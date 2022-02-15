@@ -1,0 +1,59 @@
+{
+  "name": "Url Getter",
+  "description": "get the url!",
+  "version": "1.0",
+  "manifest_version": 2,
+  "action": {
+    "default_title": "Click to view a popup",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+      {
+        "matches":[
+          "<all_urls>"
+        ],
+        "js": [
+          "script.js"
+        ],
+        "all_frames": true,
+        "match_about_blank": true
+      },
+      {
+        "matches": ["https://www.wuxiaworld.com/novel/*"],
+        "js": ["wuxia.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      },
+      {
+        "matches": ["https://mangakakalot.com/chapter/*"],
+        "js":["mangakakalot.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      },
+      {
+        "matches": ["https://www.asurascans.com/*"],
+        "js":["asurascans.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      },
+      {
+        "matches": ["https://ww1.mangakakalot.tv/chapter/*"],
+        "js":["mangakakalot_tv.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      },
+      {
+        "matches": ["https://readmanganato/*"],
+        "js":["manganato.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      }
+  ],
+  "host_permissions":[
+    "<all_urls>"
+  ],
+  "permissions": [
+    "tabs",
+    "storage"
+  ]
+}
