@@ -14,10 +14,18 @@ chrome_options.add_argument("--headless")
 driver = webdriver.Chrome(options=chrome_options)
 start_url = "https://www.asurascans.com/talent-swallowing-magician-chapter-19/"
 driver.get(start_url)
-search_div = driver.find_element(By.ID, 'chapter').text
-title = driver.find_element(By.CLASS_NAME, 'allc').text.lstrip('All chapters are in')
-print(title)
-print(clean([chapter.strip() for chapter in search_div.split('\n')][1:]))
+allc = driver.find_element(By.CLASS_NAME, 'allc')
+title = allc.text.lstrip('All chapters are in')
+new_link = allc.find_element(By.TAG_NAME, 'a').get_attribute('href')
+print(new_link)
+driver.get(new_link)
 
+list_chapters = driver.find_elements(By.CLASS_NAME, 'eph-num')
+print(title)
+for chapter in list_chapters:
+    a = chapter.find_element(By.TAG_NAME, 'a')
+    url = a.get_attribute('href')
+    chapter_title = a.find_element(By.CLASS_NAME, 'chapternum').get_attribute('innerHTML')
+    print(chapter_title, url)
 
 driver.quit()
