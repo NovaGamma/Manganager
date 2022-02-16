@@ -17,7 +17,6 @@ r = requests.get(URL)
 if r.status_code == 200:
     soup = BeautifulSoup(r.text, "html.parser")
     chapterList = soup.find_all("li", class_="wp-manga-chapter")
-    chapterList = soup.find_all("li", class_="wp-manga-chapter")
     for li in chapterList:
         cleaned = clean(li.contents)[0].contents[0].strip()
         print(cleaned)
