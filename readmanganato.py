@@ -2,9 +2,6 @@ from bs4 import BeautifulSoup
 import requests
 from utils import clean
 
-#MangaTx.com
-
-
 def url_scheme():
     return "https://readmanganato.com/manga-"
 
