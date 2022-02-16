@@ -1,4 +1,3 @@
 
-
 def clean(list):
-    return [item for item in list if item != ("\n" and "")]
+    return [item for item in list if item not in ["\n","",' ']]
