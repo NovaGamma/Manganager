@@ -1,6 +1,6 @@
 {
-  "name": "Url Getter",
-  "description": "get the url!",
+  "name": "Manga Indexer",
+  "description": "manga indexer extension",
   "version": "1.0",
   "manifest_version": 2,
   "action": {
@@ -8,16 +8,6 @@
     "default_popup": "popup.html"
   },
   "content_scripts": [
-      {
-        "matches":[
-          "<all_urls>"
-        ],
-        "js": [
-          "script.js"
-        ],
-        "all_frames": true,
-        "match_about_blank": true
-      },
       {
         "matches": ["https://www.wuxiaworld.com/novel/*"],
         "js": ["wuxia.js"],
