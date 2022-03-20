@@ -1,0 +1,29 @@
+{
+  "name": "Manga Indexer",
+  "description": "manga indexer extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Click to view a popup",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+      {
+        "matches": ["https://mangatx.com/manga/*"],
+        "js": ["mangatx.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      }
+  ],
+  "host_permissions":[
+    "<all_urls>"
+  ],
+  "permissions": [
+    "tabs",
+    "storage",
+    "unlimitedStorage"
+  ]
+}
