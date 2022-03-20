@@ -11,7 +11,7 @@ def is_up():
 
 @app.route("/API/synchro", methods=["POST"])
 def check_synchro():
-    return True
+    return "True"
 
 @app.route("/API/url", methods=["POST"])
 def receive_url():
