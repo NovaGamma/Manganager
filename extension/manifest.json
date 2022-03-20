@@ -2,39 +2,18 @@
   "name": "Manga Indexer",
   "description": "manga indexer extension",
   "version": "1.0",
-  "manifest_version": 2,
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
     "default_title": "Click to view a popup",
     "default_popup": "popup.html"
   },
   "content_scripts": [
       {
-        "matches": ["https://www.wuxiaworld.com/novel/*"],
-        "js": ["wuxia.js"],
-        "all_frames": true,
-        "match_about_blank": true
-      },
-      {
-        "matches": ["https://mangakakalot.com/chapter/*"],
-        "js":["mangakakalot.js"],
-        "all_frames": true,
-        "match_about_blank": true
-      },
-      {
-        "matches": ["https://www.asurascans.com/*"],
-        "js":["asurascans.js"],
-        "all_frames": true,
-        "match_about_blank": true
-      },
-      {
-        "matches": ["https://ww1.mangakakalot.tv/chapter/*"],
-        "js":["mangakakalot_tv.js"],
-        "all_frames": true,
-        "match_about_blank": true
-      },
-      {
-        "matches": ["https://readmanganato/*"],
-        "js":["manganato.js"],
+        "matches": ["https://mangatx.com/manga/*"],
+        "js": ["mangatx.js"],
         "all_frames": true,
         "match_about_blank": true
       }
