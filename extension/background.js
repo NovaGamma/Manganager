@@ -14,7 +14,7 @@ async function check_up(){
 }
 
 async function synchro_request(){
-  chrome.storage.local.get('data_manganager',function(result) {
+  chrome.storage.local.get(['data_manganager'],function(result) {
     fetch("http://127.0.0.1:4444/API/synchro",{
       method:'POST',
       headers: {
@@ -38,24 +38,31 @@ chrome.runtime.onMessage.addListener(
       })
     }
     else{
-      chrome.storage.local.get('data_manganager')
+      chrome.storage.local.get(['data_manganager'])
       .then(result => result.value)
       .then(value => {
         if (value == undefined){
+          console.log("was undefined");
           value = {[request.title]: [request.url]};
         }
         else{
+          console.log("was defined");
           if (value[[request.title]] == undefined){
+            console.log("series undefined"),
             value[[request.title]] = [request.url];
           }
           else{
+            console.log("series defined");
             value[[request.title]].push(request.url);
           }
         }
-        chrome.storage.local.set({'data_manganager':value})
+        console.log("set value");
+        chrome.storage.local.set({'data_manganager':value}, function() {
+          console.log('Value is set to ' + value);
+        });
       })
     }
-    if (change && ){
+    if (change && up==true){
       await synchro_request();
     }
     if (request.greeting === "hello")
