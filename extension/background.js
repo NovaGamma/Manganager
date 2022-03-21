@@ -20,7 +20,7 @@ async function synchro_request(){
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(result)
+      body: JSON.stringify(result.data_manganager)
     })
   })
 }
@@ -38,9 +38,8 @@ chrome.runtime.onMessage.addListener(
       })
     }
     else{
-      chrome.storage.local.get(['data_manganager'])
-      .then(result => result.value)
-      .then(value => {
+      chrome.storage.local.get(['data_manganager'], function(result){
+        let value = result.data_manganager
         if (value == undefined){
           console.log("was undefined");
           value = {[request.title]: [request.url]};
