@@ -12,7 +12,7 @@
   },
   "content_scripts": [
       {
-        "matches": ["https://mangatx.com/manga/*"],
+        "matches": ["https://mangatx.com/manga/*/*/"],
         "js": ["mangatx.js"],
         "all_frames": true,
         "match_about_blank": true

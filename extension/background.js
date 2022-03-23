@@ -29,16 +29,17 @@ chrome.runtime.onMessage.addListener(
   async function(request, sender, sendResponse) {
     let change = await check_up();
     if(up){
+      console.log(request);
       fetch("http://127.0.0.1:4444/API/url",{
         method:'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({'title':request.title, 'url':request.url})
+        body: JSON.stringify({'title':request.title, 'url':request.url, 'chapterName':request.chapterName})
       })
     }
     else{
-      chrome.storage.local.get(['data_manganager'], function(result){
+      chrome.storage.local.get('data_manganager', function(result){
         let value = result.data_manganager
         if (value == undefined){
           console.log("was undefined");
