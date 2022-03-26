@@ -51,7 +51,7 @@ chrome.tabs.query(query, async function(tabs){
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({'title':title, 'site':site})
+          body: JSON.stringify({'title':title, 'site':site, 'url':url})
         });
       });
     }

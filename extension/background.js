@@ -35,7 +35,11 @@ chrome.runtime.onMessage.addListener(
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({'title':request.title, 'url':request.url, 'chapterName':request.chapterName})
+        body: JSON.stringify({
+          'title':request.title,
+          'url':request.url,
+          'chapterName':request.chapterName
+        })
       })
     }
     else{
