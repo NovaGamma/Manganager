@@ -7,13 +7,17 @@ from crawler_handler import call_crawler
 app = Flask(__name__)
 cors = CORS(app)
 
+def open_with_json(path):
+    if os.path.exists(path):
+        with open(path,'r') as file:
+            data = json.load(file)
+    else:
+        data = {}
+    return data
+
 
 def save(data):
-    if os.path.exists('read.json'):
-        with open('read.json', 'r') as file:
-            data_local = json.load(file)
-    else:
-        data_local = {}
+    data_local = open_with_json('read.json')
 
     chapterName = data['chapterName']
     url = data['url']
@@ -51,25 +55,20 @@ def receive_url():
 @app.route('/API/followed', methods=["POST"])
 def check_following():
     data = request.get_json()
-    if os.path.exists('read.json'):
-        with open('read.json', 'r') as file:
-            reading = json.load(file)
+    reading = open_with_json('read.json')
+    if reading: #check that reading is not empty
         if data['title'] in reading:
             if data['site'] in reading[[data['title']]]['sites']:
                 return jsonify({'followed':True})
-        return jsonify({'followed':False})
+    return jsonify({'followed':False})
 
 
 @app.route('/API/follow', methods=['POST'])
 def add_follow():
     data = request.get_json()
 
-    if os.path.exists('read.json'):
+    reading = open_with_json('read.json')
     #---- Add to the read.json with empty chapter
-        with open('read.json', 'r') as file:
-            reading = json.load(file)
-    else:
-        reading = {}
     if data['title'] in reading:
         # should be that it's followed on another site
         reading[data['title']]['sites'].append({data['site']:data['url']})
@@ -82,11 +81,7 @@ def add_follow():
     chapters = call_crawler(data['site'], data['title'], data['url'])
 
     #---- add the list of chapters to the entire list of chapters
-    if os.path.exists('chapterList.json'):
-        with open('chapterList.json', 'r') as file:
-            data_local = json.load(file)
-    else:
-        data_local = {}
+    data_local = open_with_json('chapterList.json')
 
     if data['title'] not in data_local:
         data_local['title'] = {'sites':[{data['site']:data['url']}], 'chapters': chapters}
@@ -99,6 +94,16 @@ def add_follow():
         json.dump(data_local, file)
 
     return "True"
+
+@app.route('/get_read_list')
+def send_read_list():
+    list = open_with_json('read.json')
+    return jsonify(list)
+
+@app.route('/get_chapters_list')
+def send_chapters_list():
+    list = open_with_json('chapterList.json')
+    return jsonify(list)
 
 @app.route('/')
 def main():
