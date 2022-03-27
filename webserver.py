@@ -19,7 +19,7 @@ def save(data):
     url = data['url']
     title = data['title']
 
-    if title in data_local.keys():
+    if title in data_local:
         if not (chapterName, url) in data_local[title]['chapters']:
             data_local[title]['chapters'].append((chapterName, url))
     else:
@@ -54,7 +54,7 @@ def check_following():
     if os.path.exists('read.json'):
         with open('read.json', 'r') as file:
             reading = json.load(file)
-        if data['title'] in reading.keys():
+        if data['title'] in reading:
             if data['site'] in reading[[data['title']]]['sites']:
                 return jsonify({'followed':True})
         return jsonify({'followed':False})
@@ -70,7 +70,7 @@ def add_follow():
             reading = json.load(file)
     else:
         reading = {}
-    if data['title'] in reading.keys():
+    if data['title'] in reading:
         # should be that it's followed on another site
         reading[data['title']]['sites'].append({data['site']:data['url']})
     else:
@@ -88,7 +88,7 @@ def add_follow():
     else:
         data_local = {}
 
-    if data['title'] not in data_local.keys():
+    if data['title'] not in data_local:
         data_local['title'] = {'sites':[{data['site']:data['url']}], 'chapters': chapters}
     else:
         for chapter in chapters:
