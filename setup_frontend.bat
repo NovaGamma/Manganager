@@ -1,0 +1,2 @@
+cd Manganager/
+npm install
