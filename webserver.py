@@ -95,12 +95,12 @@ def add_follow():
 
     return "True"
 
-@app.route('/get_read_list')
+@app.route('/API/get_read_list')
 def send_read_list():
     list = open_with_json('read.json')
     return jsonify(list)
 
-@app.route('/get_chapters_list')
+@app.route('/API/get_chapters_list')
 def send_chapters_list():
     list = open_with_json('chapterList.json')
     return jsonify(list)
