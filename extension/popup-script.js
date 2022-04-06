@@ -60,4 +60,6 @@ chrome.tabs.query(query, async function(tabs){
     }
     container.appendChild(button);
   }
+  container = document.getElementById('container');
+  container.innerHTML = 'The server is not on';
 });
