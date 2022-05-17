@@ -110,6 +110,37 @@ def main():
     return redirect(url_for('display_list'))
 
 
+@app.route('/API/get_infos_serie', methods = ['POST'])
+def get_infos_series(): 
+    data = request.get_json()
+    title = data.title
+    chapter_list = open_with_json('chapterList.json')
+    if title not in chapter_list: 
+        return jsonify('error')
+    image = chapter_list[title]['preview']
+    last_chap = chapter_list[title]['chapters'][-1]
+    for (i, chapter) in enumerate(chapter_list[title]['chapters']): 
+        if not chapter[2]: 
+            if i == 0: 
+                last_read = None
+            else: 
+                last_read = chapter_list[title]['chapters'][i-1]
+            break
+    return jsonify(image, last_chap, last_read)
+
+
+@app.route('/API/get_chap_list', methods = ['POST'])
+def get_chap_list(): 
+    data = request.get_json()
+    title = data.title
+    chapter_list = open_with_json('chapterList.json')
+    if title not in chapter_list: 
+        return jsonify('error')
+    return jsonify(chapter_list[title]['chapters'])
+
+
+
+
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
     app.run(threaded=True, port=4444)
