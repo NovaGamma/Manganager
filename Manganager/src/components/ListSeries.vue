@@ -1,12 +1,13 @@
 <template>
   <div>
-    {{chapterList}}
+    <div v-for="serie in series">
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TestChapter',
+  name: 'ListSeries',
   data(){
     return {
       chapterList:{}

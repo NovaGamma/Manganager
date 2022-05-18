@@ -17,19 +17,21 @@ def open_with_json(path):
 
 
 def save(data):
-    data_local = open_with_json('read.json')
+    data_local = open_with_json('chapterList.json')
 
     chapterName = data['chapterName']
     url = data['url']
     title = data['title']
+    site = data['site']
 
     if title in data_local:
-        if not (chapterName, url) in data_local[title]['chapters']:
-            data_local[title]['chapters'].append((chapterName, url))
-    else:
-        data_local[title] = {'sites':[site], 'chapters':[(chapterName, url)]}
+        if site in data_local[title]["sites"]:
+            for i,chapter in enumerate(data_local["chapters"]):
+                if chapterName in chapter:
+                    data_local["chapters"][i][2] = True
+                    break
 
-    with open('read.json', 'w') as file:
+    with open('chapterList.json', 'w') as file:
         json.dump(data_local, file)
 
 
@@ -79,7 +81,7 @@ def add_follow():
         json.dump(reading,file)
     #---- Call the crawler to get the list of chapters
     chapters = call_crawler(data['site'], data['title'], data['url'])
-
+    chapters = [[chapter[0],chapter[1],False] for chapter in chapters]
     #---- add the list of chapters to the entire list of chapters
     data_local = open_with_json('chapterList.json')
 
@@ -111,30 +113,30 @@ def main():
 
 
 @app.route('/API/get_infos_serie', methods = ['POST'])
-def get_infos_series(): 
+def get_infos_series():
     data = request.get_json()
     title = data.title
     chapter_list = open_with_json('chapterList.json')
-    if title not in chapter_list: 
+    if title not in chapter_list:
         return jsonify('error')
     image = chapter_list[title]['preview']
     last_chap = chapter_list[title]['chapters'][-1]
-    for (i, chapter) in enumerate(chapter_list[title]['chapters']): 
-        if not chapter[2]: 
-            if i == 0: 
+    for (i, chapter) in enumerate(chapter_list[title]['chapters']):
+        if not chapter[2]:
+            if i == 0:
                 last_read = None
-            else: 
+            else:
                 last_read = chapter_list[title]['chapters'][i-1]
             break
     return jsonify(image, last_chap, last_read)
 
 
 @app.route('/API/get_chap_list', methods = ['POST'])
-def get_chap_list(): 
+def get_chap_list():
     data = request.get_json()
     title = data.title
     chapter_list = open_with_json('chapterList.json')
-    if title not in chapter_list: 
+    if title not in chapter_list:
         return jsonify('error')
     return jsonify(chapter_list[title]['chapters'])
 

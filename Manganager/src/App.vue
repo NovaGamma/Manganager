@@ -1,15 +1,15 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <TestChapter/>
+  <ListSeries/>
 </template>
 
 <script>
-import TestChapter from './components/TestChapter.vue'
+import ListSeries from './components/ListSeries.vue'
 
 export default {
   name: 'App',
   components: {
-    TestChapter
+    ListSeries
   }
 }
 </script>
