@@ -3,6 +3,7 @@ from flask_cors import CORS, cross_origin
 import os, json
 from crawler_handler import call_crawler, get_title_crawler
 import re
+import webbrowser
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -55,7 +56,7 @@ def clean_title(title):
     cleanString = ' '.join([el for el in cleanString.split(' ') if el])
     return cleanString
 
-def save(url, title, site):
+def save(data):
     data_local = open_with_json('chapterList.json')
 
     chapterName = data['chapterName']
@@ -190,6 +191,18 @@ def add_read():
     res = make_response()
     res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
     return res
+
+@app.route('/API/open/', methods=['POST','OPTION'])
+def open_url():
+    data = request.get_json()
+    url = data['url']
+
+    webbrowser.open(url)
+
+    res = make_response()
+    res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
+    return res
+
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support

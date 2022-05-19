@@ -19,7 +19,7 @@
       <button @click="setRead()">Read until</button>
     </div>
     <div v-for="chapter in chapters" :key="chapter[0]" :class="{chapter:true, read:chapter[2]}">
-      <a :href="chapter[1]">
+      <a @click="open(chapter[1])">
         {{chapter[0]}}
       </a>
     </div>
@@ -42,6 +42,17 @@ export default {
     this.get_chapters()
   },
   methods:{
+    async open(url){
+      await fetch("http://127.0.0.1:4444/API/open/",{
+        method:"POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          'url':url
+        })
+      });
+    },
     async get_infos(){
       let r = await fetch("http://127.0.0.1:4444/API/get_infos_serie/"+this.title)
       this.serie = await r.json()
