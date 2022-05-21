@@ -1,9 +1,10 @@
 from flask import redirect,url_for,Flask,render_template, send_file, jsonify, request, make_response
 from flask_cors import CORS, cross_origin
 import os, json
-from crawler_handler import call_crawler, get_title_crawler
+from crawler_handler import call_crawler, get_title_crawler, get_chapters_crawler
 import re
 import webbrowser
+import time
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -11,7 +12,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 def open_with_json(path):
     if os.path.exists(path):
-        with open(path,'r') as file:
+        with open(path,'r', encoding="utf8") as file:
             data = json.load(file)
     else:
         data = {}
@@ -20,6 +21,8 @@ def open_with_json(path):
 def get_site(url):
     if (url.startswith("https://mangatx.com/manga/")):
         return 'mangatx'
+    elif (re.match("https:\/\/readmanganato\.com\/manga.+", url)):
+        return "readmanganato"
 
 def add_follow_function(title, site, url):
     reading = open_with_json('ChapterList.json')
@@ -31,7 +34,7 @@ def add_follow_function(title, site, url):
     else:
         reading[title] = {'sites':{site:url}, 'chapters': []}
     #---- Save to read.json
-    with open('ChapterList.json', 'w') as file:
+    with open('chapterList.json', 'w') as file:
         json.dump(reading,file)
     #---- Call the crawler to get the list of chapters
     chapters, preview = call_crawler(site, title, url)
@@ -198,6 +201,34 @@ def open_url():
     url = data['url']
 
     webbrowser.open(url)
+
+    res = make_response()
+    res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
+    return res
+
+@app.route('/API/update_chapter/', methods=['POST','OPTION'])
+def update_chapter():
+    current_time = time.time()
+    log = open_with_json('log.json')
+    update_time = log['update']
+    if current_time - update_time > 86000:
+        #update
+        data_local = open_with_json("chapterList.json")
+        series = data_local.keys()
+        for serie in series:
+            data_local = open_with_json("chapterList.json")
+            print(serie)
+            chapters = get_chapters_crawler(*[i for i in data_local[serie]['sites'].items()][0])
+            unpacked = [chapter[0] for chapter in data_local[serie]['chapters']]
+            for chapter in chapters:
+                if chapter[0] not in unpacked:
+                    data_local[serie]['chapters'].append([*chapter, False])
+            with open('chapterList.json','w') as file:
+                json.dump(data_local, file)
+
+        log['update'] = time.time()
+        with open('log.json', 'w') as file:
+            json.dump(log, file)
 
     res = make_response()
     res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
