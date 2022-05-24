@@ -24,6 +24,26 @@ def get_site(url):
     elif (re.match("https:\/\/readmanganato\.com\/manga.+", url)):
         return "readmanganato"
 
+def get_infos_function(title, chapter_list = ''):
+    title = clean_title(title)
+    if chapter_list == '':
+        chapter_list = open_with_json('chapterList.json')
+    if title not in chapter_list:
+        return 'error'
+    last_chap = chapter_list[title]['chapters'][-1]
+    last_read = "None"
+    for (i, chapter) in enumerate(chapter_list[title]['chapters']):
+        if chapter[2]:
+            last_read = "Some"
+        if not chapter[2]:
+            if i > 0:
+                if chapter_list[title]['chapters'][i-1][2]:
+                    last_read = chapter_list[title]['chapters'][i-1]
+            break
+    if last_read == "Some":
+        last_read = chapter_list[title]['chapters'][-1]
+    return {'title':title, 'last_chapter':last_chap, 'last_chapter_read':last_read}
+
 def add_follow_function(title, site, url):
     reading = open_with_json('ChapterList.json')
     #---- Add to the read.json with empty chapter
@@ -117,15 +137,30 @@ def add_follow():
     add_follow_function(title, data['site'], data['url'])
     return "True"
 
-@app.route('/API/get_read_list')
+
+@app.route('/API/get_read_list', methods=['GET','OPTION'])
 def send_read_list():
-    list = open_with_json('chapterList.json')
-    return jsonify([k for k in list])
+    chapterList = open_with_json('chapterList.json')
+    not_finished = request.args['not_finished']
+    if not_finished == "true":
+        not_finished = True
+    else:
+        not_finished = False
+    print(not_finished)
+    result = []
+    for k in list(chapterList.keys()):
+        infos = get_infos_function(k, chapterList)
+        if not_finished and infos['last_chapter'] != infos['last_chapter_read'] or not not_finished:
+            result.append({**infos, "isFinished":infos['last_chapter'] == infos['last_chapter_read']})
+    res = make_response(jsonify(result))
+    res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
+    return res
 
 
 @app.route('/')
 def main():
     return redirect(url_for('display_list'))
+
 
 @app.route('/API/get_preview/<string:title>')
 def get_preview(title):
@@ -133,26 +168,11 @@ def get_preview(title):
     preview_name = chapter_list[title]['preview']
     return send_file(f"static/previews/{preview_name}")
 
+
 @app.route('/API/get_infos_serie/<string:title>')
 def get_infos_series(title):
-    title = clean_title(title)
-    chapter_list = open_with_json('chapterList.json')
-    if title not in chapter_list:
-        return jsonify('error')
-    last_chap = chapter_list[title]['chapters'][-1]
-    last_read = "None"
-    for (i, chapter) in enumerate(chapter_list[title]['chapters']):
-        if chapter[2]:
-            last_read = "Some"
-        if not chapter[2]:
-            if i > 0:
-                if chapter_list[title]['chapters'][i-1][2]:
-                    last_read = chapter_list[title]['chapters'][i-1]
-            break
-    if last_read == "Some":
-        last_read = chapter_list[title]['chapters'][-1]
-    response = jsonify({'title':title, 'last_chapter':last_chap, 'last_chapter_read':last_read})
-    return response
+    data = get_infos_function(title)
+    return jsonify(data)
 
 
 @app.route('/API/get_chap_list/<string:title>')
