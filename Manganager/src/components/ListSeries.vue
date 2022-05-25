@@ -5,16 +5,23 @@
       <input type="text" v-model="add" placeholder="Add manga...(paste url)"/>
       <button @click="add_serie()">Add</button>
     </div>
-    <button v-if="page > 1" @click="page--">Previous Page</button>
-    <a v-for="i in Math.floor(series.length/10)" @click="page=i" :key="i">{{i}}|</a>
-    <button v-if="series.length/10 > page" @click="page++">Next Page</button>
-    {{(page-1)*10}}/{{page*10-1}}
-    <DisplaySerie v-for="serie in filteredList().slice((page-1)*10,page*10-1)" :key="serie" :title="serie"/>
+    <div>
+      <button v-if="page > 1" @click="page--">Previous Page</button>
+      <a v-for="i in Math.floor(series.length/10)" @click="page=i" :key="i">{{i}}|</a>
+      <button v-if="series.length/10 > page" @click="page++">Next Page</button>
+    </div>
+    <input type="checkbox" id="isFinished" @click="params.not_finished = !params.not_finished; getChapterList()" />
+    <label for="isFinished">Not Finished</label>
+    <DisplaySerie v-for="serie in filtered_series" :key="serie" :serie="serie"/>
+    <div>
+      <button v-if="page > 1" @click="page--">Previous Page</button>
+      <a v-for="i in Math.floor(series.length/10)" @click="page=i" :key="i">{{i}}|</a>
+      <button v-if="series.length/10 > page" @click="page++">Next Page</button>
+    </div>
   </div>
 </template>
 
 <script>
-import { ref } from "vue"
 import DisplaySerie from "./DisplaySerie.vue"
 export default {
   name: 'ListSeries',
@@ -24,23 +31,30 @@ export default {
       series:[],
       input : "",
       add : "",
-      page:1
+      page:1,
+      per_page:10,
+      params:{'not_finished':false}
     }
   },
   async created(){
     await this.getChapterList();
   },
+  computed: {
+    filtered_series(){
+      let start = (this.page-1) * this.per_page+1
+      let end = this.page * this.per_page
+      let filtered = this.series.slice(start,end+1)
+      filtered = filtered.filter((serie)=>{
+          return serie.title.toLowerCase().includes(this.input.toLowerCase())
+        })
+      return filtered
+    }
+  },
   methods:{
     async getChapterList(){
-      let response = await fetch("http://127.0.0.1:4444/API/get_read_list")
+      let response = await fetch(`http://127.0.0.1:4444/API/get_read_list?not_finished=${this.params.not_finished}`)
       this.series = await response.json()
       console.log(this.series)
-    },
-    filteredList(){
-      return this.series.filter((serie)=>{
-          return serie.toLowerCase().includes(this.input.toLowerCase())
-        }
-      );
     },
     async add_serie(){
       let url = this.add;
