@@ -16,7 +16,7 @@
     <div>
       <button v-if="page > 1" @click="page--">Previous Page</button>
       <a v-for="i in Math.floor(series.length/10)" @click="page=i" :key="i">{{i}}|</a>
-      <button v-if="series.length/10 > page" @click="page++">Next Page</button>
+      <button v-if="series.length/10 > page" @click="page++; scrollTop()">Next Page</button>
     </div>
   </div>
 </template>
@@ -43,10 +43,12 @@ export default {
     filtered_series(){
       let start = (this.page-1) * this.per_page+1
       let end = this.page * this.per_page
-      let filtered = this.series.slice(start,end+1)
+      let filtered = this.series
       filtered = filtered.filter((serie)=>{
           return serie.title.toLowerCase().includes(this.input.toLowerCase())
-        })
+      })
+      if(filtered.length > this.per_page)
+          filtered = filtered.slice(start,end+1)
       return filtered
     }
   },
@@ -68,6 +70,9 @@ export default {
         })
       });
       this.getChapterList();
+    },
+    scrollTop(){
+      window.scrollTo(0,0);
     }
   }
 }

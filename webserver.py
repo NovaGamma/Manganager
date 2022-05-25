@@ -244,4 +244,7 @@ def update_chapter():
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
-    app.run(threaded=True, port=4444)
+    from waitress import serve
+    serve(app, host='127.0.0.1', port=4444)
+
+    #app.run(threaded=True, port=4444)
