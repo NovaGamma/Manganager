@@ -2,7 +2,7 @@ from flask import redirect,url_for,Flask,render_template, send_file, jsonify, re
 from flask_cors import CORS, cross_origin
 import os, json
 from crawler_handler import call_crawler, get_title_crawler, get_chapters_crawler
-import re
+import re, shutil, subprocess
 import webbrowser
 import time
 
@@ -212,20 +212,7 @@ def update_chapter():
     log = open_with_json('log.json')
     update_time = log['update']
     if current_time - update_time > 86000:
-        #update
-        data_local = open_with_json("chapterList.json")
-        series = data_local.keys()
-        for serie in series:
-            data_local = open_with_json("chapterList.json")
-            print(serie)
-            chapters = get_chapters_crawler(*[i for i in data_local[serie]['sites'].items()][0])
-            unpacked = [chapter[0] for chapter in data_local[serie]['chapters']]
-            for chapter in chapters:
-                if chapter[0] not in unpacked:
-                    data_local[serie]['chapters'].append([*chapter, False])
-            with open('chapterList.json','w') as file:
-                json.dump(data_local, file)
-
+        os.system("python update_script.py")
         log['update'] = time.time()
         with open('log.json', 'w') as file:
             json.dump(log, file)
