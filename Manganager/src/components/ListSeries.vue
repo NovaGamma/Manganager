@@ -13,6 +13,11 @@
     <input type="checkbox" id="isFinished" @click="params.not_finished = !params.not_finished; getChapterList()" />
     <label for="isFinished">Not Finished</label>
     <DisplaySerie v-for="serie in filtered_series" :key="serie" :serie="serie"/>
+    <div>
+      <button v-if="page > 1" @click="page--">Previous Page</button>
+      <a v-for="i in Math.floor(series.length/10)" @click="page=i" :key="i">{{i}}|</a>
+      <button v-if="series.length/10 > page" @click="page++">Next Page</button>
+    </div>
   </div>
 </template>
 
