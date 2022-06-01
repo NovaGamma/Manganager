@@ -2,21 +2,15 @@ from flask import redirect,url_for,Flask,render_template, send_file, jsonify, re
 from flask_cors import CORS, cross_origin
 import os, json
 from crawler_handler import call_crawler, get_title_crawler, get_chapters_crawler
-import re, shutil, subprocess
+import re, shutil, subprocess, sys
 import webbrowser
 import time
+from utils import open_with_json
 
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-def open_with_json(path):
-    if os.path.exists(path):
-        with open(path,'r', encoding="utf8") as file:
-            data = json.load(file)
-    else:
-        data = {}
-    return data
 
 def get_site(url):
     if (url.startswith("https://mangatx.com/manga/")):
@@ -42,7 +36,13 @@ def get_infos_function(title, chapter_list = ''):
             break
     if last_read == "Some":
         last_read = chapter_list[title]['chapters'][-1]
-    return {'title':title, 'last_chapter':last_chap, 'last_chapter_read':last_read}
+    return {'title':title,
+            'last_chapter':last_chap,
+            'last_chapter_read':last_read,
+            'site':list(chapter_list[title]['sites'].keys())[0],
+            'date':chapter_list[title]['date'],
+            'state':chapter_list[title]['state']
+            }
 
 def add_follow_function(title, site, url):
     reading = open_with_json('ChapterList.json')
@@ -52,7 +52,7 @@ def add_follow_function(title, site, url):
         return
         reading[title]['sites'][site] = url
     else:
-        reading[title] = {'sites':{site:url}, 'chapters': []}
+        reading[title] = {'sites':{site:url}, 'chapters': [], 'date':time.time(), 'state':'reading'}
     #---- Save to read.json
     with open('chapterList.json', 'w') as file:
         json.dump(reading,file)
@@ -89,9 +89,11 @@ def save(data):
 
     if title in data_local:
         if site in data_local[title]["sites"]:
+            data_local[title]['date'] = time.time()
             for i,chapter in enumerate(data_local[title]["chapters"]):
                 if chapterName == chapter[0]:
                     data_local[title]["chapters"][i][2] = True
+                    print(data)
                     break
 
     with open('chapterList.json', 'w') as file:
@@ -112,7 +114,6 @@ def check_synchro():
 @app.route("/API/url", methods=["POST"])
 def receive_url():
     data = request.get_json()
-    print(data)
     save(data)
     return "True"
 
@@ -122,6 +123,7 @@ def check_following():
     data = request.get_json()
     reading = open_with_json("chapterList.json")
     title = clean_title(data['title'])
+    print(title)
     if reading: #check that reading is not empty
         if title in reading:
             if data['site'] in reading[title]['sites']:
@@ -242,9 +244,20 @@ def update_chapter():
     return res
 
 
+@app.route('/API/read', methods=["GET","POST"])
+def is_read():
+    name = clean_title(request.get_json()['title'])
+    data = open_with_json('chapterList.json')
+
+    if name in data.keys():
+        return jsonify(1)
+    return jsonify(0)
+
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
-    from waitress import serve
-    serve(app, host='127.0.0.1', port=4444)
-
-    #app.run(threaded=True, port=4444)
+    print(sys.argv)
+    if 'dev' in sys.argv:
+        app.run(threaded=True, port=4444)
+    else:
+        from waitress import serve
+        serve(app, host='127.0.0.1', port=4444)

@@ -7,6 +7,7 @@
     </div>
     <div class="chapter-info">
       {{serie.title}}
+      {{serie.site}}
       <p v-if="serie.last_chapter_read != undefined">Last Chapter : {{serie.last_chapter[0]}}</p>
       <p v-if='serie.last_chapter_read != undefined && serie.last_chapter_read != "None"'>Last Chapter Read : {{serie.last_chapter_read[0]}}</p>
     </div>

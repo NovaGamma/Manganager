@@ -5,6 +5,7 @@
       <img :src="'http://127.0.0.1:4444/API/get_preview/'+title">
       <div>
         {{title}}
+        {{serie.site}}
         {{serie.last_chapter[0]}}
         <p v-if="serie.last_chapter_read != 'None'">
           {{serie.last_chapter_read[0]}}
