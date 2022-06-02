@@ -149,11 +149,19 @@ def send_read_list():
     else:
         not_finished = False
     print(not_finished)
+    #----------- filter chapterList to remove dropped
+
+    chapterList = {serie:chapterList[serie] for serie in chapterList.keys() if chapterList[serie]['state'] != "dropped"}
+
     result = []
     for k in list(chapterList.keys()):
         infos = get_infos_function(k, chapterList)
         if not_finished and infos['last_chapter'] != infos['last_chapter_read'] or not not_finished:
             result.append({**infos, "isFinished":infos['last_chapter'] == infos['last_chapter_read']})
+
+    #---- sort result by date
+    result.sort(key=lambda x: x.get('date'), reverse=True)
+
     res = make_response(jsonify(result))
     res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
     return res
