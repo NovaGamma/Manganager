@@ -24,4 +24,4 @@ To run it use run-electron.bat
 ### The chrome extension
 
 To add the extension to you webbrowser (if chromium based)
-you can follow the guide here[https://developer.chrome.com/docs/extensions/mv3/getstarted/#unpacked]
+you can follow the guide [here](https://developer.chrome.com/docs/extensions/mv3/getstarted/#unpacked)
