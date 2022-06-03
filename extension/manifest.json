@@ -16,6 +16,18 @@
         "js": ["mangatx.js"],
         "all_frames": true,
         "match_about_blank": true
+      },
+      {
+        "matches": ["https://readmanganato.com/manga-*/chapter*"],
+        "js": ["readmanganato.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      },
+      {
+        "matches": ["https://mangatx.com/manga/"],
+        "js": ["mangatx_chapters.js"],
+        "all_frames": true,
+        "match_about_blank": true
       }
   ],
   "host_permissions":[

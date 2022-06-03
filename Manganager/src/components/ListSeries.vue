@@ -1,53 +1,62 @@
 <template>
   <div>
-    <input type="text" v-model="input" placeholder="Search manga..." />
-    <input type="text" v-model="add" placeholder="Add manga...(paste url)"/>
-    <button @click="add_serie()">Add</button>
-    <div v-for="serie in filteredList()" :key="serie.title" class="chapter">
-      <div class="logo">
-        <router-link :to="'/serie/'+serie.title">
-          <img :src="'http://127.0.0.1:4444/API/get_preview/'+serie.title">
-        </router-link>
-      </div>
-      <div class="chapter-info">
-        {{serie.title}}
-        <p>Last Chapter : {{serie.last_chapter[0]}}</p>
-        <p v-if='serie.last_chapter_read != "None"'>Last Chapter Read : {{serie.last_chapter_read[0]}}</p>
-      </div>
+    <div>
+      <input type="text" v-model="input" placeholder="Search manga..." />
+      <input type="text" v-model="add" placeholder="Add manga...(paste url)"/>
+      <button @click="add_serie()">Add</button>
+    </div>
+    <div>
+      <button v-if="page > 1" @click="page--">Previous Page</button>
+      <a v-for="i in Math.floor(series.length/10)" @click="page=i" :key="i">{{i}}|</a>
+      <button v-if="series.length/10 > page" @click="page++">Next Page</button>
+    </div>
+    <input type="checkbox" id="isFinished" @click="params.not_finished = !params.not_finished; getChapterList()" />
+    <label for="isFinished">Not Finished</label>
+    <DisplaySerie v-for="serie in filtered_series" :key="serie" :serie="serie"/>
+    <div>
+      <button v-if="page > 1" @click="page--">Previous Page</button>
+      <a v-for="i in Math.floor(series.length/10)" @click="page=i" :key="i">{{i}}|</a>
+      <button v-if="series.length/10 > page" @click="page++; scrollTop()">Next Page</button>
     </div>
   </div>
 </template>
 
 <script>
-import { ref } from "vue"
+import DisplaySerie from "./DisplaySerie.vue"
 export default {
   name: 'ListSeries',
+  components :{DisplaySerie},
   data(){
     return {
       series:[],
       input : "",
       add : "",
+      page:1,
+      per_page:10,
+      params:{'not_finished':false}
     }
   },
-  created(){
-    this.getChapterList();
+  async created(){
+    await this.getChapterList();
+  },
+  computed: {
+    filtered_series(){
+      let start = (this.page-1) * this.per_page
+      let end = this.page * this.per_page
+      let filtered = this.series
+      filtered = filtered.filter((serie)=>{
+          return serie.title.toLowerCase().includes(this.input.toLowerCase())
+      })
+      if(filtered.length > this.per_page)
+          filtered = filtered.slice(start,end)
+      return filtered
+    }
   },
   methods:{
     async getChapterList(){
-      let response = await fetch("http://127.0.0.1:4444/API/get_read_list")
-        let series = await response.json()
-        for(let serie of series){
-          console.log(serie)
-          let r = await fetch("http://127.0.0.1:4444/API/get_infos_serie/"+serie)
-          this.series.push(await r.json())
-        }
+      let response = await fetch(`http://127.0.0.1:4444/API/get_read_list?not_finished=${this.params.not_finished}`)
+      this.series = await response.json()
       console.log(this.series)
-    },
-    filteredList(){
-      return this.series.filter((serie)=>{
-          return serie.title.toLowerCase().includes(this.input.toLowerCase())
-        }
-      );
     },
     async add_serie(){
       let url = this.add;
@@ -61,6 +70,9 @@ export default {
         })
       });
       this.getChapterList();
+    },
+    scrollTop(){
+      window.scrollTo(0,0);
     }
   }
 }
@@ -68,31 +80,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.chapter-info{
-  display:inline-block;
-  margin-left: 3%;
-}
-
-.logo{
-
-}
-
-.chapter{
-  margin-left : 15%;
-  margin-right : 15%;
-  margin-top : 2%;
-  margin-bottom : 2%;
-  background-color: white;
-}
-
-.logo{
-  display: inline-block;
-  margin-right: 2%;
-}
 
 .text{
   display: inline-block;
-
 }
 
 .template{

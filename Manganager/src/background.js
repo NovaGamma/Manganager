@@ -4,6 +4,7 @@ import { app, protocol, BrowserWindow } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS3_DEVTOOLS } from 'electron-devtools-installer'
 const isDevelopment = process.env.NODE_ENV !== 'production'
+const shell = require('electron').shell;
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([
@@ -45,6 +46,8 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
+
+
 
 app.on('activate', () => {
   // On macOS it's common to re-create a window in the app when the

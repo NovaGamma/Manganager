@@ -2,6 +2,9 @@ function get_site(url){
   if (url.match(/https:\/\/mangatx\.com\/manga\/.+\/.+\//)){
     return 'mangatx'
   }
+  else if(url.match(/https:\/\/readmanganato\.com\/manga.+\/chapter-.+/)){
+    return 'readmanganato'
+  }
   else return 'undefined'
 }
 
@@ -40,7 +43,7 @@ chrome.tabs.query(query, async function(tabs){
         container = document.getElementById('container');
         button = document.createElement('button');
         button.className = "button";
-        if (!followed){
+        if (!followed.followed){
           button.innerHTML = "Follow Series";
           button.addEventListener('click', () => {
             fetch("http://127.0.0.1:4444/API/follow",{
