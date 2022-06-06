@@ -18,7 +18,7 @@ You can run it using **run.bat**
 ### The electron app
 
 you will need to have npm/node installed
-and you can use setup-electron.bat to make it install the requirements.
+and you can use setup_frontend.bat to make it install the requirements.
 To run it use **run-electron.bat**
 
 ### The chrome extension
