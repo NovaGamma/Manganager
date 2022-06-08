@@ -1,12 +1,4 @@
-function get_site(url){
-  if (url.match(/https:\/\/mangatx\.com\/manga\/.+\/.+\//)){
-    return 'mangatx'
-  }
-  else if(url.match(/https:\/\/readmanganato\.com\/manga.+\/chapter-.+/)){
-    return 'readmanganato'
-  }
-  else return 'undefined'
-}
+import get_site from './utils.js'
 
 chrome.runtime.onMessage.addListener(
   async function(request, sender, sendResponse) {

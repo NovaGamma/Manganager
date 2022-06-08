@@ -4,8 +4,10 @@
   "version": "1.0",
   "manifest_version": 3,
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type":"module"
   },
+  "minimum_chrome_version": "92",
   "action": {
     "default_title": "Click to view a popup",
     "default_popup": "popup.html"
