@@ -1,4 +1,4 @@
-import get_site from './utils'
+import get_site from './utils.js'
 
 chrome.runtime.onMessage.addListener(
   async function(request, sender, sendResponse) {
