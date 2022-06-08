@@ -251,13 +251,29 @@ def update_chapter():
     res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
     return res
 
+@app.route('/API/delete', methods=["POST",'OPTION'])
+def del_serie():
+    data = request.get_json()
+    title = clean_title(data['title'])
+    data_local = open_with_json('chapterList.json')
+
+    if title in data_local.keys():
+        del data_local[title]
+
+    with open('chapterList.json','w') as file:
+        json.dump(data_local, file)
+
+    res = make_response()
+    res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
+    return res
+
 
 @app.route('/API/read', methods=["GET","POST"])
 def is_read():
     name = clean_title(request.get_json()['title'])
     data = open_with_json('chapterList.json')
 
-    if name in data.keys():
+    if name.lower() in  [k.lower() for k in data.keys()]:
         return jsonify(1)
     return jsonify(0)
 

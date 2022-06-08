@@ -11,6 +11,9 @@
           {{serie.last_chapter_read[0]}}
         </p>
       </div>
+      <div>
+        <button @click='del()'>Remove</button>
+      </div>
     </div>
     <div>
       <select v-model="read_until">
@@ -53,6 +56,19 @@ export default {
           'url':url
         })
       });
+    },
+    async del(){
+      if(confirm('Do you want to delete ?')){
+        await fetch("http://127.0.0.1:4444/API/delete",{
+          method:"POST",
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            'title':this.title
+          })
+        })
+      }
     },
     async get_infos(){
       let r = await fetch("http://127.0.0.1:4444/API/get_infos_serie/"+this.title)

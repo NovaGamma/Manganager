@@ -28,6 +28,18 @@
         "js": ["mangatx_chapters.js"],
         "all_frames": true,
         "match_about_blank": true
+      },
+      {
+        "matches": ["https://manganato.com/"],
+        "js":["manganato_chapters.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      },
+      {
+        "matches": ["https://manganato.com/genre*"],
+        "js":["manganato_chapters_genre.js"],
+        "all_frames": true,
+        "match_about_blank": true
       }
   ],
   "host_permissions":[
