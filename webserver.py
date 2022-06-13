@@ -12,6 +12,17 @@ cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 
+def ratio(x):
+    chapterList = open_with_json('chapterList.json')
+    serie = chapterList[x.get('title')]
+    last_chap = x.get("last_chapter_read")
+    if last_chap == 'None':
+        index = 0
+    else:
+        index = serie['chapters'].index(last_chap)
+    return (index+1)/len(serie['chapters'])
+
+
 def get_site(url):
     if (url.startswith("https://mangatx.com/manga/")):
         return 'mangatx'
@@ -160,7 +171,8 @@ def send_read_list():
             result.append({**infos, "isFinished":infos['last_chapter'] == infos['last_chapter_read']})
 
     #---- sort result by date
-    result.sort(key=lambda x: x.get('date'), reverse=True)
+    #result.sort(key=lambda x: x.get('date'), reverse=True)
+    result.sort(key=ratio)
 
     res = make_response(jsonify(result))
     res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
