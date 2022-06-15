@@ -26,8 +26,13 @@ def ratio(x):
 def get_site(url):
     if (url.startswith("https://mangatx.com/manga/")):
         return 'mangatx'
-    elif (re.match("https:\/\/readmanganato\.com\/manga.+", url)):
+    elif (re.match("https:\/\/readmanganato\.com\/manga", url)):
         return "readmanganato"
+    elif (re.match("https:\/\/mangakakalot\.com\/chapter", url)):
+        return "mangakakalot"
+
+    else:
+        return None
 
 def get_infos_function(title, chapter_list = ''):
     title = clean_title(title)
@@ -67,6 +72,8 @@ def add_follow_function(title, site, url):
     #---- Save to read.json
     with open('chapterList.json', 'w') as file:
         json.dump(reading,file)
+    with open('logAction.txt','a') as file:
+        file.write(f"add {title} {url}\n")
     #---- Call the crawler to get the list of chapters
     chapters, preview = call_crawler(site, title, url)
     chapters = [[chapter[0],chapter[1],False] for chapter in chapters]
@@ -83,6 +90,8 @@ def add_follow_function(title, site, url):
 
     with open('chapterList.json', 'w') as file:
         json.dump(data_local, file)
+    with open('logAction.txt','a') as file:
+        file.write(f"addCrawler {title} {url}\n")
 
 
 def clean_title(title):
@@ -107,8 +116,10 @@ def save(data):
                     print(data)
                     break
 
-    with open('chapterList.json', 'w') as file:
-        json.dump(data_local, file)
+            with open('chapterList.json', 'w') as file:
+                json.dump(data_local, file)
+            with open('logAction.txt','a') as file:
+                file.write(f"readUntil {title} {i}\n")
 
 
 @app.route("/API/uptime", methods=["GET"])
@@ -225,13 +236,15 @@ def add_read():
     data_local = open_with_json('chapterList.json')
 
     if title in data_local:
-        for chapter in data_local[title]['chapters']:
+        for i,chapter in enumerate(data_local[title]['chapters']):
             chapter[2] = True
             if chapter_name == chapter[0]:
                 break
 
-    with open('chapterList.json', 'w') as file:
-        json.dump(data_local, file)
+        with open('chapterList.json', 'w') as file:
+            json.dump(data_local, file)
+        with open('logAction.txt','a') as file:
+            file.write(f"readUntil {title} {i}\n")
 
     res = make_response()
     res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
@@ -258,6 +271,8 @@ def update_chapter():
         log['update'] = time.time()
         with open('log.json', 'w') as file:
             json.dump(log, file)
+        with open('logAction.txt','a') as file:
+            file.write("update\n")
 
     res = make_response()
     res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
@@ -274,6 +289,8 @@ def del_serie():
 
     with open('chapterList.json','w') as file:
         json.dump(data_local, file)
+    with open('logAction.txt','a') as file:
+        file.write(f"del {title}\n")
 
     res = make_response()
     res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
