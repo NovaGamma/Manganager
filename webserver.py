@@ -1,8 +1,8 @@
-from flask import redirect,url_for,Flask,render_template, send_file, jsonify, request, make_response
-from flask_cors import CORS, cross_origin
+from flask import redirect,url_for,Flask, send_file, jsonify, request, make_response
+from flask_cors import CORS
 import os, json
-from crawler_handler import call_crawler, get_title_crawler, get_chapters_crawler
-import re, shutil, subprocess, sys
+from crawler_handler import call_crawler, get_title_crawler
+import re, sys
 import webbrowser
 import time
 from utils import open_with_json
@@ -108,7 +108,7 @@ def save(data):
             with open('chapterList.json', 'w') as file:
                 json.dump(data_local, file)
             with open('logAction.txt','a') as file:
-                file.write(f"readUntil {title} {i}\n")
+                file.write(f"read {title} {i}\n")
 
 
 @app.route("/API/uptime", methods=["GET"])
