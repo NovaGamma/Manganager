@@ -269,8 +269,6 @@ def update_chapter():
         log['update'] = time.time()
         with open('log.json', 'w') as file:
             json.dump(log, file)
-        with open('logAction.txt','a') as file:
-            file.write("update\n")
 
     res = make_response()
     res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
