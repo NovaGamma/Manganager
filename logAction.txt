@@ -80,3 +80,29 @@ read Shikkaku Mon No Saikyou Kenja 8
 read Shikkaku Mon No Saikyou Kenja 9
 read Shikkaku Mon No Saikyou Kenja 10
 readUntil Shikkaku Mon No Saikyou Kenja 10
+add Cultivation Return On Campus https://readmanganato.com/manga-iu986277/chapter-54
+addCrawler Cultivation Return On Campus https://readmanganato.com/manga-iu986277/chapter-54
+readUntil Cultivation Return On Campus 53
+drop Cultivation Return On Campus
+drop Cultivation Return On Campus
+drop I Have a Dragon in my Body
+read Infinite Apostles And Twelve War Girls 150
+read Infinite Apostles And Twelve War Girls 151
+read Infinite Apostles And Twelve War Girls 152
+read Infinite Apostles And Twelve War Girls 153
+read Infinite Apostles And Twelve War Girls 154
+read Infinite Apostles And Twelve War Girls 155
+read Infinite Apostles And Twelve War Girls 156
+read Infinite Apostles And Twelve War Girls 157
+read Infinite Apostles And Twelve War Girls 158
+read Infinite Apostles And Twelve War Girls 159
+read Infinite Apostles And Twelve War Girls 160
+read Infinite Apostles And Twelve War Girls 161
+read Infinite Apostles And Twelve War Girls 162
+read Infinite Apostles And Twelve War Girls 163
+read Infinite Apostles And Twelve War Girls 164
+read Infinite Apostles And Twelve War Girls 165
+read Infinite Apostles And Twelve War Girls 166
+read Infinite Apostles And Twelve War Girls 167
+read Infinite Apostles And Twelve War Girls 168
+read Infinite Apostles And Twelve War Girls 169

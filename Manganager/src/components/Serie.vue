@@ -12,6 +12,7 @@
         </p>
       </div>
       <div>
+        <button @click="drop()">Drop</button>
         <button @click='del()'>Remove</button>
       </div>
     </div>
@@ -69,6 +70,17 @@ export default {
           })
         })
       }
+    },
+    async drop(){
+      await fetch("http://127.0.0.1:4444/API/drop",{
+          method:"POST",
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            'title':this.title
+          })
+        }) 
     },
     async get_infos(){
       let r = await fetch("http://127.0.0.1:4444/API/get_infos_serie/"+this.title)

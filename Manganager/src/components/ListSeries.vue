@@ -10,8 +10,7 @@
       <a v-for="i in Math.floor(series.length/10)" @click="page=i" :key="i">{{i}}|</a>
       <button v-if="series.length/10 > page" @click="page++">Next Page</button>
     </div>
-    <input type="checkbox" id="isFinished" @click="params.not_finished = !params.not_finished; getChapterList()" />
-    <label for="isFinished">Not Finished</label>
+    <Filter @filter="send_filters"></Filter>
     <DisplaySerie v-for="serie in filtered_series" :key="serie" :serie="serie"/>
     <div>
       <button v-if="page > 1" @click="page--">Previous Page</button>
@@ -23,9 +22,10 @@
 
 <script>
 import DisplaySerie from "./DisplaySerie.vue"
+import Filter from "./Filter.vue"
 export default {
   name: 'ListSeries',
-  components :{DisplaySerie},
+  components :{DisplaySerie, Filter},
   data(){
     return {
       series:[],
@@ -33,7 +33,7 @@ export default {
       add : "",
       page:1,
       per_page:10,
-      params:{'not_finished':false}
+      params:{'finished':false, 'sort': "date"}
     }
   },
   async created(){
@@ -54,7 +54,7 @@ export default {
   },
   methods:{
     async getChapterList(){
-      let response = await fetch(`http://127.0.0.1:4444/API/get_read_list?not_finished=${this.params.not_finished}`)
+      let response = await fetch(`http://127.0.0.1:4444/API/get_read_list?finished=${this.params.finished}&sort=${this.params.sort}`)
       this.series = await response.json()
       console.log(this.series)
     },
@@ -73,8 +73,14 @@ export default {
     },
     scrollTop(){
       window.scrollTo(0,0);
+    },
+    async send_filters(finished, sort){
+        console.log(finished);
+        this.params.sort = sort;
+        this.params.finished = finished;
+        await this.getChapterList();
     }
-  }
+  },
 }
 </script>
 

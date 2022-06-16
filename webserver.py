@@ -154,12 +154,14 @@ def add_follow():
 @app.route('/API/get_read_list', methods=['GET','OPTION'])
 def send_read_list():
     chapterList = open_with_json('chapterList.json')
-    not_finished = request.args['not_finished']
-    if not_finished == "true":
-        not_finished = True
+
+    finished = request.args['finished']
+    sort = request.args['sort']
+    if finished == "true":
+        finished = True
     else:
-        not_finished = False
-    print(not_finished)
+        finished = False
+    print(finished)
     #----------- filter chapterList to remove dropped
 
     chapterList = {serie:chapterList[serie] for serie in chapterList.keys() if chapterList[serie]['state'] != "dropped"}
@@ -167,21 +169,22 @@ def send_read_list():
     result = []
     for k in list(chapterList.keys()):
         infos = get_infos_function(k, chapterList)
-        if not_finished and infos['last_chapter'] != infos['last_chapter_read'] or not not_finished:
+        if finished and infos['last_chapter'] != infos['last_chapter_read'] or not finished:
             result.append({**infos, "isFinished":infos['last_chapter'] == infos['last_chapter_read']})
 
     #---- sort result by date
-    #result.sort(key=lambda x: x.get('date'), reverse=True)
-    def ratio(x):
-        serie = chapterList[x.get('title')]
-        last_chap = x.get("last_chapter_read")
-        if last_chap == 'None':
-            index = 0
-        else:
-            index = serie['chapters'].index(last_chap)
-        return (index+1)/len(serie['chapters'])
-        
-    result.sort(key=ratio)
+    if sort == "date":
+        result.sort(key=lambda x: x.get('date'), reverse=True)
+    elif sort == "remaining":
+        def ratio(x):
+            serie = chapterList[x.get('title')]
+            last_chap = x.get("last_chapter_read")
+            if last_chap == 'None':
+                index = 0
+            else:
+                index = serie['chapters'].index(last_chap)
+            return (index+1)/len(serie['chapters'])
+        result.sort(key=ratio)
 
     res = make_response(jsonify(result))
     res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
@@ -286,7 +289,25 @@ def del_serie():
     with open('chapterList.json','w') as file:
         json.dump(data_local, file)
     with open('logAction.txt','a') as file:
-        file.write(f"del {title}\n")
+        file.write(f"delete {title}\n")
+
+    res = make_response()
+    res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
+    return res
+
+@app.route('/API/drop', methods=["POST", 'OPTION'])
+def drop_serie():
+    data = request.get_json()
+    title = clean_title(data['title'])
+    data_local = open_with_json('chapterList.json')
+
+    if title in data_local.keys():
+        data_local[title]["state"] = "dropped"
+
+    with open('chapterList.json','w') as file:
+        json.dump(data_local, file)
+    with open('logAction.txt','a') as file:
+        file.write(f"drop {title}\n")
 
     res = make_response()
     res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
