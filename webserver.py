@@ -5,7 +5,7 @@ from crawler_handler import call_crawler, get_title_crawler
 import re, sys
 import webbrowser
 import time
-from utils import open_with_json
+from utils import open_with_json, clean_title
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -83,11 +83,6 @@ def add_follow_function(title, site, url):
         file.write(f"addCrawler {title} {url}\n")
 
 
-def clean_title(title):
-    cleanString = re.sub('\W+',' ', title )
-    cleanString = ' '.join([el for el in cleanString.split(' ') if el])
-    return cleanString
-
 def save(data):
     data_local = open_with_json('chapterList.json')
 
@@ -101,14 +96,15 @@ def save(data):
             data_local[title]['date'] = time.time()
             for i,chapter in enumerate(data_local[title]["chapters"]):
                 if chapterName == chapter[0]:
-                    data_local[title]["chapters"][i][2] = True
-                    print(data)
+                    if not data_local[title]["chapters"][i][2]:
+                        data_local[title]["chapters"][i][2] = True
+                        print(data)
+                        with open('chapterList.json', 'w') as file:
+                            json.dump(data_local, file)
+                        with open('logAction.txt','a') as file:
+                            file.write(f"read {title} {i}\n")
                     break
 
-            with open('chapterList.json', 'w') as file:
-                json.dump(data_local, file)
-            with open('logAction.txt','a') as file:
-                file.write(f"read {title} {i}\n")
 
 
 @app.route("/API/uptime", methods=["GET"])
@@ -185,6 +181,8 @@ def send_read_list():
                 index = serie['chapters'].index(last_chap)
             return (index+1)/len(serie['chapters'])
         result.sort(key=ratio)
+    elif sort == "sites":
+        result.sort(key=lambda x: x.get('sites').keys()[0])
 
     res = make_response(jsonify(result))
     res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"

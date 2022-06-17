@@ -11,6 +11,9 @@
 
         <input type="checkbox" id="remaining" @click="sort = 'remaining';send_event()"/>
         <label>Remaining chapters</label>
+
+        <input type="checkbox" id="site" @click="sort = 'site';send_event()"/>
+        <label>Sites</label>
     </div>
 </template>
 
@@ -27,7 +30,6 @@ export default{
     },
     methods:{
         send_event(){
-            console.log(this.finished);
             this.$emit("filter",this.finished, this.sort)
         }
     }
