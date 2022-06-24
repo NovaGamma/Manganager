@@ -42,6 +42,18 @@
         "js":["manganato_chapters_genre.js"],
         "all_frames": true,
         "match_about_blank": true
+      },
+      {
+        "matches": ["https://www.asurascans.com/*-chapter-*"],
+        "js":["asurascans.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      },
+      {
+        "matches": ["https://www.asurascans.com/manga*"],
+        "js":["asurascans_chapters.js"],
+        "all_frames": true,
+        "match_about_blank": true
       }
   ],
   "host_permissions":[

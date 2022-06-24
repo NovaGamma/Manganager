@@ -8,6 +8,9 @@ function get_site(url){
   else if(url.match(/https:\/\/mangakakalot\.com\/chapter\/.+\/.+/)){
     return 'mangakakalot'
   }
+  else if(url.match(/https:\/\/www\.asurascans\.com\/.*/)){
+    return 'asurascans'
+  }
   else return 'undefined'
 }
 

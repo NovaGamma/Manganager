@@ -2,14 +2,19 @@ from bs4 import BeautifulSoup
 import requests
 try:
     from crawlers.utils import clean
+    from crawlers.utils import save_preview
 except:
     from utils import clean
+    from utils import save_preview
 
 #MangaTx.com
 
 
 def url_scheme():
     return "https://mangatx.com/manga/"
+
+def type():
+    return 'bs4'
 
 def get_soup(RAW_URL):
     temp = RAW_URL.split("/")
@@ -24,11 +29,7 @@ def get_preview(RAW_URL, title):
     temp = soup.find("div", class_="summary_image")
     url = clean(clean(temp.contents)[0].contents)[0].attrs['data-src']
 
-    img_type = url.split('.')[-1]
-    image = requests.get(url)
-    with open(f"static/previews/{title}.{img_type}",'wb') as f:
-        f.write(image.content)
-    return f"{title}.{img_type}"
+    return save_preview(title, url)
 
 def get_title(RAW_URL):
     soup = get_soup(RAW_URL)

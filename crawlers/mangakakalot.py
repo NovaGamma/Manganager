@@ -2,12 +2,17 @@ from bs4 import BeautifulSoup
 import requests
 try:
     from crawlers.utils import clean
+    from crawlers.utils import save_preview
 except:
     from utils import clean
+    from utils import save_preview
 
 
 def url_scheme():
     return "https://mangakakalot.com/manga-"
+
+def type():
+    return 'bs4'
 
 def get_soup(RAW_URL):
     URL = RAW_URL.split('/')[:3]+['manga']+[RAW_URL.split('/')[4]]
@@ -22,11 +27,7 @@ def get_preview(RAW_URL, title):
     box = soup.find('div', class_= "manga-info-pic")
     url = clean(box.contents)[0].attrs['src']
 
-    img_type = url.split('.')[-1]
-    image = requests.get(url)
-    with open(f"static/previews/{title}.{img_type}",'wb') as f:
-        f.write(image.content)
-    return f"{title}.{img_type}"
+    return save_preview(title, url)
 
 def get_title(RAW_URL):
     soup = get_soup(RAW_URL)
@@ -42,7 +43,7 @@ def get_chapter_list(RAW_URL):
         a = clean(chapter.contents)[0].contents[0]
         chapter_name = a.contents[0]
         url = a.attrs['href']
-        chapterList.append(chapter_name, url)
+        chapterList.append((chapter_name, url))
     return chapterList
 
 

@@ -15,8 +15,14 @@ def call_crawler(site, title, url):
                 module = importlib.import_module('crawlers.'+name)
                 #check if the url correspond to the right site
                 if url.startswith(module.url_scheme()):
-                    chapter_list = module.get_chapter_list(url)
-                    preview = module.get_preview(url, title)
+                    if module.type() == 'selenium':
+                        driver = module.get_page(url)
+                        chapter_list = module.get_chapter_list(driver)
+                        preview = module.get_preview(driver, title)
+                        driver.quit()
+                    else:
+                        chapter_list = module.get_chapter_list(url)
+                        preview = module.get_preview(url, title)
                     return [chapter_list, preview]
                 else:
                     raise Error('URL does not correspond to the url_scheme')
@@ -29,7 +35,11 @@ def get_chapters_crawler(site, url):
                 module = importlib.import_module('crawlers.'+name)
                 #check if the url correspond to the right site
                 if url.startswith(module.url_scheme()):
-                    chapter_list = module.get_chapter_list(url)
+                    if module.type() == 'selenium':
+                        driver = module.get_page(url)
+                        chapter_list = module.get_chapter_list(driver)
+                    else:
+                        chapter_list = module.get_chapter_list(url)
                     return chapter_list
                 else:
                     raise Error('URL does not correspond to the url_scheme')

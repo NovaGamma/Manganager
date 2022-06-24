@@ -131,3 +131,284 @@ read I m Destined For Greatness 110
 read I m Destined For Greatness 111
 read I m Destined For Greatness 112
 read I m Destined For Greatness 113
+add Ending Maker https://www.asurascans.com/ending-maker-chapter-1/
+addCrawler Ending Maker https://www.asurascans.com/ending-maker-chapter-1/
+readUntil Ending Maker 20
+add Overpowered Sword https://www.asurascans.com/overpowered-sword-chapter-1/
+addCrawler Overpowered Sword https://www.asurascans.com/overpowered-sword-chapter-1/
+read Overpowered Sword 0
+read Overpowered Sword 1
+read Overpowered Sword 2
+read Overpowered Sword 3
+read Overpowered Sword 4
+read Overpowered Sword 5
+read Overpowered Sword 6
+read Overpowered Sword 7
+read Overpowered Sword 8
+read Overpowered Sword 9
+read Overpowered Sword 10
+read Overpowered Sword 11
+read Overpowered Sword 12
+read Overpowered Sword 13
+read Overpowered Sword 14
+read Overpowered Sword 15
+read Overpowered Sword 16
+read Overpowered Sword 17
+read Overpowered Sword 18
+read Overpowered Sword 19
+read Overpowered Sword 20
+read Overpowered Sword 21
+read I Have An Apocalyptic Dungeon 39
+read I Have An Apocalyptic Dungeon 40
+read I Have An Apocalyptic Dungeon 41
+read I Have An Apocalyptic Dungeon 42
+read I Have An Apocalyptic Dungeon 43
+read I Have An Apocalyptic Dungeon 44
+read I Have An Apocalyptic Dungeon 45
+read I Have An Apocalyptic Dungeon 46
+read I Have An Apocalyptic Dungeon 47
+read I Have An Apocalyptic Dungeon 48
+read I Have An Apocalyptic Dungeon 49
+add 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu https://readmanganato.com/manga-fo982397/chapter-1
+addCrawler 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu https://readmanganato.com/manga-fo982397/chapter-1
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 1
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 2
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 3
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 4
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 5
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 6
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 7
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 8
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 9
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 10
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 11
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 12
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 13
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 14
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 15
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 16
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 17
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 18
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 19
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 20
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 21
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 22
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 23
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 24
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 25
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 26
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 27
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 28
+readUntil 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 28
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 29
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 30
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 31
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 32
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 33
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 34
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 35
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 36
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 37
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 38
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 39
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 40
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 41
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 42
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 43
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 44
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 45
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 46
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 47
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 48
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 49
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 50
+read 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu 51
+read Updater 43
+read Updater 44
+read Updater 45
+read Updater 46
+read Updater 47
+read Updater 48
+read Updater 49
+read Updater 50
+read Updater 51
+read Updater 52
+read Updater 53
+read Updater 54
+read Updater 55
+read Updater 56
+read Updater 57
+read Updater 58
+read Updater 59
+read Updater 60
+read Updater 61
+read Updater 62
+read Updater 63
+read Updater 64
+read Updater 65
+read Updater 66
+read Updater 67
+read Updater 68
+read Updater 69
+read Updater 70
+read Updater 71
+read Updater 72
+read Updater 73
+read Updater 74
+read Updater 75
+read Updater 76
+read Updater 77
+read Updater 78
+read Updater 79
+read Updater 80
+add Kimoota Idol Yarutteyo https://readmanganato.com/manga-bo978671/chapter-54.5
+addCrawler Kimoota Idol Yarutteyo https://readmanganato.com/manga-bo978671/chapter-54.5
+readUntil Kimoota Idol Yarutteyo 63
+read The World After the Fall 24
+read The World After the Fall 25
+add Protoss Dark Emperor https://readmanganato.com/manga-nz990434/chapter-41
+addCrawler Protoss Dark Emperor https://readmanganato.com/manga-nz990434/chapter-41
+readUntil Protoss Dark Emperor 40
+readUntil Updater 81
+read Protoss Dark Emperor 41
+read Protoss Dark Emperor 42
+read Protoss Dark Emperor 43
+read Protoss Dark Emperor 44
+read Protoss Dark Emperor 45
+read Protoss Dark Emperor 46
+read Protoss Dark Emperor 47
+read Protoss Dark Emperor 48
+read Protoss Dark Emperor 49
+read Protoss Dark Emperor 50
+read Protoss Dark Emperor 51
+read Protoss Dark Emperor 52
+read Protoss Dark Emperor 53
+read Protoss Dark Emperor 54
+read Protoss Dark Emperor 55
+read Protoss Dark Emperor 56
+read Protoss Dark Emperor 57
+read Protoss Dark Emperor 58
+read Protoss Dark Emperor 59
+read Protoss Dark Emperor 60
+read Protoss Dark Emperor 61
+read Protoss Dark Emperor 62
+read Protoss Dark Emperor 63
+read Protoss Dark Emperor 64
+read Protoss Dark Emperor 65
+read Protoss Dark Emperor 66
+read Protoss Dark Emperor 67
+read Protoss Dark Emperor 68
+read Protoss Dark Emperor 69
+drop Protoss Dark Emperor
+read I m Destined For Greatness 114
+read I m Destined For Greatness 115
+read I m Destined For Greatness 116
+read I m Destined For Greatness 117
+read I m Destined For Greatness 118
+read I m Destined For Greatness 119
+read I m Destined For Greatness 120
+read I m Destined For Greatness 121
+read I m Destined For Greatness 122
+read I m Destined For Greatness 123
+read I m Destined For Greatness 124
+read I m Destined For Greatness 125
+read I m Destined For Greatness 126
+read I m Destined For Greatness 127
+read I m Destined For Greatness 128
+read I m Destined For Greatness 129
+read I m Destined For Greatness 130
+read I m Destined For Greatness 131
+read I m Destined For Greatness 132
+read I m Destined For Greatness 133
+read I m Destined For Greatness 134
+read I m Destined For Greatness 135
+drop Kill The Dragon
+read Shikkaku Mon No Saikyou Kenja 11
+read Shikkaku Mon No Saikyou Kenja 12
+read Shikkaku Mon No Saikyou Kenja 13
+read Shikkaku Mon No Saikyou Kenja 14
+read Shikkaku Mon No Saikyou Kenja 15
+read Shikkaku Mon No Saikyou Kenja 16
+read Shikkaku Mon No Saikyou Kenja 17
+read Shikkaku Mon No Saikyou Kenja 18
+read Shikkaku Mon No Saikyou Kenja 19
+read Shikkaku Mon No Saikyou Kenja 20
+read Shikkaku Mon No Saikyou Kenja 21
+read Shikkaku Mon No Saikyou Kenja 22
+read Shikkaku Mon No Saikyou Kenja 23
+read Shikkaku Mon No Saikyou Kenja 24
+read Shikkaku Mon No Saikyou Kenja 25
+read Shikkaku Mon No Saikyou Kenja 26
+read Shikkaku Mon No Saikyou Kenja 27
+read Shikkaku Mon No Saikyou Kenja 28
+read Shikkaku Mon No Saikyou Kenja 29
+read Shikkaku Mon No Saikyou Kenja 30
+read Shikkaku Mon No Saikyou Kenja 31
+read Shikkaku Mon No Saikyou Kenja 32
+read Shikkaku Mon No Saikyou Kenja 33
+read Shikkaku Mon No Saikyou Kenja 34
+read Shikkaku Mon No Saikyou Kenja 35
+read Shikkaku Mon No Saikyou Kenja 36
+read Shikkaku Mon No Saikyou Kenja 37
+read Shikkaku Mon No Saikyou Kenja 38
+read Shikkaku Mon No Saikyou Kenja 39
+read Shikkaku Mon No Saikyou Kenja 40
+read Shikkaku Mon No Saikyou Kenja 41
+read Shikkaku Mon No Saikyou Kenja 42
+read Shikkaku Mon No Saikyou Kenja 43
+read Shikkaku Mon No Saikyou Kenja 44
+read Shikkaku Mon No Saikyou Kenja 45
+read Shikkaku Mon No Saikyou Kenja 46
+read Shikkaku Mon No Saikyou Kenja 47
+read Shikkaku Mon No Saikyou Kenja 48
+read Shikkaku Mon No Saikyou Kenja 49
+read Shikkaku Mon No Saikyou Kenja 50
+read Shikkaku Mon No Saikyou Kenja 51
+read Shikkaku Mon No Saikyou Kenja 52
+read Shikkaku Mon No Saikyou Kenja 53
+read Shikkaku Mon No Saikyou Kenja 54
+read Shikkaku Mon No Saikyou Kenja 55
+read Shikkaku Mon No Saikyou Kenja 56
+read Shikkaku Mon No Saikyou Kenja 57
+read Shikkaku Mon No Saikyou Kenja 58
+read Shikkaku Mon No Saikyou Kenja 59
+read Shikkaku Mon No Saikyou Kenja 60
+read Shikkaku Mon No Saikyou Kenja 61
+read Shikkaku Mon No Saikyou Kenja 62
+read Shikkaku Mon No Saikyou Kenja 63
+read Shikkaku Mon No Saikyou Kenja 64
+read Shikkaku Mon No Saikyou Kenja 65
+read Shikkaku Mon No Saikyou Kenja 66
+read Shikkaku Mon No Saikyou Kenja 67
+read Shikkaku Mon No Saikyou Kenja 68
+read Shikkaku Mon No Saikyou Kenja 69
+read Shikkaku Mon No Saikyou Kenja 70
+read Shikkaku Mon No Saikyou Kenja 71
+read Shikkaku Mon No Saikyou Kenja 72
+read Shikkaku Mon No Saikyou Kenja 73
+read Shikkaku Mon No Saikyou Kenja 74
+read Shikkaku Mon No Saikyou Kenja 75
+read Shikkaku Mon No Saikyou Kenja 76
+read Shikkaku Mon No Saikyou Kenja 77
+read Shikkaku Mon No Saikyou Kenja 78
+read Shikkaku Mon No Saikyou Kenja 79
+read Shikkaku Mon No Saikyou Kenja 80
+read Shikkaku Mon No Saikyou Kenja 81
+read Shikkaku Mon No Saikyou Kenja 82
+read Shikkaku Mon No Saikyou Kenja 83
+read Shikkaku Mon No Saikyou Kenja 84
+read Shikkaku Mon No Saikyou Kenja 85
+read Shikkaku Mon No Saikyou Kenja 86
+read Shikkaku Mon No Saikyou Kenja 87
+read Shikkaku Mon No Saikyou Kenja 88
+read Shikkaku Mon No Saikyou Kenja 89
+read Shikkaku Mon No Saikyou Kenja 90
+read Shikkaku Mon No Saikyou Kenja 91
+read Shikkaku Mon No Saikyou Kenja 92
+read Shikkaku Mon No Saikyou Kenja 93
+read Shikkaku Mon No Saikyou Kenja 97
+read Shikkaku Mon No Saikyou Kenja 98
+read Shikkaku Mon No Saikyou Kenja 94
+read Shikkaku Mon No Saikyou Kenja 95
+read Shikkaku Mon No Saikyou Kenja 96
+read Shikkaku Mon No Saikyou Kenja 99

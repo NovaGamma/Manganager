@@ -2,7 +2,7 @@
   <div class="outer">
   <div class="box">
     <div>
-      <img :src="'http://127.0.0.1:4444/API/get_preview/'+title">
+      <img :src="'http://127.0.0.1:4444/API/get_preview/'+title" width="200" height="300"/>
       <div>
         {{title}}
         {{serie.site}}

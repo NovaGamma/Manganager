@@ -1,7 +1,7 @@
 #update
 #clone the chapterList
 import shutil, os, json
-from crawler_handler import call_crawler, get_title_crawler, get_chapters_crawler
+from crawler_handler import get_chapters_crawler
 
 def open_with_json(path):
     if os.path.exists(path):
