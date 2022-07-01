@@ -412,3 +412,28 @@ read Shikkaku Mon No Saikyou Kenja 94
 read Shikkaku Mon No Saikyou Kenja 95
 read Shikkaku Mon No Saikyou Kenja 96
 read Shikkaku Mon No Saikyou Kenja 99
+readUntil Omniscient Reader S Viewpoint 112
+readUntil The Eternal Supreme 101
+read Dungeon House 21
+read Dungeon House 22
+read Dungeon House 23
+read Dungeon House 24
+read Dungeon House 25
+read Dungeon House 26
+read Dungeon House 27
+read Dungeon House 28
+read Dungeon House 29
+readUntil Solo Leveling 180
+read Archmage Streamer 39
+read Archmage Streamer 40
+read Archmage Streamer 41
+read Archmage Streamer 42
+read Archmage Streamer 43
+read Archmage Streamer 44
+read Archmage Streamer 45
+read Archmage Streamer 46
+read Archmage Streamer 47
+readUntil Archmage Streamer 47
+read Heavenly Demon Instructor 20
+read Heavenly Demon Instructor 21
+read The Return of the Crazy Demon 30
