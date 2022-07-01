@@ -1,11 +1,11 @@
-from flask import redirect,url_for,Flask,render_template, send_file, jsonify, request, make_response
-from flask_cors import CORS, cross_origin
+from flask import redirect,url_for,Flask, send_file, jsonify, request, make_response
+from flask_cors import CORS
 import os, json
-from crawler_handler import call_crawler, get_title_crawler, get_chapters_crawler
-import re, shutil, subprocess, sys
+from crawler_handler import call_crawler, get_title_crawler
+import re, sys
 import webbrowser
 import time
-from utils import open_with_json
+from utils import open_with_json, clean_title
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -15,8 +15,14 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 def get_site(url):
     if (url.startswith("https://mangatx.com/manga/")):
         return 'mangatx'
-    elif (re.match("https:\/\/readmanganato\.com\/manga.+", url)):
+    elif (re.match("https:\/\/readmanganato\.com\/manga", url)):
         return "readmanganato"
+    elif (re.match("https:\/\/mangakakalot\.com\/chapter", url)):
+        return "mangakakalot"
+    elif (re.match("https:\/\/asurascans\.com\/.*-chapter-.*", url)):
+        return "asurascans"
+    else:
+        return None
 
 def get_infos_function(title, chapter_list = ''):
     title = clean_title(title)
@@ -56,6 +62,8 @@ def add_follow_function(title, site, url):
     #---- Save to read.json
     with open('chapterList.json', 'w') as file:
         json.dump(reading,file)
+    with open('logAction.txt','a') as file:
+        file.write(f"add {title} {url}\n")
     #---- Call the crawler to get the list of chapters
     chapters, preview = call_crawler(site, title, url)
     chapters = [[chapter[0],chapter[1],False] for chapter in chapters]
@@ -72,12 +80,9 @@ def add_follow_function(title, site, url):
 
     with open('chapterList.json', 'w') as file:
         json.dump(data_local, file)
+    with open('logAction.txt','a') as file:
+        file.write(f"addCrawler {title} {url}\n")
 
-
-def clean_title(title):
-    cleanString = re.sub('\W+',' ', title )
-    cleanString = ' '.join([el for el in cleanString.split(' ') if el])
-    return cleanString
 
 def save(data):
     data_local = open_with_json('chapterList.json')
@@ -92,12 +97,15 @@ def save(data):
             data_local[title]['date'] = time.time()
             for i,chapter in enumerate(data_local[title]["chapters"]):
                 if chapterName == chapter[0]:
-                    data_local[title]["chapters"][i][2] = True
-                    print(data)
+                    if not data_local[title]["chapters"][i][2]:
+                        data_local[title]["chapters"][i][2] = True
+                        print(data)
+                        with open('chapterList.json', 'w') as file:
+                            json.dump(data_local, file)
+                        with open('logAction.txt','a') as file:
+                            file.write(f"read {title} {i}\n")
                     break
 
-    with open('chapterList.json', 'w') as file:
-        json.dump(data_local, file)
 
 
 @app.route("/API/uptime", methods=["GET"])
@@ -143,12 +151,14 @@ def add_follow():
 @app.route('/API/get_read_list', methods=['GET','OPTION'])
 def send_read_list():
     chapterList = open_with_json('chapterList.json')
-    not_finished = request.args['not_finished']
-    if not_finished == "true":
-        not_finished = True
+
+    finished = request.args['finished']
+    sort = request.args['sort']
+    if finished == "true":
+        finished = True
     else:
-        not_finished = False
-    print(not_finished)
+        finished = False
+    print(finished)
     #----------- filter chapterList to remove dropped
 
     chapterList = {serie:chapterList[serie] for serie in chapterList.keys() if chapterList[serie]['state'] != "dropped"}
@@ -156,14 +166,27 @@ def send_read_list():
     result = []
     for k in list(chapterList.keys()):
         infos = get_infos_function(k, chapterList)
-        if not_finished and infos['last_chapter'] != infos['last_chapter_read'] or not not_finished:
+        if finished and infos['last_chapter'] != infos['last_chapter_read'] or not finished:
             result.append({**infos, "isFinished":infos['last_chapter'] == infos['last_chapter_read']})
 
     #---- sort result by date
-    result.sort(key=lambda x: x.get('date'), reverse=True)
+    if sort == "date":
+        result.sort(key=lambda x: x.get('date'), reverse=True)
+    elif sort == "remaining":
+        def ratio(x):
+            serie = chapterList[x.get('title')]
+            last_chap = x.get("last_chapter_read")
+            if last_chap == 'None':
+                index = 0
+            else:
+                index = serie['chapters'].index(last_chap)
+            return (index+1)/len(serie['chapters'])
+        result.sort(key=ratio)
+    elif sort == "sites":
+        result.sort(key=lambda x: x.get('sites').keys()[0])
 
     res = make_response(jsonify(result))
-    res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
+    res.headers['Access-Control-Allow-Origin'] = "app://."
     return res
 
 
@@ -202,7 +225,7 @@ def add_serie():
     add_follow_function(title, site, url)
 
     res = make_response({'title':title})
-    res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
+    res.headers['Access-Control-Allow-Origin'] = "app://."
     return res
 
 @app.route('/API/read_until/', methods=['POST','OPTION'])
@@ -213,16 +236,18 @@ def add_read():
     data_local = open_with_json('chapterList.json')
 
     if title in data_local:
-        for chapter in data_local[title]['chapters']:
+        for i,chapter in enumerate(data_local[title]['chapters']):
             chapter[2] = True
             if chapter_name == chapter[0]:
                 break
 
-    with open('chapterList.json', 'w') as file:
-        json.dump(data_local, file)
+        with open('chapterList.json', 'w') as file:
+            json.dump(data_local, file)
+        with open('logAction.txt','a') as file:
+            file.write(f"readUntil {title} {i}\n")
 
     res = make_response()
-    res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
+    res.headers['Access-Control-Allow-Origin'] = "app://."
     return res
 
 @app.route('/API/open/', methods=['POST','OPTION'])
@@ -233,7 +258,7 @@ def open_url():
     webbrowser.open(url)
 
     res = make_response()
-    res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
+    res.headers['Access-Control-Allow-Origin'] = "app://."
     return res
 
 @app.route('/API/update_chapter/', methods=['POST','OPTION'])
@@ -248,7 +273,43 @@ def update_chapter():
             json.dump(log, file)
 
     res = make_response()
-    res.headers['Access-Control-Allow-Origin'] = "http://localhost:8080"
+    res.headers['Access-Control-Allow-Origin'] = "app://."
+    return res
+
+@app.route('/API/delete', methods=["POST",'OPTION'])
+def del_serie():
+    data = request.get_json()
+    title = clean_title(data['title'])
+    data_local = open_with_json('chapterList.json')
+
+    if title in data_local.keys():
+        del data_local[title]
+
+    with open('chapterList.json','w') as file:
+        json.dump(data_local, file)
+    with open('logAction.txt','a') as file:
+        file.write(f"delete {title}\n")
+
+    res = make_response()
+    res.headers['Access-Control-Allow-Origin'] = "app://."
+    return res
+
+@app.route('/API/drop', methods=["POST", 'OPTION'])
+def drop_serie():
+    data = request.get_json()
+    title = clean_title(data['title'])
+    data_local = open_with_json('chapterList.json')
+
+    if title in data_local.keys():
+        data_local[title]["state"] = "dropped"
+
+    with open('chapterList.json','w') as file:
+        json.dump(data_local, file)
+    with open('logAction.txt','a') as file:
+        file.write(f"drop {title}\n")
+
+    res = make_response()
+    res.headers['Access-Control-Allow-Origin'] = "app://."
     return res
 
 
@@ -257,7 +318,7 @@ def is_read():
     name = clean_title(request.get_json()['title'])
     data = open_with_json('chapterList.json')
 
-    if name in data.keys():
+    if name.lower() in  [k.lower() for k in data.keys()]:
         return jsonify(1)
     return jsonify(0)
 

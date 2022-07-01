@@ -2,7 +2,7 @@
   <div class="chapter">
     <div class="logo">
       <router-link :to="'/serie/'+serie.title">
-        <img :src="'http://127.0.0.1:4444/API/get_preview/'+serie.title">
+        <img :src="'http://127.0.0.1:4444/API/get_preview/'+serie.title" width="200" height="300">
       </router-link>
     </div>
     <div class="chapter-info">
@@ -52,10 +52,10 @@ export default {
 
 
 .chapter{
-  margin-left : 15%;
-  margin-right : 15%;
-  margin-top : 2%;
-  margin-bottom : 2%;
+  margin-left : 2%;
+  margin-right : 2%;
+  margin-top : .1%;
+  margin-bottom : .1%;
   background-color: white;
 }
 

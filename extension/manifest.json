@@ -4,8 +4,10 @@
   "version": "1.0",
   "manifest_version": 3,
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type":"module"
   },
+  "minimum_chrome_version": "92",
   "action": {
     "default_title": "Click to view a popup",
     "default_popup": "popup.html"
@@ -26,6 +28,30 @@
       {
         "matches": ["https://mangatx.com/manga/"],
         "js": ["mangatx_chapters.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      },
+      {
+        "matches": ["https://manganato.com/"],
+        "js":["manganato_chapters.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      },
+      {
+        "matches": ["https://manganato.com/genre*"],
+        "js":["manganato_chapters_genre.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      },
+      {
+        "matches": ["https://www.asurascans.com/*-chapter-*"],
+        "js":["asurascans.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      },
+      {
+        "matches": ["https://www.asurascans.com/manga*"],
+        "js":["asurascans_chapters.js"],
         "all_frames": true,
         "match_about_blank": true
       }

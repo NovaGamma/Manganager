@@ -1,5 +1,6 @@
 import json
 import os
+import re
 
 def open_with_json(path):
     if os.path.exists(path):
@@ -8,3 +9,8 @@ def open_with_json(path):
     else:
         data = {}
     return data
+
+def clean_title(title):
+    cleanString = re.sub('\W+',' ', title )
+    cleanString = ' '.join([el for el in cleanString.split(' ') if el])
+    return cleanString
