@@ -186,7 +186,7 @@ def send_read_list():
         result.sort(key=lambda x: x.get('sites').keys()[0])
 
     res = make_response(jsonify(result))
-    res.headers['Access-Control-Allow-Origin'] = "app://."
+    res.headers['Access-Control-Allow-Origin'] = "*"
     return res
 
 
@@ -225,7 +225,7 @@ def add_serie():
     add_follow_function(title, site, url)
 
     res = make_response({'title':title})
-    res.headers['Access-Control-Allow-Origin'] = "app://."
+    res.headers['Access-Control-Allow-Origin'] = "*"
     return res
 
 @app.route('/API/read_until/', methods=['POST','OPTION'])
@@ -247,7 +247,7 @@ def add_read():
             file.write(f"readUntil {title} {i}\n")
 
     res = make_response()
-    res.headers['Access-Control-Allow-Origin'] = "app://."
+    res.headers['Access-Control-Allow-Origin'] = "*"
     return res
 
 @app.route('/API/open/', methods=['POST','OPTION'])
@@ -258,7 +258,7 @@ def open_url():
     webbrowser.open(url)
 
     res = make_response()
-    res.headers['Access-Control-Allow-Origin'] = "app://."
+    res.headers['Access-Control-Allow-Origin'] = "*"
     return res
 
 @app.route('/API/update_chapter/', methods=['POST','OPTION'])
@@ -273,7 +273,7 @@ def update_chapter():
             json.dump(log, file)
 
     res = make_response()
-    res.headers['Access-Control-Allow-Origin'] = "app://."
+    res.headers['Access-Control-Allow-Origin'] = "*"
     return res
 
 @app.route('/API/delete', methods=["POST",'OPTION'])
@@ -291,7 +291,7 @@ def del_serie():
         file.write(f"delete {title}\n")
 
     res = make_response()
-    res.headers['Access-Control-Allow-Origin'] = "app://."
+    res.headers['Access-Control-Allow-Origin'] = "*"
     return res
 
 @app.route('/API/drop', methods=["POST", 'OPTION'])
@@ -309,7 +309,7 @@ def drop_serie():
         file.write(f"drop {title}\n")
 
     res = make_response()
-    res.headers['Access-Control-Allow-Origin'] = "app://."
+    res.headers['Access-Control-Allow-Origin'] = "*"
     return res
 
 
