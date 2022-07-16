@@ -182,6 +182,7 @@ def is_read():
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
     print(sys.argv)
+    sys.setrecursionlimit(100000)
     handler = Handler()
     if 'dev' in sys.argv:
         app.run(threaded=True, port=4444)

@@ -17,12 +17,15 @@ series = data_local.keys()
 for i,serie in enumerate(series):
     data_local = open_with_json("chapterList_temp.json")
     print(f"{i/len(series)*100} %",serie)
-    chapters = get_chapters_crawler(*list(data_local[serie]['sites'].items())[0])
-    unpacked = [chapter[0] for chapter in data_local[serie]['chapters']]
-    for chapter in chapters:
-        if chapter[0] not in unpacked:
-            data_local[serie]['chapters'].append([*chapter, False])
-    with open('chapterList_temp.json','w') as file:
-        json.dump(data_local, file)
+    try:
+        chapters = get_chapters_crawler(*list(data_local[serie]['sites'].items())[0])
+        unpacked = [chapter[0] for chapter in data_local[serie]['chapters']]
+        for chapter in chapters:
+            if chapter[0] not in unpacked:
+                data_local[serie]['chapters'].append([*chapter, False])
+        with open('chapterList_temp.json','w') as file:
+            json.dump(data_local, file)
+    except(error):
+        print(error)
 
 shutil.copy("chapterList_temp.json", "chapterList.json")

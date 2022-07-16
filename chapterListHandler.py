@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from crawler_handler import call_crawler
-from utils import open_with_json, clean_title
+from utils import clean_title
 import time
 import multiprocessing
 import json
-from typing import List
 
 @dataclass
 class Chapter:
@@ -12,6 +11,8 @@ class Chapter:
     name: str
     read: bool = False
 
+    def __repr__(self):
+        return f"Chapter({self.name})"
 
 @dataclass
 class Serie:
@@ -19,8 +20,8 @@ class Serie:
     sites: dict
     date: float
     state: bool
+    chapters: list
     preview: str = ''
-    chapters: List = field(default_factory = [])
 
     def get_infos(self):
         last_chap = self.chapters[-1]
@@ -28,7 +29,7 @@ class Serie:
         return {
             'title':self.title,
             'last_chapter':[last_chap.name, last_chap.url, last_chap.read],
-            'last_chapter_read':[last_read.name, last_read.url, last_read.read],
+            'last_chapter_read':"None" if last_read is None else [last_read.name, last_read.url, last_read.read],
             'site':list(self.sites.keys())[0],
             'date':self.date,
             'state':self.state
@@ -130,7 +131,7 @@ class Handler:
     def add_follow(self, title: str, site: str, url: str) -> None:
         if self.get_serie(title):
             return
-        serie = Serie(title = title, sites = {site:url}, date=time.time(), state="reading")
+        serie = Serie(title = title, sites = {site:url}, date=time.time(), state="reading", chapters = [])
         self.log(f"add {title} {url}\n")
 
         chapters, preview = call_crawler(site, title, url)
@@ -139,15 +140,18 @@ class Handler:
         serie.chapters = chapters
         serie.preview = preview
 
+        self.series.append(serie)
+        print(serie)
+        print(self.series[0])
         self.save()
 
     def following(self, title: str, site: str) -> bool:
         serie = self.get_serie(title)
-        return site in serie.sites
+        return False if serie is None else site in serie.sites
 
     def get_read_list(self, kwargs) -> list:
         series_list = [serie for serie in self.series if serie.state != "dropped"]
-        if "finished" in kwargs and kwargs["finished"]:
+        if "finished" in kwargs and kwargs["finished"] == "true":
             series_list = [serie for serie in series_list if serie.get_last_chapter_read() != serie.chapters[-1]]
 
         if "sort" in kwargs:
@@ -170,20 +174,28 @@ class Handler:
         return [serie.get_infos() for serie in series_list]
 
     def save(self):
-        multiprocessing.Process(target=self.save_function, args=(self.lock, self.series))
+        process = multiprocessing.Process(target=save_function, args=(self.lock, self.series))
+        process.start()
+
+    def log(self, message):
+        pass
 
 def save_function(lock, series):
     data = {}
     for serie in series:
         data[serie.title] = {
-            'sites':{serie.sites},
-            'chapters': serie.chapters_json,
+            'sites':serie.sites,
+            'chapters': serie.chapters_json(),
             'preview': serie.preview,
             'state': serie.state,
             'date': serie.date
         }
 
-
+    print(data)
     with lock:
         with open("chapterList.json", 'w') as file:
             json.dump(data, file)
+
+if __name__ == "__main__":
+    handler = Handler()
+    handler.save()
