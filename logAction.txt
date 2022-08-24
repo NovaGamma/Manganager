@@ -699,3 +699,12 @@ read Atsumare Fushigi Kenkyu Bu 276
 read Atsumare Fushigi Kenkyu Bu 277
 drop I Return From The Heaven And Worlds
 drop I Opened A Harem In Hell
+drop The Superb Captain In The City
+drop Greatest Boss System
+delete The Story of a Low Rank Soldier Becoming a Monarch
+drop My Cultivator Girlfriend
+drop Eternal Kingdom
+drop Reaper of the Drifting Moon
+delete Soaring Heavenly Dragon
+drop I m Just An Immortal
+drop Cultivators in the city

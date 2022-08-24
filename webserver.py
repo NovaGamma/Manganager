@@ -22,6 +22,8 @@ def get_site(url):
         return "mangakakalot"
     elif (re.match("https:\/\/asurascans\.com\/.*-chapter-.*", url)):
         return "asurascans"
+    elif (re.match("https:\/\/lhtranslation\.net\/manga\/.*\/.*")):
+        return "lhtranslation"
     else:
         return None
 
@@ -130,14 +132,7 @@ def open_url():
 
 @app.route('/API/update_chapter/', methods=['POST','OPTION'])
 def update_chapter():
-    current_time = time.time()
-    log = open_with_json('log.json')
-    update_time = log['update']
-    if current_time - update_time > 86000:
-        os.system("python update_script.py")
-        log['update'] = time.time()
-        with open('log.json', 'w') as file:
-            json.dump(log, file)
+    handler.update()
 
     res = make_response()
     res.headers['Access-Control-Allow-Origin'] = "*"

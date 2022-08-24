@@ -38,6 +38,7 @@ def get_chapters_crawler(site, url):
                     if module.type() == 'selenium':
                         driver = module.get_page(url)
                         chapter_list = module.get_chapter_list(driver)
+                        driver.quit()
                     else:
                         chapter_list = module.get_chapter_list(url)
                     return chapter_list

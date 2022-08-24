@@ -1,9 +1,10 @@
 from dataclasses import dataclass
-from crawler_handler import call_crawler
-from utils import clean_title
+from statistics import mean, median
+from crawler_handler import call_crawler, get_chapters_crawler
+from utils import clean_title, open_with_json
 import time
 import multiprocessing
-import json
+import json, shutil
 
 @dataclass
 class Chapter:
@@ -71,28 +72,63 @@ class Handler:
 
         self.lock = multiprocessing.Lock()
 
+    def reload(self) -> None:
+        with open("chapterList.json",'r') as file:
+            data = json.load(file)
+        self.series = [Serie(
+            title = title,
+            sites = serie['sites'], 
+            date = float(serie['date']), 
+            state = serie['state'], 
+            preview = serie["preview"], 
+            chapters = [Chapter(url = chapter[1], name = chapter[0], read = chapter[2]) for chapter in serie["chapters"]]
+        ) for (title, serie) in data.items()]
 
-    def delete(self, title):
+    def update(self) -> None:
+        current_time = time.time()
+        log = open_with_json('log.json')
+        update_time = log['update']
+        if current_time - update_time > 86000:
+            for i,serie in enumerate(sorted(self.series, key=lambda x: x.date, reverse=True)):
+                try:
+                    chapters = get_chapters_crawler(*list(serie.sites.items())[0])
+                    unpacked = [chapter.name for chapter in serie.chapters]
+                    count = 0
+                    for chapter in chapters:
+                        if chapter[0] not in unpacked:
+                            count += 1
+                            serie.chapters.append(Chapter(url = chapter[1], name = chapter[0]))
+                    if count != 0:
+                        print(f"{i/len(self.series)*100} %", count, serie.title)
+                    else:
+                        print(f"{i/len(self.series)*100} %")
+                except Exception as err:
+                    print(err)
+
+            log['update'] = time.time()
+            with open('log.json', 'w') as file:
+                json.dump(log, file)
+            self.save()
+
+    def delete(self, title: str) -> None:
         serie = self.get_serie(title)
         if serie:
             self.series.remove(serie)
             self.save()
 
-    def drop(self, title):
+    def drop(self, title: str) -> None:
         serie = self.get_serie(title)
         if serie:
             serie.state = "dropped"
             self.save()
 
-    def read_until(self, title, chapterName):
+    def read_until(self, title: str, chapterName: str) -> None:
         serie = self.get_serie(title)
         if serie:
             for chapter in serie.chapters:
+                chapter.read = True
                 if chapter.name == chapterName:
-                    chapter.read = True
                     break
-                else:
-                    chapter.read = True
             self.save()
 
     def read_chapter(self, data: dict) -> None:
@@ -141,8 +177,6 @@ class Handler:
         serie.preview = preview
 
         self.series.append(serie)
-        print(serie)
-        print(self.series[0])
         self.save()
 
     def following(self, title: str, site: str) -> bool:
@@ -174,28 +208,70 @@ class Handler:
         return [serie.get_infos() for serie in series_list]
 
     def save(self):
-        process = multiprocessing.Process(target=save_function, args=(self.lock, self.series))
-        process.start()
+        data = {}
+        for serie in self.series:
+            data[serie.title] = {
+                'sites':serie.sites,
+                'chapters': serie.chapters_json(),
+                'preview': serie.preview,
+                'state': serie.state,
+                'date': serie.date
+            }
+
+        with self.lock:
+            with open("chapterList.json", 'w') as file:
+                json.dump(data, file)
 
     def log(self, message):
         pass
+    
+def convert_to_float(number: str) -> float:
+    if ':' in number:
+        number = number.rstrip(':')
+    if number.isdecimal() or '.' in number:
+        return float(number)
+    if '-' in number:
+        if '-' == number[-1]:
+            return float(number[:-1])
+        number = number.replace('-','.')
+        return float(number)
+    if ',' in number:
+        number = number.replace(',','.')
+        return float(number)
+    raise ValueError
 
-def save_function(lock, series):
-    data = {}
-    for serie in series:
-        data[serie.title] = {
-            'sites':serie.sites,
-            'chapters': serie.chapters_json(),
-            'preview': serie.preview,
-            'state': serie.state,
-            'date': serie.date
-        }
-
-    print(data)
-    with lock:
-        with open("chapterList.json", 'w') as file:
-            json.dump(data, file)
+def extract_chapter_number(name: str) -> float:
+    name = name.lower()
+    if any([x in name for x in ["extra", "bonus", "special", "hiatus"]]):
+        return 0.0
+    index = name.find("chapter")
+    if index == -1:
+        if name.find("ch.") == -1:
+            if name.find("episode") == -1:
+                raise ValueError
+            else:
+                index = name.find("episode")
+                name = name[index:]
+                a = name.lstrip("episode").split(' ')
+        else:
+            index = name.find("ch.")
+            name = name[index:]
+            a = name.lstrip("ch.").split(' ')
+    else:        
+        name = name[index:]
+        a = name.lstrip("chapter ").split(' ')
+    if len(a) > 1:
+        return convert_to_float(a[0])
+    else:
+        return convert_to_float(a[0])
 
 if __name__ == "__main__":
+    from time import perf_counter
     handler = Handler()
-    handler.save()
+    counter = 0
+    for serie in handler.series:
+        for chapter in serie.chapters:
+            try:
+                number = extract_chapter_number(chapter.name)
+            except ValueError:
+                print(serie.title, chapter.name)
