@@ -1,18 +1,4 @@
-function get_site(url){
-  if (url.match(/https:\/\/mangatx\.com\/manga\/.+\/.+\//)){
-    return 'mangatx'
-  }
-  else if(url.match(/https:\/\/readmanganato\.com\/manga.+\/chapter-.+/)){
-    return 'readmanganato'
-  }
-  else if(url.match(/https:\/\/mangakakalot\.com\/chapter\/.+\/.+/)){
-    return 'mangakakalot'
-  }
-  else if(url.match(/https:\/\/www\.asurascans\.com\/.*/)){
-    return 'asurascans'
-  }
-  else return 'undefined'
-}
+import get_site from './utils.js'
 
 var query = { active: true, currentWindow: true };
 chrome.tabs.query(query, async function(tabs){
@@ -46,8 +32,8 @@ chrome.tabs.query(query, async function(tabs){
         });
         let followed = await response.json()
         console.log(followed)
-        container = document.getElementById('container');
-        button = document.createElement('button');
+        let container = document.getElementById('container');
+        let button = document.createElement('button');
         button.className = "button";
         if (!followed.followed){
           button.innerHTML = "Follow Series";

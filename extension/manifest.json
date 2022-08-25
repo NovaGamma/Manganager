@@ -26,7 +26,7 @@
         "match_about_blank": true
       },
       {
-        "matches": ["https://mangatx.com/manga/"],
+        "matches": ["https://mangatx.com/"],
         "js": ["mangatx_chapters.js"],
         "all_frames": true,
         "match_about_blank": true
@@ -52,6 +52,18 @@
       {
         "matches": ["https://www.asurascans.com/manga*"],
         "js":["asurascans_chapters.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      },
+      {
+        "matches": ["https://lhtranslation.net/home/"],
+        "js":["lhtranslation_chapters.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      },
+      {
+        "matches": ["https://lhtranslation.net/manga/*/*"],
+        "js":["lhtranslation.js"],
         "all_frames": true,
         "match_about_blank": true
       }

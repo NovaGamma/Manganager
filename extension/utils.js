@@ -12,5 +12,8 @@ export default
     else if(url.match(/https:\/\/www\.asurascans\.com\/.*/)){
       return 'asurascans'
     }
+    else if (url.match(/https:\/\/lhtranslation\.net\/manga\/.*\/.*/)){
+        return "lhtranslation"
+    }
     else return 'undefined'
   }

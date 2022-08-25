@@ -11,6 +11,7 @@ def open_with_json(path):
     return data
 
 def clean_title(title):
+    print(title)
     cleanString = re.sub('\W+',' ', title )
     cleanString = ' '.join([el for el in cleanString.split(' ') if el])
     return cleanString
