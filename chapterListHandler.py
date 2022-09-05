@@ -6,6 +6,7 @@ from utils import clean_title, open_with_json
 import time
 import multiprocessing
 import json
+from mongo import update, update_serie, remove_serie, get_serie, get_series, get_database, add_serie, set_updated
 
 @dataclass
 class Chapter:
@@ -56,6 +57,15 @@ class Serie:
                 return chapter
         return None            
 
+    def mongo(self):
+        return {
+            'title':self.title,
+            'sites':self.sites,
+            'chapters': self.chapters_json(),
+            'preview': self.preview,
+            'state': self.state,
+            'date': self.date}
+
     def chapters_json(self):
         return [[chapter.name, chapter.url, chapter.read] for chapter in self.chapters]
 
@@ -67,8 +77,11 @@ class Handler:
     series: List[Serie]
     lock: object
     def __init__(self) -> None:
-        with open("chapterList.json",'r') as file:
-            data = json.load(file)
+        self.id = open_with_json("identifier.json")
+        if update(self.id): #check if needed to update from the db
+            data = get_series()
+        else: #just get from local file
+            data = open_with_json("chapterList.json")
         self.series = [Serie(
             title = title,
             sites = serie['sites'], 
@@ -106,13 +119,15 @@ class Handler:
                         if chapter[0] not in unpacked:
                             count += 1
                             serie.chapters.append(Chapter(url = chapter[1], name = chapter[0]))
-                    if count != 0:
+                    if count != 0: #new chapters have been found
+                        update_serie(serie, self.id)
                         print(f"{i/len(self.series)*100} %", count, serie.title)
                     else:
                         print(f"{i/len(self.series)*100} %")
                 except Exception as err:
                     print(err)
 
+            set_updated(time.time())
             log['update'] = time.time()
             with open('log.json', 'w') as file:
                 json.dump(log, file)
@@ -122,12 +137,14 @@ class Handler:
         serie = self.get_serie(title)
         if serie:
             self.series.remove(serie)
+            remove_serie(serie, self.id)
             self.save()
 
     def drop(self, title: str) -> None:
         serie = self.get_serie(title)
         if serie:
             serie.state = "dropped"
+            update_serie(serie, self.id)
             self.save()
 
     def read_until(self, title: str, chapterName: str) -> None:
@@ -137,6 +154,7 @@ class Handler:
                 chapter.read = True
                 if chapter.name == chapterName:
                     break
+            update_serie(serie, self.id)
             self.save()
 
     def read_chapter(self, data: dict) -> None:
@@ -153,6 +171,7 @@ class Handler:
                     chapter.read = True
                     print(data)
                     self.log(f"read {title}\n")
+                    update_serie(serie, self.id)
                     self.save()
                     
 
@@ -185,6 +204,7 @@ class Handler:
         serie.preview = preview
 
         self.series.append(serie)
+        add_serie(serie, self.id)
         self.save()
 
     def following(self, title: str, site: str) -> bool:
