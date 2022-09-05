@@ -1,10 +1,11 @@
 from dataclasses import dataclass
 from statistics import mean, median
+from typing import List
 from crawler_handler import call_crawler, get_chapters_crawler
 from utils import clean_title, open_with_json
 import time
 import multiprocessing
-import json, shutil
+import json
 
 @dataclass
 class Chapter:
@@ -14,6 +15,13 @@ class Chapter:
 
     def __repr__(self):
         return f"Chapter({self.name})"
+    
+    def __eq__(self, other: object):
+        if other is not None:
+            return self.name == other.name
+        else:
+            return False
+
 
 @dataclass
 class Serie:
@@ -56,7 +64,7 @@ class Serie:
 
 
 class Handler:
-    series: list
+    series: List[Serie]
     lock: object
     def __init__(self) -> None:
         with open("chapterList.json",'r') as file:
@@ -268,10 +276,30 @@ def extract_chapter_number(name: str) -> float:
 if __name__ == "__main__":
     from time import perf_counter
     handler = Handler()
-    counter = 0
+    '''mangatx = [serie for serie in handler.series if "mangatx" in serie.sites.keys()]
+    print(len(mangatx))
+    for i,serie in enumerate(mangatx):
+        print(i,serie.title)
+        chapters = get_chapters_crawler(*list(serie.sites.items())[0])
+        new_chapters = [Chapter(chapter[1], chapter[0]) for chapter in chapters]
+        last_read = serie.get_last_chapter_read()
+        if last_read is None:
+            continue
+        try:
+            index = new_chapters.index(last_read)
+        except ValueError:
+            index = serie.chapters.index(last_read)
+        for chapter in new_chapters[:index]:
+            chapter.read = True
+        serie.chapters = new_chapters
+    handler.save()
+    print("done")'''
+
+    '''
     for serie in handler.series:
         for chapter in serie.chapters:
             try:
                 number = extract_chapter_number(chapter.name)
             except ValueError:
                 print(serie.title, chapter.name)
+    '''
