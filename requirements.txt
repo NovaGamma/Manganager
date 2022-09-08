@@ -3,3 +3,5 @@ flask-cors
 waitress
 selenium
 bs4
+dnspython
+pymongo

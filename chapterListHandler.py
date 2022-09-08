@@ -79,9 +79,12 @@ class Handler:
     def __init__(self) -> None:
         self.id = open_with_json("identifier.json")
         if update(self.id): #check if needed to update from the db
+            print("Getting data from the database...")
             data = get_series()
+            print("Done !")
         else: #just get from local file
             data = open_with_json("chapterList.json")
+            print("Getting data from local storage")
         self.series = [Serie(
             title = title,
             sites = serie['sites'], 
