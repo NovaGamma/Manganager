@@ -112,7 +112,7 @@ class Handler:
         current_time = time.time()
         log = get_updated()
         update_time = log['log']
-        if current_time - update_time > 86000:
+        if current_time - update_time > 86000: #check if one day has passed (i.e 24h)
             for i,serie in enumerate(sorted(self.series, key=lambda x: x.date, reverse=True)):
                 try:
                     chapters = get_chapters_crawler(*list(serie.sites.items())[0])
@@ -128,7 +128,7 @@ class Handler:
                     else:
                         print(f"{i/len(self.series)*100} %")
                 except Exception as err:
-                    print(err)
+                    print(err, serie.title, serie.sites)
 
             set_updated(time.time())
             self.save()
