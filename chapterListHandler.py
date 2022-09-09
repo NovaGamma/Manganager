@@ -6,7 +6,7 @@ from utils import clean_title, open_with_json
 import time
 import multiprocessing
 import json
-from mongo import update, update_serie, remove_serie, get_serie, get_series, get_database, add_serie, set_updated
+from mongo import update, update_serie, remove_serie, get_serie, get_series, get_database, add_serie, set_updated, get_updated
 
 @dataclass
 class Chapter:
@@ -77,7 +77,7 @@ class Handler:
     series: List[Serie]
     lock: object
     def __init__(self) -> None:
-        self.id = open_with_json("identifier.json")
+        self.id = open_with_json("identifier.json")['id']
         if update(self.id): #check if needed to update from the db
             print("Getting data from the database...")
             data = get_series()
@@ -110,8 +110,8 @@ class Handler:
 
     def update(self) -> None:
         current_time = time.time()
-        log = open_with_json('log.json')
-        update_time = log['update']
+        log = get_updated()
+        update_time = log['log']
         if current_time - update_time > 86000:
             for i,serie in enumerate(sorted(self.series, key=lambda x: x.date, reverse=True)):
                 try:
@@ -131,9 +131,6 @@ class Handler:
                     print(err)
 
             set_updated(time.time())
-            log['update'] = time.time()
-            with open('log.json', 'w') as file:
-                json.dump(log, file)
             self.save()
 
     def delete(self, title: str) -> None:

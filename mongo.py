@@ -18,7 +18,7 @@ def updated(id):
     data = collection.find()
     for el in data:
         if "updater" in el.keys():
-            collection.find_one_and_replace(el, {"updater":id['id']})
+            collection.find_one_and_replace(el, {"updater":id})
 
 def get_serie(serie, id):
     collection = get_collection_series()
@@ -52,6 +52,13 @@ def set_updated(time):
     for el in collection.find():
         if "log" in el.keys():
             collection.find_one_and_replace(el, {"log":time})
+
+def get_updated():
+    db = get_database()
+    collection = db["logs"]
+    for el in collection.find():
+        if "log" in el.keys():
+            return el
 
 def get_series() -> dict:
     collection = get_collection_series()
