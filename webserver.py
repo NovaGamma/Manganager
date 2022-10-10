@@ -1,7 +1,7 @@
 from flask import redirect,url_for,Flask, send_file, jsonify, request, make_response
 from flask_cors import CORS
 import os, json
-from crawler_handler import call_crawler, get_title_crawler
+from crawler_handler import call_crawler, get_preview_crawler, get_title_crawler
 import re, sys
 import webbrowser
 import time
@@ -79,7 +79,12 @@ def main():
 @app.route('/API/get_preview/<string:title>')
 def get_preview(title):
     preview_name = handler.get_preview(title)
-    return send_file(f"static/previews/{preview_name}")
+    if os.path.exists(f"static/previews/{preview_name}"):
+        return send_file(f"static/previews/{preview_name}")
+    else:
+        serie = handler.get_serie(title)
+        get_preview_crawler(list(serie.sites.keys())[0],serie.title,serie.chapters[0].url)
+        return send_file(f"static/previews/{preview_name}")
 
 
 @app.route('/API/get_infos_serie/<string:title>')

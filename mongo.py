@@ -29,11 +29,11 @@ def update_serie(serie, id) -> None:
     collection = get_collection_series()
     collection.replace_one(get_serie(serie, id), serie.mongo())
 
-def add_serie(serie, id) -> None:
+def add_serie(serie) -> None:
     collection = get_collection_series()
     collection.insert_one(serie.mongo())
 
-def remove_serie(serie, id) -> None:
+def remove_serie(serie) -> None:
     collection = get_collection_series()
     collection.delete_one(serie.mongo())
 
@@ -69,4 +69,4 @@ def get_series() -> dict:
     return series
 
 if __name__ == "__main__":
-    updated("2")
+    print(get_collection_series())

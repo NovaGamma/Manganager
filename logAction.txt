@@ -708,3 +708,4 @@ drop Reaper of the Drifting Moon
 delete Soaring Heavenly Dragon
 drop I m Just An Immortal
 drop Cultivators in the city
+drop Super God System
