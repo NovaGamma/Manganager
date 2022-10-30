@@ -1,4 +1,4 @@
-import os
+import os, requests
 import importlib
 
 class Error(Exception):
@@ -16,10 +16,14 @@ def call_crawler(site, title, url):
                 #check if the url correspond to the right site
                 if url.startswith(module.url_scheme()):
                     if module.type() == 'selenium':
-                        driver = module.get_page(url)
-                        chapter_list = module.get_chapter_list(driver)
-                        preview = module.get_preview(driver, title)
-                        driver.quit()
+                        try:
+                            driver = module.get_page(url)
+                            chapter_list = module.get_chapter_list(driver)
+                            preview = module.get_preview(driver, title)
+                            driver.quit()
+                        except:
+                            print(url)
+                            raise Exception
                     else:
                         chapter_list = module.get_chapter_list(url)
                         preview = module.get_preview(url, title)
@@ -53,9 +57,17 @@ def get_chapters_crawler(site, url):
                 #check if the url correspond to the right site
                 if url.startswith(module.url_scheme()):
                     if module.type() == 'selenium':
-                        driver = module.get_page(url)
-                        chapter_list = module.get_chapter_list(driver)
-                        driver.quit()
+                        try:
+                            driver = module.get_page(url)
+                            chapter_list = module.get_chapter_list(driver)
+                            driver.quit()
+                        except:
+                            r = requests.get(url)
+                            if(r.status_code == 404):
+                                print(url)
+                                return []
+                            else:
+                                raise Exception
                     else:
                         chapter_list = module.get_chapter_list(url)
                     return chapter_list

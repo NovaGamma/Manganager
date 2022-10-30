@@ -27,20 +27,20 @@ class Chapter:
 @dataclass
 class Serie:
     title: str
-    sites: dict
+    sites: List
     date: float
     state: bool
     chapters: list
     preview: str = ''
 
     def get_infos(self):
-        last_chap = self.chapters[-1]
+        last_chap = self.chapters[-1] if len(self.chapters) > 0 else None
         last_read = self.get_last_chapter_read()
         return {
             'title':self.title,
-            'last_chapter':[last_chap.name, last_chap.url, last_chap.read],
+            'last_chapter':"None" if last_chap is None else [last_chap.name, last_chap.url, last_chap.read],
             'last_chapter_read':"None" if last_read is None else [last_read.name, last_read.url, last_read.read],
-            'site':list(self.sites.keys())[0],
+            'site':self.sites[0],
             'date':self.date,
             'state':self.state
         }
@@ -77,9 +77,10 @@ class Handler:
     series: List[Serie]
     lock: object
     def __init__(self) -> None:
-        self.id = open_with_json("identifier.json")['id']
+        self.id = "1"
         print("Getting data from the database...")
-        data = get_series()
+        #data = get_series()
+        data = open_with_json("chapterList.json")
         print("Done !")
         self.series = [Serie(
             title = title,
@@ -111,7 +112,7 @@ class Handler:
         if current_time - update_time > 86000: #check if one day has passed (i.e 24h)
             for i,serie in enumerate(sorted(self.series, key=lambda x: x.date, reverse=True)):
                 try:
-                    chapters = get_chapters_crawler(*list(serie.sites.items())[0])
+                    chapters = get_chapters_crawler(*serie.site)
                     unpacked = [chapter.name for chapter in serie.chapters]
                     count = 0
                     for chapter in chapters:
@@ -190,7 +191,7 @@ class Handler:
     def add_follow(self, title: str, site: str, url: str) -> None:
         if self.get_serie(title):
             return
-        serie = Serie(title = title, sites = {site:url}, date=time.time(), state="reading", chapters = [])
+        serie = Serie(title = title, sites = [site,url], date=time.time(), state="reading", chapters = [])
         self.log(f"add {title} {url}\n")
 
         chapters, preview = call_crawler(site, title, url)
@@ -205,7 +206,7 @@ class Handler:
 
     def following(self, title: str, site: str) -> bool:
         serie = self.get_serie(title)
-        return False if serie is None else site in serie.sites
+        return False if serie is None else site == serie.sites[0]
 
     def get_read_list(self, kwargs) -> list:
         series_list = [serie for serie in self.series if serie.state != "dropped"]
@@ -227,7 +228,7 @@ class Handler:
                 series_list.sort(key=ratio)
             
             elif kwargs["sort"] == "sites":
-                series_list.sort(key=lambda x: x.sites.keys()[0])
+                series_list.sort(key=lambda x: x.sites[0])
 
         return [serie.get_infos() for serie in series_list]
 
@@ -290,12 +291,19 @@ def extract_chapter_number(name: str) -> float:
         return convert_to_float(a[0])
 
 if __name__ == "__main__":
-    from time import perf_counter
     handler = Handler()
-    counter = 0
-    for serie in handler.series:
-        last_chapter = serie.get_last_chapter_read()
-        if not last_chapter is None:
-            index = serie.chapters.index(last_chapter)
-            counter += index
-    print(counter)
+    for serie in handler.series[325:]:
+        print(serie.title)
+        last = serie.get_last_chapter_read()
+        if last is None:
+            continue
+        index = serie.chapters.index(last)
+        c = get_chapters_crawler(*serie.sites)
+        unpacked = [chapter.name for chapter in serie.chapters]
+        chapters = []
+        for chapter in c:
+            chapters.append(Chapter(url = chapter[1], name = chapter[0]))
+        for chapter in chapters[:index]:
+            chapter.read = True
+        serie.chapters = chapters
+        handler.save()

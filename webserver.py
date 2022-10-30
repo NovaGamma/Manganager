@@ -83,7 +83,7 @@ def get_preview(title):
         return send_file(f"static/previews/{preview_name}")
     else:
         serie = handler.get_serie(title)
-        get_preview_crawler(list(serie.sites.keys())[0],serie.title,serie.chapters[0].url)
+        get_preview_crawler(serie.sites[0],serie.title,serie.chapters[0].url)
         return send_file(f"static/previews/{preview_name}")
 
 
