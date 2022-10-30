@@ -3,7 +3,7 @@ export default
     if (url.match(/https:\/\/mangatx\.com\/manga\/.+\/.+\//)){
       return 'mangatx'
     }
-    else if(url.match(/https:\/\/readmanganato\.com\/manga.+\/chapter-.+/)){
+    else if(url.match(/https:\/\/chapmanganato\.com\/manga.+\/chapter-.+/)){
       return 'readmanganato'
     }
     else if(url.match(/https:\/\/mangakakalot\.com\/chapter\/.+\/.+/)){

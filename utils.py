@@ -10,6 +10,10 @@ def open_with_json(path):
         data = {}
     return data
 
+def save_with_json(data, path):
+    with open(path, 'w', encoding="utf8") as file:
+        json.dump(data, file)
+
 def clean_title(title):
     print(title)
     cleanString = re.sub('\W+',' ', title )

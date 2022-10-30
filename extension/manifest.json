@@ -20,7 +20,7 @@
         "match_about_blank": true
       },
       {
-        "matches": ["https://readmanganato.com/manga-*/chapter*"],
+        "matches": ["https://chapmanganato.com/manga-*/chapter*"],
         "js": ["readmanganato.js"],
         "all_frames": true,
         "match_about_blank": true

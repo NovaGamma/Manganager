@@ -708,3 +708,6 @@ drop Reaper of the Drifting Moon
 delete Soaring Heavenly Dragon
 drop I m Just An Immortal
 drop Cultivators in the city
+drop Rebirth City Deity
+delete Limitless Abyss
+drop Is this Hunter for Real

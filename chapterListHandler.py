@@ -299,30 +299,10 @@ def extract_chapter_number(name: str) -> float:
 if __name__ == "__main__":
     from time import perf_counter
     handler = Handler()
-    '''mangatx = [serie for serie in handler.series if "mangatx" in serie.sites.keys()]
-    print(len(mangatx))
-    for i,serie in enumerate(mangatx):
-        print(i,serie.title)
-        chapters = get_chapters_crawler(*list(serie.sites.items())[0])
-        new_chapters = [Chapter(chapter[1], chapter[0]) for chapter in chapters]
-        last_read = serie.get_last_chapter_read()
-        if last_read is None:
-            continue
-        try:
-            index = new_chapters.index(last_read)
-        except ValueError:
-            index = serie.chapters.index(last_read)
-        for chapter in new_chapters[:index]:
-            chapter.read = True
-        serie.chapters = new_chapters
-    handler.save()
-    print("done")'''
-
-    '''
+    counter = 0
     for serie in handler.series:
-        for chapter in serie.chapters:
-            try:
-                number = extract_chapter_number(chapter.name)
-            except ValueError:
-                print(serie.title, chapter.name)
-    '''
+        last_chapter = serie.get_last_chapter_read()
+        if not last_chapter is None:
+            index = serie.chapters.index(last_chapter)
+            counter += index
+    print(counter)
