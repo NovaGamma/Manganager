@@ -6,7 +6,7 @@ from utils import clean_title, open_with_json
 import time
 import multiprocessing
 import json
-from mongo import update, update_serie, remove_serie, get_serie, get_series, get_database, add_serie, set_updated
+from mongo import update, update_serie, remove_serie, get_serie, get_series, get_database, add_serie, set_updated, get_updated
 
 @dataclass
 class Chapter:
@@ -77,14 +77,10 @@ class Handler:
     series: List[Serie]
     lock: object
     def __init__(self) -> None:
-        self.id = open_with_json("identifier.json")
-        if update(self.id): #check if needed to update from the db
-            print("Getting data from the database...")
-            data = get_series()
-            print("Done !")
-        else: #just get from local file
-            data = open_with_json("chapterList.json")
-            print("Getting data from local storage")
+        self.id = open_with_json("identifier.json")['id']
+        print("Getting data from the database...")
+        data = get_series()
+        print("Done !")
         self.series = [Serie(
             title = title,
             sites = serie['sites'], 
@@ -110,9 +106,9 @@ class Handler:
 
     def update(self) -> None:
         current_time = time.time()
-        log = open_with_json('log.json')
-        update_time = log['update']
-        if current_time - update_time > 86000:
+        log = get_updated()
+        update_time = log['log']
+        if current_time - update_time > 86000: #check if one day has passed (i.e 24h)
             for i,serie in enumerate(sorted(self.series, key=lambda x: x.date, reverse=True)):
                 try:
                     chapters = get_chapters_crawler(*list(serie.sites.items())[0])
@@ -128,12 +124,9 @@ class Handler:
                     else:
                         print(f"{i/len(self.series)*100} %")
                 except Exception as err:
-                    print(err)
+                    print(err, serie.title, serie.sites)
 
             set_updated(time.time())
-            log['update'] = time.time()
-            with open('log.json', 'w') as file:
-                json.dump(log, file)
             self.save()
 
     def delete(self, title: str) -> None:

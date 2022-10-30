@@ -18,7 +18,7 @@ def updated(id):
     data = collection.find()
     for el in data:
         if "updater" in el.keys():
-            collection.find_one_and_replace(el, {"updater":id['id']})
+            collection.find_one_and_replace(el, {"updater":id})
 
 def get_serie(serie, id):
     collection = get_collection_series()
@@ -29,11 +29,11 @@ def update_serie(serie, id) -> None:
     collection = get_collection_series()
     collection.replace_one(get_serie(serie, id), serie.mongo())
 
-def add_serie(serie, id) -> None:
+def add_serie(serie) -> None:
     collection = get_collection_series()
     collection.insert_one(serie.mongo())
 
-def remove_serie(serie, id) -> None:
+def remove_serie(serie) -> None:
     collection = get_collection_series()
     collection.delete_one(serie.mongo())
 
@@ -53,6 +53,13 @@ def set_updated(time):
         if "log" in el.keys():
             collection.find_one_and_replace(el, {"log":time})
 
+def get_updated():
+    db = get_database()
+    collection = db["logs"]
+    for el in collection.find():
+        if "log" in el.keys():
+            return el
+
 def get_series() -> dict:
     collection = get_collection_series()
     series = {}
@@ -62,4 +69,4 @@ def get_series() -> dict:
     return series
 
 if __name__ == "__main__":
-    updated("2")
+    print(get_collection_series())
