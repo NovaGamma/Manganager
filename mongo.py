@@ -20,14 +20,13 @@ def updated(id):
         if "updater" in el.keys():
             collection.find_one_and_replace(el, {"updater":id})
 
-def get_serie(serie, id):
+def get_serie(serie):
     collection = get_collection_series()
-    updated(id)
     return collection.find_one({"title": serie.title})
 
-def update_serie(serie, id) -> None:
+def update_serie(serie) -> None:
     collection = get_collection_series()
-    collection.replace_one(get_serie(serie, id), serie.mongo())
+    collection.replace_one(get_serie(serie), serie.mongo())
 
 def add_serie(serie) -> None:
     collection = get_collection_series()

@@ -77,7 +77,6 @@ class Handler:
     series: List[Serie]
     lock: object
     def __init__(self) -> None:
-        self.id = "1"
         print("Getting data from the database...")
         #data = get_series()
         data = open_with_json("chapterList.json")
@@ -112,7 +111,7 @@ class Handler:
         if current_time - update_time > 86000: #check if one day has passed (i.e 24h)
             for i,serie in enumerate(sorted(self.series, key=lambda x: x.date, reverse=True)):
                 try:
-                    chapters = get_chapters_crawler(*serie.site)
+                    chapters = get_chapters_crawler(*serie.sites)
                     unpacked = [chapter.name for chapter in serie.chapters]
                     count = 0
                     for chapter in chapters:
@@ -120,7 +119,7 @@ class Handler:
                             count += 1
                             serie.chapters.append(Chapter(url = chapter[1], name = chapter[0]))
                     if count != 0: #new chapters have been found
-                        update_serie(serie, self.id)
+                        update_serie(serie)
                         print(f"{i/len(self.series)*100} %", count, serie.title)
                     else:
                         print(f"{i/len(self.series)*100} %")
@@ -134,14 +133,14 @@ class Handler:
         serie = self.get_serie(title)
         if serie:
             self.series.remove(serie)
-            remove_serie(serie, self.id)
+            remove_serie(serie)
             self.save()
 
     def drop(self, title: str) -> None:
         serie = self.get_serie(title)
         if serie:
             serie.state = "dropped"
-            update_serie(serie, self.id)
+            update_serie(serie)
             self.save()
 
     def read_until(self, title: str, chapterName: str) -> None:
@@ -151,7 +150,7 @@ class Handler:
                 chapter.read = True
                 if chapter.name == chapterName:
                     break
-            update_serie(serie, self.id)
+            update_serie(serie)
             self.save()
 
     def read_chapter(self, data: dict) -> None:
@@ -168,7 +167,7 @@ class Handler:
                     chapter.read = True
                     print(data)
                     self.log(f"read {title}\n")
-                    update_serie(serie, self.id)
+                    update_serie(serie)
                     self.save()
                     
 
@@ -201,7 +200,7 @@ class Handler:
         serie.preview = preview
 
         self.series.append(serie)
-        add_serie(serie, self.id)
+        add_serie(serie)
         self.save()
 
     def following(self, title: str, site: str) -> bool:
@@ -292,18 +291,9 @@ def extract_chapter_number(name: str) -> float:
 
 if __name__ == "__main__":
     handler = Handler()
-    for serie in handler.series[325:]:
-        print(serie.title)
+    for serie in handler.series:
         last = serie.get_last_chapter_read()
         if last is None:
+            print(serie.title)
+        else:
             continue
-        index = serie.chapters.index(last)
-        c = get_chapters_crawler(*serie.sites)
-        unpacked = [chapter.name for chapter in serie.chapters]
-        chapters = []
-        for chapter in c:
-            chapters.append(Chapter(url = chapter[1], name = chapter[0]))
-        for chapter in chapters[:index]:
-            chapter.read = True
-        serie.chapters = chapters
-        handler.save()

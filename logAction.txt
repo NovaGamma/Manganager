@@ -711,3 +711,10 @@ drop Cultivators in the city
 drop Rebirth City Deity
 delete Limitless Abyss
 drop Is this Hunter for Real
+delete The Max Level Hero has Returned
+delete Forced To Become The Villain S Son In Law
+delete The Strongest Ever
+delete The Interceptor Cross System
+drop Divine Perspective
+drop Futari Switch
+drop Yong Heng Zhi Zun

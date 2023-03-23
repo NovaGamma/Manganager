@@ -5,18 +5,8 @@
       <input type="text" v-model="add" placeholder="Add manga...(paste url)"/>
       <button @click="add_serie()">Add</button>
     </div>
-    <div>
-      <button v-if="page > 1" @click="page--">Previous Page</button>
-      <a v-for="i in Math.floor(series.length/10)" @click="page=i" :key="i">{{i}}|</a>
-      <button v-if="series.length/10 > page" @click="page++">Next Page</button>
-    </div>
     <Filter @filter="send_filters"></Filter>
     <DisplaySerie v-for="serie in filtered_series" :key="serie" :serie="serie"/>
-    <div>
-      <button v-if="page > 1" @click="page--">Previous Page</button>
-      <a v-for="i in Math.floor(series.length/10)" @click="page=i" :key="i">{{i}}|</a>
-      <button v-if="series.length/10 > page" @click="page++; scrollTop()">Next Page</button>
-    </div>
   </div>
 </template>
 
@@ -31,8 +21,6 @@ export default {
       series:[],
       input : "",
       add : "",
-      page:1,
-      per_page:10,
       params:{'finished':false, 'sort': "date"}
     }
   },
@@ -41,14 +29,10 @@ export default {
   },
   computed: {
     filtered_series(){
-      let start = (this.page-1) * this.per_page
-      let end = this.page * this.per_page
       let filtered = this.series
       filtered = filtered.filter((serie)=>{
           return serie.title.toLowerCase().includes(this.input.toLowerCase())
       })
-      if(filtered.length > this.per_page)
-          filtered = filtered.slice(start,end)
       return filtered
     }
   },
