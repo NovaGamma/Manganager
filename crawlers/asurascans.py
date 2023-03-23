@@ -9,7 +9,7 @@ except:
     from utils import save_preview
 
 def url_scheme():
-    return "https://www.asurascans.com/"
+    return "https://asura.gg/"
 
 def type():
     return "selenium"

@@ -3,13 +3,13 @@ export default
     if (url.match(/https:\/\/mangatx\.com\/manga\/.+\/.+\//)){
       return 'mangatx'
     }
-    else if(url.match(/https:\/\/readmanganato\.com\/manga.+\/chapter-.+/)){
+    else if(url.match(/https:\/\/chapmanganato\.com\/manga.+\/chapter-.+/)){
       return 'readmanganato'
     }
     else if(url.match(/https:\/\/mangakakalot\.com\/chapter\/.+\/.+/)){
       return 'mangakakalot'
     }
-    else if(url.match(/https:\/\/www\.asurascans\.com\/.*/)){
+    else if(url.match(/https:\/\/asura\.gg\/.*/)){
       return 'asurascans'
     }
     else if (url.match(/https:\/\/lhtranslation\.net\/manga\/.*\/.*/)){

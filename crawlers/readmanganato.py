@@ -8,7 +8,7 @@ except:
     from utils import save_preview
 
 def url_scheme():
-    return "https://readmanganato.com/manga-"
+    return "https://chapmanganato.com/manga-"
 
 def type():
     return "bs4"
