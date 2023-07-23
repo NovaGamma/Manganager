@@ -5,3 +5,5 @@ selenium
 bs4
 dnspython
 pymongo
+bcript
+pyjwt
