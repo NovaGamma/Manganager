@@ -721,3 +721,6 @@ drop Yong Heng Zhi Zun
 drop I Became a Renowned Family s Sword Prodigy
 drop Magic Level 99990000 All Attribute Great Sage
 drop Neta Chara Tensei To Ka Anmari Da
+drop Slave B
+drop The Live
+delete Cell
