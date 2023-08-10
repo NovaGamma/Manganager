@@ -724,3 +724,5 @@ drop Neta Chara Tensei To Ka Anmari Da
 drop Slave B
 drop The Live
 delete Cell
+drop Crazy professor system
+drop The Greatest in the World
