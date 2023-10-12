@@ -125,7 +125,14 @@ class Handler:
                         print(f"{i/len(self.series)*100} %")
                 except Exception as err:
                     print(err, serie.title, serie.sites)
-
+            import psutil
+            processes = psutil.process_iter()
+            for process in processes:
+                if(process.name() == "firefox.exe"):
+                    p = psutil.Process(process.pid)
+                    p.kill()
+                    print(f"Process ID: {process.pid}, Name: {process.name()}")
+            print("killed remanant firefox processes")
             set_updated(time.time())
             self.save()
 

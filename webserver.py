@@ -20,10 +20,8 @@ def get_site(url):
         return "readmanganato"
     elif (re.match("https:\/\/mangakakalot\.com\/chapter", url)):
         return "mangakakalot"
-    elif (re.match("https:\/\/asurascans\.com\/.*-chapter-.*", url)):
+    elif (re.match("https:\/\/asura\.nacm\.xyz\/.*-chapter-.*", url)):
         return "asurascans"
-    elif (re.match("https:\/\/lhtranslation\.net\/manga\/.*\/.*")):
-        return "lhtranslation"
     else:
         return None
 
@@ -82,9 +80,9 @@ def get_preview(title):
     if os.path.exists(f"static/previews/{preview_name}"):
         return send_file(f"static/previews/{preview_name}")
     else:
-        return send_file(f"static/previews/{preview_name}")
         serie = handler.get_serie(title)
         get_preview_crawler(serie.sites[0],serie.title,serie.chapters[0].url)
+        return send_file(f"static/previews/{preview_name}")
 
 
 @app.route('/API/get_infos_serie/<string:title>')

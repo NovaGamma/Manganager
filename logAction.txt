@@ -726,3 +726,11 @@ drop The Live
 delete Cell
 drop Crazy professor system
 drop The Greatest in the World
+drop The Gateway of Revolution
+drop Virus Girlfriend
+drop Double Click
+drop Demi Gods and Semi Devils
+drop Dangerous Dungeon Escape
+drop Golden Mage
+delete The Player Hides His Past
+delete Standard of Reincarnation

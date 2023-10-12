@@ -44,13 +44,13 @@
         "match_about_blank": true
       },
       {
-        "matches": ["https://asura.gg/*-chapter-*"],
+        "matches": ["https://asura.nacm.xyz/*-chapter-*"],
         "js":["asurascans.js"],
         "all_frames": true,
         "match_about_blank": true
       },
       {
-        "matches": ["https://asura.gg/manga*"],
+        "matches": ["https://asura.nacm.xyz/manga*"],
         "js":["asurascans_chapters.js"],
         "all_frames": true,
         "match_about_blank": true
