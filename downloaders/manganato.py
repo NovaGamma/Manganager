@@ -3,7 +3,6 @@ import os
 from bs4 import BeautifulSoup
 import sys
 import time
-from progressBar import Progress
 import re
 
 def get_page(text):

@@ -16,16 +16,33 @@ def get_pages(soup):
         pages.append([page_number,url])
     return pages
 
-def get_chapter_list(soup):
-    s = soup.find_all('select',class_ = "selectpicker single-chapter-select")
-    result = [item for item in s[0].contents if not (item == '\n' or item == ' ')]
-    return clean(result)
-
 def clean(list):
     for item in list:
         if item == '\n':
             list.remove('\n')
     return list
+
+def download_chapter(url: str, dirName: str):
+    chapter_number = url.split('/')[-2].lstrip('chapter-')
+    chapter_request = requests.get(url)
+    if(chapter_request.status_code == 404):
+        print(f"Chapter not found : {url}")
+        return
+    chapter_soup = BeautifulSoup(chapter_request.text,'html.parser')
+    pages = get_pages(chapter_soup)
+    if not os.path.exists(f"{dirName}/Chapter {chapter_number}/"):
+        os.mkdir(f"{dirName}/Chapter {chapter_number}/")
+    for page in pages:
+        page_url = page[1]
+        img_type = '.'+page_url.split('.')[-1]
+        img_path = dirName+"/Chapter "+str(chapter_number)+'/page '+str(int(page[0])+1)+img_type
+        if os.path.exists(img_path) and not os.path.getsize(img_path) < 70000:
+            continue
+        image = requests.get(page_url)
+        if not image.status_code == 200:
+            print("error downloading", chapter_number, page_url)
+        with open(img_path,'wb') as f:
+            f.write(image.content)
 
 path = sys.argv[1]
 if len(sys.argv) < 3:
