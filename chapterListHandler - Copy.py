@@ -12,14 +12,14 @@ from mongo import update, update_serie, remove_serie, get_serie, get_series, get
 class Chapter:
     url: str
     name: str
-    number: float = ''
+    read: bool = False
 
     def __repr__(self):
         return f"Chapter({self.name})"
     
     def __eq__(self, other: object):
         if other is not None:
-            return self.number == other.number
+            return self.name == other.name
         else:
             return False
 
@@ -27,33 +27,35 @@ class Chapter:
 @dataclass
 class Serie:
     title: str
+    sites: List
     date: float
     state: bool
-    chapters: dict
-    read: list[float]
+    chapters: list
     preview: str = ''
-    last_chapter: float = 0
-    last_chapter_read: float = 0
 
     def get_infos(self):
+        last_chap = self.chapters[-1] if len(self.chapters) > 0 else None
+        last_read = self.get_last_chapter_read()
         return {
             'title':self.title,
-            'last_chapter': self.last_chapter,
-            'last_chapter_read':"None" if self.last_chapter_read == 0 else self.last_chapter_read,
-            'sites':self.chapters.keys(),
+            'last_chapter':"None" if last_chap is None else [last_chap.name, last_chap.url, last_chap.read],
+            'last_chapter_read':"None" if last_read is None else [last_read.name, last_read.url, last_read.read],
+            'site':self.sites[0],
             'date':self.date,
             'state':self.state
         }
 
-    def read_chapter(self, data) -> None:
-        chapter_number = data['chapter_number']
-        self.date = time.time()
-        self.read.append(chapter_number)
-        self.read.sort()
-        self.last_chapter_read = chapter_number if chapter_number > self.last_chapter_read else self.last_chapter_read
+    def get_last_chapter_read(self) -> Chapter:
+        for chapter in reversed(self.chapters):
+            if chapter.read:
+                return chapter
+        return None
 
-        if not chapter_number in self.chapters[data['site']].keys():
-            self.chapters[data['site']][chapter_number] = Chapter(data['url'], data['site'], data['chapterName'], chapter_number)
+    def get_chapter(self, chapterName) -> Chapter:
+        for chapter in self.chapters:
+            if chapter.name == chapterName:
+                return chapter
+        return None            
 
     def mongo(self):
         return {
@@ -65,12 +67,7 @@ class Serie:
             'date': self.date}
 
     def chapters_json(self):
-        return {
-            site: { 
-                number: [chapter.name, chapter.url, chapter.number] for number, chapter in chapters.items()
-            } for site, chapters in self.chapters.items()
-        }
-
+        return [[chapter.name, chapter.url, chapter.read] for chapter in self.chapters]
 
     def __eq__(self, __o: object) -> bool:
         return self.title == __o.title
@@ -84,30 +81,28 @@ class Handler:
         #data = get_series()
         data = open_with_json("chapterList.json")
         print("Done !")
-        self.load_data(data)
-        self.lock = multiprocessing.Lock()
-
-    def load_data(self, data):
         self.series = [Serie(
             title = title,
+            sites = serie['sites'], 
             date = float(serie['date']), 
             state = serie['state'], 
-            preview = serie["preview"],
-            last_chapter = serie["last_chapter"],
-            last_chapter_read = serie["last_chapter_read"] ,
-            chapters = {
-                site: {
-                    number: Chapter(name = chapter[0], url = chapter[1], number = chapter[2])
-                    for number, chapter in chapters.items()
-                }
-                for site, chapters in serie['chapters'].items()   
-            }
+            preview = serie["preview"], 
+            chapters = [Chapter(url = chapter[1], name = chapter[0], read = chapter[2]) for chapter in serie["chapters"]]
         ) for (title, serie) in data.items()]
+
+        self.lock = multiprocessing.Lock()
 
     def reload(self) -> None:
         with open("chapterList.json",'r') as file:
             data = json.load(file)
-        self.load_data(data)
+        self.series = [Serie(
+            title = title,
+            sites = serie['sites'], 
+            date = float(serie['date']), 
+            state = serie['state'], 
+            preview = serie["preview"], 
+            chapters = [Chapter(url = chapter[1], name = chapter[0], read = chapter[2]) for chapter in serie["chapters"]]
+        ) for (title, serie) in data.items()]
 
     def update(self) -> None:
         current_time = time.time()
@@ -116,21 +111,18 @@ class Handler:
         if current_time - update_time > 86000: #check if one day has passed (i.e 24h)
             for i,serie in enumerate(sorted(self.series, key=lambda x: x.date, reverse=True)):
                 try:
-                    #can be multithreaded
-                    for site in serie.chapters.keys():
-                        chapters = get_chapters_crawler(site)
-                        count = 0
-                        for chapter in chapters:
-                            if chapter[2] not in site.keys():
-                                count += 1
-                                site[chapter[2]] = Chapter(name = chapter[0], url = chapter[1], number = chapter[2])
-                                if chapter[2] > serie.last_chapter:
-                                    serie.last_chapter = chapter[2]
-                        if count != 0: #new chapters have been found
-                            update_serie(serie)
-                            print(f"{i/len(self.series)*100} %", count, serie.title)
-                        else:
-                            print(f"{i/len(self.series)*100} %")
+                    chapters = get_chapters_crawler(*serie.sites)
+                    unpacked = [chapter.name for chapter in serie.chapters]
+                    count = 0
+                    for chapter in chapters:
+                        if chapter[0] not in unpacked:
+                            count += 1
+                            serie.chapters.append(Chapter(url = chapter[1], name = chapter[0]))
+                    if count != 0: #new chapters have been found
+                        update_serie(serie)
+                        print(f"{i/len(self.series)*100} %", count, serie.title)
+                    else:
+                        print(f"{i/len(self.series)*100} %")
                 except Exception as err:
                     print(err, serie.title, serie.sites)
             import psutil
@@ -158,39 +150,32 @@ class Handler:
             update_serie(serie)
             self.save()
 
-    def read_until(self, title: str, chapterNumber: float) -> None:
+    def read_until(self, title: str, chapterName: str) -> None:
         serie = self.get_serie(title)
         if serie:
-            indexes = []
-            for chapters in serie.chapters.values():
-                for number in chapters.keys():
-                    if not number in indexes and number <= chapterNumber:
-                        indexes.append(number)
-
-            for index in indexes:
-                if not index in serie.read:
-                    serie.read.append(index)
-            serie.read.sort()
+            for chapter in serie.chapters:
+                chapter.read = True
+                if chapter.name == chapterName:
+                    break
             update_serie(serie)
             self.save()
 
     def read_chapter(self, data: dict) -> None:
         chapterName = data['chapterName']
+        url = data['url']
         title = clean_title(data['title'])
         site = data['site']
         serie = self.get_serie(title)
         if serie:
-            #needs to be moved in the server to be sent in data dict
-            #needs to be in utils
-            number = self.get_chapter_number(chapterName)
-
-            if not number in serie.read:
-                #chapter has not been read on any site before
-                serie.read_chapter(data)
-                
-                self.log(f"read {title} on {site}\n")
-                update_serie(serie)
-                self.save()                
+            if site in serie.sites:
+                serie.date = time.time()
+                chapter = serie.get_chapter(chapterName)
+                if not chapter.read:
+                    chapter.read = True
+                    print(data)
+                    self.log(f"read {title}\n")
+                    update_serie(serie)
+                    self.save()
                     
 
     def get_preview(self, title: str) -> str:
@@ -210,29 +195,19 @@ class Handler:
         else: return None
 
     def add_follow(self, title: str, site: str, url: str) -> None:
-        serie = self.get_serie(title)
-        add_serie = False
-        if(not serie):
-            add_serie = True
-            serie = Serie(title = title, sites = [site,url], date=time.time(), state="reading")
-
-        elif site in serie.chapters.keys():
+        if self.get_serie(title):
             return
-        
+        serie = Serie(title = title, sites = [site,url], date=time.time(), state="reading", chapters = [])
         self.log(f"add {title} {url}\n")
 
         chapters, preview = call_crawler(site, title, url)
         chapters = [Chapter(name = chapter[0], url = chapter[1]) for chapter in chapters]
 
-        serie.chapters[site] = {
-            chapter[2]: Chapter(name = chapter[0], url = chapter[1], number = chapter[2])
-            for chapter in chapters
-        }
+        serie.chapters = chapters
+        serie.preview = preview
 
-        if add_serie:
-            serie.preview = preview
-            self.series.append(serie)
-            add_serie(serie)
+        self.series.append(serie)
+        add_serie(serie)
         self.save()
 
     def following(self, title: str, site: str) -> bool:
@@ -242,7 +217,7 @@ class Handler:
     def get_read_list(self, kwargs) -> list:
         series_list = [serie for serie in self.series if serie.state != "dropped"]
         if "finished" in kwargs and kwargs["finished"] == "true":
-            series_list = [serie for serie in series_list if serie.last_chapter_read != serie.last_chapter]
+            series_list = [serie for serie in series_list if serie.get_last_chapter_read() != serie.chapters[-1]]
 
         if "sort" in kwargs:
             if kwargs["sort"] == "date":
@@ -250,12 +225,12 @@ class Handler:
 
             elif kwargs["sort"] == "remaining":
                 def ratio(serie: Serie) -> int:
-                    last_chap_read = serie.last_chapter_read
+                    last_chap_read = serie.get_last_chapter_read()
                     if last_chap_read is None:
                         index = 0
                     else:
-                        index = last_chap_read
-                    return (index+1)/serie.last_chapter
+                        index = serie.chapters.index(last_chap_read)
+                    return (index+1)/len(serie.chapters)
                 series_list.sort(key=ratio)
             
             elif kwargs["sort"] == "sites":
@@ -267,13 +242,11 @@ class Handler:
         data = {}
         for serie in self.series:
             data[serie.title] = {
+                'sites':serie.sites,
                 'chapters': serie.chapters_json(),
                 'preview': serie.preview,
                 'state': serie.state,
-                'date': serie.date,
-                'last_chapter': serie.last_chapter,
-                'last_chapter_read': serie.last_chapter_read,
-                'read': serie.read
+                'date': serie.date
             }
 
         with self.lock:
@@ -285,7 +258,7 @@ class Handler:
     
 def convert_to_float(number: str) -> float:
     if ':' in number:
-        number = number[:number.index(':')]
+        number = number.rstrip(':')
     if number.isdecimal() or '.' in number:
         return float(number)
     if '-' in number:
@@ -296,27 +269,21 @@ def convert_to_float(number: str) -> float:
     if ',' in number:
         number = number.replace(',','.')
         return float(number)
-    return 0.0
+    raise ValueError
 
 def extract_chapter_number(name: str) -> float:
     name = name.lower()
-    if ' ' in name: #checking UTF-8 character <0xa0>
-        name = name.replace(' ', ' ')
-    if any([x in name for x in ["extra", "bonus", "special", "hiatus", "notice", "hitaus", "bounus"]]):
+    if any([x in name for x in ["extra", "bonus", "special", "hiatus"]]):
         return 0.0
     index = name.find("chapter")
     if index == -1:
         if name.find("ch.") == -1:
             if name.find("episode") == -1:
-                try: #if name is only the number of the chapter
-                   number = float(name) 
-                   return number
-                except:
-                    return 0.0 #has not found any corespondance
+                raise ValueError
             else:
                 index = name.find("episode")
                 name = name[index:]
-                a = name.lstrip("episode ").split(' ')
+                a = name.lstrip("episode").split(' ')
         else:
             index = name.find("ch.")
             name = name[index:]
@@ -324,15 +291,15 @@ def extract_chapter_number(name: str) -> float:
     else:        
         name = name[index:]
         a = name.lstrip("chapter ").split(' ')
-    try:
+    if len(a) > 1:
         return convert_to_float(a[0])
-    except:
-        return 0.0
+    else:
+        return convert_to_float(a[0])
 
 if __name__ == "__main__":
     handler = Handler()
     for serie in handler.series:
-        last = serie.last_chapter_read
+        last = serie.get_last_chapter_read()
         if last is None:
             print(serie.title)
         else:
