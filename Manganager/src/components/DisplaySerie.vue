@@ -1,15 +1,29 @@
 <template>
-  <div class="chapter">
-    <div class="logo">
-      <router-link :to="'/serie/'+serie.title">
-        <img :src="'http://127.0.0.1:4444/API/get_preview/'+serie.title" width="200" height="300">
-      </router-link>
-    </div>
-    <div class="chapter-info">
+  <div
+      @click="$router.push(`/serie/${serie.title}`)"
+      class="property-card row"
+  >
+    <q-img
+      :src="'http://127.0.0.1:4444/API/get_preview/'+serie.title"
+      :placeholder-src="imageSrc"
+      @error="replaceByDefault"
+      style="border-radius: 10px; z-index: inherit"
+      :ratio="9 / 12"
+      spinner-color="grey"
+      spinner-size="md"
+      class="property-image row col-12"
+    />
+    <div class="col-12 q-px-sm">
       {{serie.title}}
-      {{serie.sites}}
-      <p v-if="serie.last_chapter_read != undefined">Last Chapter : Chapter {{serie.last_chapter}}</p>
-      <p v-if='serie.last_chapter_read != undefined && serie.last_chapter_read != "None"'>Last Chapter Read : Chapter {{serie.last_chapter_read}}</p>
+      <q-linear-progress 
+        :value="serie.last_chapter_read / serie.last_chapter"
+        size="7px"
+        stripe
+        rounded
+      />
+      <p v-if="serie.last_chapter_read != 0" class="no-margin">
+        {{ serie.last_chapter_read }} / {{ serie.last_chapter }}
+      </p>
     </div>
   </div>
 </template>
@@ -39,24 +53,10 @@ export default {
 </script>
 <style>
 
-.chapter-info{
-  display:inline-block;
-  margin-left: 3%;
-}
-
-
 .logo{
   display: inline-block;
   margin-right: 2%;
 }
 
-
-.chapter{
-  margin-left : 2%;
-  margin-right : 2%;
-  margin-top : .1%;
-  margin-bottom : .1%;
-  background-color: white;
-}
 
 </style>

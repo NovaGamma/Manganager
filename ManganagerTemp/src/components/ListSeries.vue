@@ -1,24 +1,12 @@
 <template>
-  <div class="column items-center">
-    <div class="row">
-      <q-input class="q-mr-md" type="text" v-model="input" placeholder="Search manga..." />
-      <q-input class="q-mr-md" type="text" v-model="add" placeholder="Add manga...(paste url)"/>
-      <q-btn @click="add_serie()" label="Add" />
-
+  <div>
+    <div>
+      <input type="text" v-model="input" placeholder="Search manga..." />
+      <input type="text" v-model="add" placeholder="Add manga...(paste url)"/>
+      <button @click="add_serie()">Add</button>
     </div>
     <Filter @filter="send_filters"></Filter>
-
-    <div class="row">
-      <div v-for="serie in filtered_series"
-        class="col-xs-4 col-sm-3 col-md-2 q-pa-sm"
-        :key="serie" 
-      >
-        <DisplaySerie 
-          class="fit hover"
-          :serie="serie"
-        />
-      </div>
-    </div>
+    <DisplaySerie v-for="serie in filtered_series" :key="serie" :serie="serie"/>
   </div>
 </template>
 
@@ -45,7 +33,7 @@ export default {
       filtered = filtered.filter((serie)=>{
           return serie.title.toLowerCase().includes(this.input.toLowerCase())
       })
-      return filtered.slice(0,10)
+      return filtered
     }
   },
   methods:{
@@ -89,16 +77,6 @@ export default {
 
 .template{
   background-color: aliceblue;
-}
-
-.hover {
-  border-radius: 10px;
-  height: fit-content;
-  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
-}
-
-.hover:hover {
-  box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.2);
 }
 
 h3 {

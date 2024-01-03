@@ -1,6 +1,6 @@
 <template>
-  <div id="nav" class="row justify-center">
-    <router-link to="/">Home</router-link>
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
   </div>
   <router-view/>
 </template>

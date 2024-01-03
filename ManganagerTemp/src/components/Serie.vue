@@ -1,52 +1,40 @@
 <template>
-  <div class="row justify-center">
-    <div class="col-7 column items-center">
+  <div class="outer">
+  <div class="box">
+    <div>
       <img :src="'http://127.0.0.1:4444/API/get_preview/'+title" width="200" height="300"/>
       <div>
         {{title}}
         <br>
         <div>
-          <q-btn @click="drop()" label="drop"/>
-          <q-btn @click="del()" label="remove"/>
+          <button @click="drop()">Drop</button>
+          <button @click='del()'>Remove</button>
         </div>
-        <q-btn 
-          v-for="site of serie.sites" 
-          :label="site"
-          :key="site" 
-          @click="displayedSite = site"
-        />
-        <q-linear-progress 
-          :value="serie.last_chapter_read / serie.last_chapter"
-          size="7px"
-          stripe
-          rounded
-        />
-        <p v-if="serie.last_chapter_read != 0" class="no-margin">
-          {{ serie.last_chapter_read }} / {{ serie.last_chapter }}
+        <button v-for="site of serie.sites" :key="site" @click="displayedSite = site">
+          {{site}}
+        </button> 
+        <br>
+        Last Chapter: Chapter {{serie.last_chapter}}
+        <p v-if="serie.last_chapter_read != 'None'">
+          Last Chapter Read: Chapter {{serie.last_chapter_read}}
         </p>
       </div>
       
     </div>
-    <div class="col-6 column items-center">
-      <div class="full-width">
-        <select v-model="read_until">
-          <option disabled value="">Select</option>
-          <option v-for="chapter in chapters[displayedSite]" :key="chapter[2]">{{chapter[0]}}</option>
-        </select>
-        <button @click="setRead()">Read until</button>
-      </div>
-      <div 
-        v-for="chapter of chapters[displayedSite]" :key="chapter[2]"
-        class="hover q-pa-sm q-my-xs full-width"
-        :class="{read: serie.read.includes(chapter[2])}"
-        @click="open(chapter[1])"
-      >
-        <p class="no-margin">
-          {{ chapter[0] }}
-        </p>
-      </div>
+    <div>
+      <select v-model="read_until">
+        <option disabled value="">Select</option>
+        <option v-for="chapter in chapters" :key="chapter[0]">{{chapter[0]}}</option>
+      </select>
+      <button @click="setRead()">Read until</button>
+    </div>
+    <div v-for="chapter of chapters[displayedSite]" :key="chapter[2]" :class="{chapter:true, read: serie.read.includes(chapter[2])}">
+      <a @click="open(chapter[1])">
+        {{chapter[0]}}
+      </a>
     </div>
  </div>
+</div>
 </template>
 <script>
 export default {
@@ -138,18 +126,31 @@ export default {
 }
 </script>
 <style>
+  .outer{
+    display:flex;
+    justify-content:center;
+  }
+  .box{
+    display:flex;
+    flex-direction: column;
+    width:fit-content;
+    position:center
+  }
+  .chapter{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding:2px;
+    margin:2px;
+  }
+  a{
+    text-decoration: none;
+    color:black;
+  }
+  a:hover{
+    color:green;
+  }
   .read{
     background-color:grey;
     color:white;
   }
-
-  .hover {
-  border-radius: 10px;
-  height: fit-content;
-  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
-}
-
-.hover:hover {
-  box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.2);
-}
 </style>

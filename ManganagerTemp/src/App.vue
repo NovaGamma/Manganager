@@ -1,6 +1,7 @@
 <template>
-  <div class="column center">
+  <div>
     <NavBar />
+    <ListSeries />
   </div>
 </template>
 
@@ -8,10 +9,10 @@
 import ListSeries from './components/ListSeries.vue'
 import NavBar from './components/NavBar.vue'
 
-export default {
+export default{
   name: 'app',
-  components: { NavBar, ListSeries },
-  async created() {
+  components:{NavBar},
+  async created(){
     //await fetch("http://127.0.0.1:4444/API/update_chapter/",{
     //  method:"POST"
     //})

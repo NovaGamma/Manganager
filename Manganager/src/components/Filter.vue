@@ -1,19 +1,24 @@
 <template>
     <div>
-        Display :
-        <input type="checkbox" id="isFinished" @click="finished = !finished; send_event()"/>
-        <label>Finished</label>
-
-        Sort by:
-
-        <input type="checkbox" id="date" @click="sort = 'date';send_event()"/>
-        <label>Date</label>
-
-        <input type="checkbox" id="remaining" @click="sort = 'remaining';send_event()"/>
-        <label>Remaining chapters</label>
-
-        <input type="checkbox" id="site" @click="sort = 'site';send_event()"/>
-        <label>Sites</label>
+        <div>
+            <q-checkbox 
+                v-model="finished" 
+                @update:model-value="send_event()"
+                label="Not finished"
+            />
+        </div>
+        <div>
+            Sort by:
+            
+            <q-checkbox v-model="date" @update:model-value="this.sorting('date')"/>
+            <label>Date</label>
+            
+            <q-checkbox v-model="remaining" @update:model-value="this.sorting('remaining')"/>
+            <label>Remaining chapters</label>
+            
+            <q-checkbox v-model="site" @update:model-value="this.sorting('site')"/>
+            <label>Sites</label>
+        </div>
     </div>
 </template>
 
@@ -26,9 +31,27 @@ export default{
         return {
             finished:false,
             sort: "date",
+            date: false,
+            remaining: false,
+            site: false,
         }
     },
     methods:{
+        sorting(type) {
+            switch(type) {
+                case 'date':
+                    this.remaining = false
+                    this.site = false
+                case 'remaining':
+                    this.date = false
+                    this.site = false
+                case 'site':
+                    this.date = false
+                    this.remaining = false
+            }
+            this.sort = type
+            this.send_event()
+        },
         send_event(){
             this.$emit("filter",this.finished, this.sort)
         }
