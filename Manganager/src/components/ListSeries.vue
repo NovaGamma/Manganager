@@ -45,7 +45,7 @@ export default {
       filtered = filtered.filter((serie)=>{
           return serie.title.toLowerCase().includes(this.input.toLowerCase())
       })
-      return filtered.slice(0,10)
+      return filtered
     }
   },
   methods:{

@@ -80,6 +80,7 @@ def get_preview(title):
     if os.path.exists(f"static/previews/{preview_name}"):
         return send_file(f"static/previews/{preview_name}")
     else:
+        return send_file(f"static/previews/default.jpg")
         serie = handler.get_serie(title)
         get_preview_crawler(serie.sites[0],serie.title,serie.chapters[0].url)
         return send_file(f"static/previews/{preview_name}")

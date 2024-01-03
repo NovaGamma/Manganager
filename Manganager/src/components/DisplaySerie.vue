@@ -5,8 +5,6 @@
   >
     <q-img
       :src="'http://127.0.0.1:4444/API/get_preview/'+serie.title"
-      :placeholder-src="imageSrc"
-      @error="replaceByDefault"
       style="border-radius: 10px; z-index: inherit"
       :ratio="9 / 12"
       spinner-color="grey"
