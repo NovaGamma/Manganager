@@ -7,9 +7,9 @@
     </div>
     <div class="chapter-info">
       {{serie.title}}
-      {{serie.site}}
-      <p v-if="serie.last_chapter_read != undefined">Last Chapter : {{serie.last_chapter[0]}}</p>
-      <p v-if='serie.last_chapter_read != undefined && serie.last_chapter_read != "None"'>Last Chapter Read : {{serie.last_chapter_read[0]}}</p>
+      {{serie.sites}}
+      <p v-if="serie.last_chapter_read != undefined">Last Chapter : Chapter {{serie.last_chapter}}</p>
+      <p v-if='serie.last_chapter_read != undefined && serie.last_chapter_read != "None"'>Last Chapter Read : Chapter {{serie.last_chapter_read}}</p>
     </div>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
     return {
     }
   },
-  props: {serie:Object},
+  props: {serie: Object},
   async created(){
     /*
     let r = await fetch("http://127.0.0.1:4444/API/get_infos_serie/"+this.title)

@@ -37,12 +37,13 @@ class Serie:
 
     def get_infos(self):
         return {
-            'title':self.title,
+            'title': self.title,
             'last_chapter': self.last_chapter,
-            'last_chapter_read':"None" if self.last_chapter_read == 0 else self.last_chapter_read,
-            'sites':self.chapters.keys(),
-            'date':self.date,
-            'state':self.state
+            'last_chapter_read': "None" if self.last_chapter_read == 0 else self.last_chapter_read,
+            'sites': list(self.chapters.keys()),
+            'date': self.date,
+            'state': self.state,
+            'read': self.read,
         }
 
     def read_chapter(self, data) -> None:
@@ -95,6 +96,7 @@ class Handler:
             preview = serie["preview"],
             last_chapter = serie["last_chapter"],
             last_chapter_read = serie["last_chapter_read"] ,
+            read = serie["read"],
             chapters = {
                 site: {
                     number: Chapter(name = chapter[0], url = chapter[1], number = chapter[2])
