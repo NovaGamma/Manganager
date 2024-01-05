@@ -8,14 +8,15 @@
         <div>
           <q-btn @click="drop()" label="drop"/>
           <q-btn @click="del()" label="remove"/>
+          <q-btn @click="update()" icon="autorenew" />
         </div>
-        <q-btn 
-          v-for="site of serie.sites" 
+        <q-btn
+          v-for="site of serie.sites"
           :label="site"
-          :key="site" 
+          :key="site"
           @click="displayedSite = site"
         />
-        <q-linear-progress 
+        <q-linear-progress
           :value="serie.last_chapter_read / serie.last_chapter"
           size="7px"
           stripe
@@ -25,7 +26,6 @@
           {{ serie.last_chapter_read }} / {{ serie.last_chapter }}
         </p>
       </div>
-      
     </div>
     <div class="col-6 column items-center">
       <div class="full-width">
@@ -35,7 +35,7 @@
         </select>
         <button @click="setRead()">Read until</button>
       </div>
-      <div 
+      <div
         v-for="chapter of chapters[displayedSite]" :key="chapter[2]"
         class="hover q-pa-sm q-my-xs full-width"
         :class="{read: serie.read.includes(chapter[2])}"
@@ -59,80 +59,92 @@ export default {
       displayedSite: ''
     }
   },
-  props: {title:String},
+  props: {title: String},
   async created(){
     await this.get_infos()
     await this.get_chapters()
     this.displayedSite = this.serie.sites[0]
   },
-  methods:{
+  methods: {
     async open(url){
-      await fetch("http://127.0.0.1:4444/API/open/",{
-        method:"POST",
+      await fetch("http://127.0.0.1:4444/API/open/", {
+        method: "POST",
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          'url':url
+          url: url
         })
-      });
+      })
     },
     async del(){
-      if(confirm('Do you want to delete ?')){
-        await fetch("http://127.0.0.1:4444/API/delete",{
-          method:"POST",
+      if (confirm('Do you want to delete ?')){
+        await fetch("http://127.0.0.1:4444/API/delete", {
+          method: "POST",
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            'title':this.title
+            title: this.title
           })
         })
       }
     },
+    async update() {
+      await fetch("http://127.0.0.1:4444/API/add_site/", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          title: this.title,
+          site: 'asurascans'
+        })
+      })
+    },
     async drop(){
       await fetch("http://127.0.0.1:4444/API/drop",{
-          method:"POST",
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            'title':this.title
-          })
-        }) 
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          title: this.title
+        })
+      })
     },
     async get_infos(){
-      let r = await fetch("http://127.0.0.1:4444/API/get_infos_serie/"+this.title)
+      let r = await fetch("http://127.0.0.1:4444/API/get_infos_serie/" + this.title)
       this.serie = await r.json()
       console.log(this.serie)
     },
     async get_chapters(){
-      let r = await fetch("http://127.0.0.1:4444/API/get_chap_list/"+this.title)
+      let r = await fetch("http://127.0.0.1:4444/API/get_chap_list/" + this.title)
       let chapters = await r.json()
       let chapters_parsed = {}
-      for(let site of Object.keys(chapters)) {
+      for (let site of Object.keys(chapters)) {
         let list_chapters = []
-        for(let number of Object.keys(chapters[site])) {
+        for (let number of Object.keys(chapters[site])) {
           list_chapters.push(chapters[site][number])
         }
-        list_chapters.sort((a,b) => a[2] - b[2])
+        list_chapters.sort((a, b) => a[2] - b[2])
         chapters_parsed[site] = list_chapters
       }
       this.chapters = chapters_parsed
     },
     async setRead(){
       await fetch("http://127.0.0.1:4444/API/read_until/",{
-        method:"POST",
+        method: "POST",
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          'title':this.title,
-          'chapter':this.read_until
+          title: this.title,
+          chapter: this.read_until
         })
-      });
-      await this.get_chapters();
-      await this.get_infos();
+      })
+      await this.get_chapters()
+      await this.get_infos()
     }
   }
 }

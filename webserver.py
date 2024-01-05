@@ -100,6 +100,16 @@ def get_chap_list(title):
         return jsonify('error')
     return jsonify(serie.chapters_json())
 
+@app.route('/API/add_site/', methods=['POST','OPTION'])
+def add_site():
+    data = request.get_json()
+    handler.add_site(data['title'], data['site'])
+
+    res = make_response({'title': data['title']})
+    res.headers['Access-Control-Allow-Origin'] = "*"
+    return res
+
+
 @app.route('/API/add_serie/', methods=['POST','OPTION'])
 def add_serie():
     data = request.get_json()

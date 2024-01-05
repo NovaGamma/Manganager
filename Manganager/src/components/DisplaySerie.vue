@@ -13,7 +13,7 @@
     />
     <div class="col-12 q-px-sm">
       {{serie.title}}
-      <q-linear-progress 
+      <q-linear-progress
         :value="serie.last_chapter_read / serie.last_chapter"
         size="7px"
         stripe
@@ -39,7 +39,7 @@ export default {
     this.serie = await r.json()
     console.log(this.serie)*/
   },
-  methods:{
+  methods: {
     async get_infos(){
       /*
       let r = await fetch("http://127.0.0.1:4444/API/get_infos_serie/"+this.title)
@@ -55,6 +55,5 @@ export default {
   display: inline-block;
   margin-right: 2%;
 }
-
 
 </style>

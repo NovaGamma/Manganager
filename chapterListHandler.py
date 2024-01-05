@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from statistics import mean, median
 from typing import List
-from crawler_handler import call_crawler, get_chapters_crawler
+from crawler_handler import call_crawler, get_chapters_crawler, crawler_search
 from utils import clean_title, open_with_json
 import time
 import multiprocessing
@@ -123,11 +123,12 @@ class Handler:
                         chapters = get_chapters_crawler(site)
                         count = 0
                         for chapter in chapters:
-                            if chapter[2] not in site.keys():
+                            chapter_number = extract_chapter_number(chapter[0])
+                            if chapter_number not in site.keys():
                                 count += 1
-                                site[chapter[2]] = Chapter(name = chapter[0], url = chapter[1], number = chapter[2])
-                                if chapter[2] > serie.last_chapter:
-                                    serie.last_chapter = chapter[2]
+                                site[chapter_number] = Chapter(name = chapter[0], url = chapter[1], number = chapter_number)
+                                if chapter_number > serie.last_chapter:
+                                    serie.last_chapter = chapter_number
                         if count != 0: #new chapters have been found
                             update_serie(serie)
                             print(f"{i/len(self.series)*100} %", count, serie.title)
@@ -182,9 +183,7 @@ class Handler:
         site = data['site']
         serie = self.get_serie(title)
         if serie:
-            #needs to be moved in the server to be sent in data dict
-            #needs to be in utils
-            number = self.get_chapter_number(chapterName)
+            number = extract_chapter_number(chapterName)
 
             if not number in serie.read:
                 #chapter has not been read on any site before
@@ -211,23 +210,48 @@ class Handler:
                     return serie
         else: return None
 
+    def add_site(self, title: str, site: str) -> None:
+        serie = self.get_serie(title)
+        if(site in serie.chapters.keys()):
+            return
+        #hardcoded for asurascans
+        url = crawler_search(title, site)
+        if(not url is None):
+            print(url)
+            chapters = get_chapters_crawler(site, url)
+
+            serie.chapters[site] = {
+                extract_chapter_number(chapter[0]): Chapter(name = chapter[0], url = chapter[1], number = extract_chapter_number(chapter[0]))
+                for chapter in chapters
+            }
+
+            chapters_number = list(serie.chapters[site].keys())
+            chapters_number.sort()
+
+            if chapters_number[-1] > serie.last_chapter:
+                serie.last_chapter = chapters_number[-1]
+
+            self.save()
+
     def add_follow(self, title: str, site: str, url: str) -> None:
         serie = self.get_serie(title)
         add_serie = False
         if(not serie):
             add_serie = True
-            serie = Serie(title = title, sites = [site,url], date=time.time(), state="reading")
+            serie = Serie(title = title, sites = [site], date=time.time(), state="reading")
 
         elif site in serie.chapters.keys():
             return
         
+        else:
+            serie.sites.append(site)
+        
         self.log(f"add {title} {url}\n")
 
         chapters, preview = call_crawler(site, title, url)
-        chapters = [Chapter(name = chapter[0], url = chapter[1]) for chapter in chapters]
 
         serie.chapters[site] = {
-            chapter[2]: Chapter(name = chapter[0], url = chapter[1], number = chapter[2])
+            extract_chapter_number(chapter[0]): Chapter(name = chapter[0], url = chapter[1], number = extract_chapter_number(chapter[0]))
             for chapter in chapters
         }
 
@@ -257,7 +281,7 @@ class Handler:
                         index = 0
                     else:
                         index = last_chap_read
-                    return (index+1)/serie.last_chapter
+                    return (index+1)/(serie.last_chapter+1)
                 series_list.sort(key=ratio)
             
             elif kwargs["sort"] == "sites":

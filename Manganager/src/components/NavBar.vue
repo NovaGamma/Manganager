@@ -5,17 +5,14 @@
   <router-view/>
 </template>
 
-
 <script>
-export default{
-  name:'NavBar',
-  data(){
+export default {
+  name: 'NavBar',
+  data() {
     return {
-      user:{},
-      token:''
+      user: {},
+      token: ''
     }
   },
 }
-
-
 </script>

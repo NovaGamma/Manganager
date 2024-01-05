@@ -74,6 +74,16 @@ def get_chapters_crawler(site, url):
                 else:
                     raise Error('URL does not correspond to the url_scheme')
 
+def crawler_search(title, site):
+    for crawler in os.listdir("crawlers/"):
+        if crawler.endswith('.py'):
+            name = crawler.rstrip('.py')
+            if name == site:
+                module = importlib.import_module('crawlers.'+name)
+                url = module.search(title)
+                return url
+
+
 def get_title_crawler(site, url):
     for crawler in os.listdir("crawlers/"):
         if crawler.endswith('.py'):

@@ -1,6 +1,6 @@
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.common.by import By
+from difflib import SequenceMatcher
+from bs4 import BeautifulSoup
+import requests
 try:
     from crawlers.utils import clean
     from crawlers.utils import save_preview
@@ -9,42 +9,74 @@ except:
     from utils import save_preview
 
 def url_scheme():
-    return "https://asura.nacm.xyz/"
+    return "https://asuratoon.com/"
 
 def type():
-    return "selenium"
+    return "bs4"
 
 def get_page(url):
-    firefox_options = Options()
-    firefox_options.add_argument("--disable-gpu")
-    firefox_options.add_argument("--headless")
-    driver = webdriver.Firefox(options=firefox_options)
+    r = requests.get(url)
+    soup = BeautifulSoup(r.text, "html.parser")
+    allc = soup.find('div', class_='allc')
+    new_url = allc.contents[1].attrs['href']
+    new_r = requests.get(new_url)
+    new_soup = BeautifulSoup(new_r.text, "html.parser")
+    return new_soup
 
-    start_url = url
-    driver.get(start_url)
-    allc = driver.find_element(By.CLASS_NAME, 'allc')
-    new_link = allc.find_element(By.TAG_NAME, 'a').get_attribute('href')
-    driver.get(new_link)
-    return driver
-
-def get_chapter_list(driver):
-    list_chapters = driver.find_elements(By.CLASS_NAME, 'eph-num')
+def get_chapter_list(url):
+    r = requests.get(url)
+    soup = BeautifulSoup(r.text, "html.parser")
+    list_chapters = soup.find_all('div', class_="eph-num")
     chapterList = []
     for chapter in list_chapters:
-        a = chapter.find_element(By.TAG_NAME, 'a')
-        url = a.get_attribute('href')
-        chapter_title = a.find_element(By.CLASS_NAME, 'chapternum').get_attribute('innerHTML')
+        a = clean(chapter.contents)[0]
+        url = a.attrs['href']
+        chapter_title = clean(clean(a.contents)[0].contents)[0]
         chapterList.append((chapter_title, url))
     return chapterList[::-1]
 
-def get_preview(driver, title):
-    div = driver.find_element(By.CLASS_NAME, 'thumb')
-    img = div.find_element(By.CSS_SELECTOR, '*')
-    url = img.get_attribute('src')
+def get_preview(soup, title):
+    div = soup.find('div', class_="thumb")
+    img = clean(div.contents)[0]
+    url = img.attrs['src']
     return save_preview(title, url)
 
 def get_title(RAW_URL):
-    driver = get_page(RAW_URL)
-    title = driver.find_element(By.CLASS_NAME, 'entry-title')
-    driver.quit()
+    r = requests.get(url)
+    soup = BeautifulSoup(r.text, "html.parser")
+    allc = soup.find('div', class_='allc')
+    title = allc.contents[1].contents[0]
     return title
+
+def search(title):
+    base_url = "https://asuratoon.com/?s="
+    url = base_url + title
+    url = url.replace(' ', '%20')
+    r = requests.get(url)
+    soup = BeautifulSoup(r.text, "html.parser")
+    results = soup.find_all('div', class_='bsx')
+    if(len(results) > 0):
+        a = clean(results[0].contents)[0]
+        search_title = a.attrs['title']
+        seq = SequenceMatcher(None, title.lower().strip(), search_title.lower().strip())
+        if seq.ratio() > 0.9:
+            return a.attrs['href']
+        elif len(results) > 1:
+            for result in results[1:]:
+                a = clean(result.contents)[0]
+                search_title = a.attrs['title']
+                seq = SequenceMatcher(None, title.lower().strip(), search_title.lower().strip())
+                if seq.ratio() > 0.9:
+                    return a.attrs['href']
+
+
+if __name__ == '__main__':
+    url = "https://asuratoon.com/3955407132-insanely-talented-player-chapter-1/"
+    soup = get_page(url)
+    title = get_title(url)
+    chapter_list = get_chapter_list(soup)
+    #print(title, chapter_list)
+    print(search('The Dark Mage s Return to Enlistment'))
+    #preview = get_preview(driver, title)
+    #print(chapter_list)
+    #driver.quit()

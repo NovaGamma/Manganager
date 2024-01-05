@@ -4,6 +4,7 @@
       <q-input class="q-mr-md" type="text" v-model="input" placeholder="Search manga..." />
       <q-input class="q-mr-md" type="text" v-model="add" placeholder="Add manga...(paste url)"/>
       <q-btn @click="add_serie()" label="Add" />
+      <q-btn @click="add_site()" icon="autorenew" />
 
     </div>
     <Filter @filter="send_filters"></Filter>
@@ -48,7 +49,21 @@ export default {
       return filtered
     }
   },
-  methods:{
+  methods: {
+    async add_site() {
+      for (let serie of this.series){
+        await fetch("http://127.0.0.1:4444/API/add_site/", {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            title: serie.title,
+            site: 'asurascans'
+          })
+        })
+      }
+    },
     async getChapterList(){
       let response = await fetch(`http://127.0.0.1:4444/API/get_read_list?finished=${this.params.finished}&sort=${this.params.sort}`)
       this.series = await response.json()
