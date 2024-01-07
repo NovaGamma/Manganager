@@ -144,22 +144,22 @@ class Handler:
                     p.kill()
                     print(f"Process ID: {process.pid}, Name: {process.name()}")
             print("killed remanant firefox processes")
-            set_updated(time.time())
+            #set_updated(time.time())
             self.save()
 
     def delete(self, title: str) -> None:
         serie = self.get_serie(title)
         if serie:
             self.series.remove(serie)
-            remove_serie(serie)
+            #remove_serie(serie)
             self.save()
 
     def drop(self, title: str) -> None:
         serie = self.get_serie(title)
         if serie:
             serie.state = "dropped"
-            update_serie(serie)
             self.save()
+            #update_serie(serie)
 
     def read_until(self, title: str, chapterNumber: float) -> None:
         serie = self.get_serie(title)
@@ -175,8 +175,8 @@ class Handler:
                     serie.read.append(index)
             serie.read.sort()
             serie.last_chapter_read = serie.read[-1]
-            update_serie(serie)
             self.save()
+            #update_serie(serie)
 
     def read_chapter(self, data: dict) -> None:
         chapterName = data['chapterName']
@@ -191,8 +191,8 @@ class Handler:
                 serie.read_chapter(data)
                 
                 self.log(f"read {title} on {site}\n")
-                update_serie(serie)
                 self.save()                
+                #update_serie(serie)
                     
 
     def get_preview(self, title: str) -> str:
