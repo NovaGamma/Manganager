@@ -99,7 +99,7 @@ class Handler:
             read = [float(number) for number in serie["read"]],
             chapters = {
                 site: {
-                    number: Chapter(name = chapter[0], url = chapter[1], number = chapter[2])
+                    float(number): Chapter(name = chapter[0], url = chapter[1], number = chapter[2])
                     for number, chapter in chapters.items()
                 }
                 for site, chapters in serie['chapters'].items()   
