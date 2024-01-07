@@ -30,7 +30,7 @@ class Serie:
     date: float
     state: bool
     chapters: dict
-    read: list[float]
+    read: list
     preview: str = ''
     last_chapter: float = 0
     last_chapter_read: float = 0
@@ -96,7 +96,7 @@ class Handler:
             preview = serie["preview"],
             last_chapter = serie["last_chapter"],
             last_chapter_read = serie["last_chapter_read"] ,
-            read = serie["read"],
+            read = [float(number) for number in serie["read"]],
             chapters = {
                 site: {
                     number: Chapter(name = chapter[0], url = chapter[1], number = chapter[2])
@@ -168,12 +168,13 @@ class Handler:
             for chapters in serie.chapters.values():
                 for number in chapters.keys():
                     if not number in indexes and number <= chapterNumber:
-                        indexes.append(number)
+                        indexes.append(float(number))
 
             for index in indexes:
                 if not index in serie.read:
                     serie.read.append(index)
             serie.read.sort()
+            serie.last_chapter_read = serie.read[-1]
             update_serie(serie)
             self.save()
 
