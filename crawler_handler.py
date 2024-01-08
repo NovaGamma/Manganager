@@ -25,8 +25,10 @@ def call_crawler(site, title, url):
                             print(url)
                             raise Exception
                     else:
-                        chapter_list = module.get_chapter_list(url)
-                        preview = module.get_preview(url, title)
+                        print(url)
+                        soup = module.get_page(url)
+                        chapter_list = module.get_chapter_list(soup)
+                        preview = module.get_preview(soup, title)
                     return [chapter_list, preview]
                 else:
                     raise Error('URL does not correspond to the url_scheme')

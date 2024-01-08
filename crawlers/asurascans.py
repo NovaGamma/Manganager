@@ -23,9 +23,7 @@ def get_page(url):
     new_soup = BeautifulSoup(new_r.text, "html.parser")
     return new_soup
 
-def get_chapter_list(url):
-    r = requests.get(url)
-    soup = BeautifulSoup(r.text, "html.parser")
+def get_chapter_list(soup):
     list_chapters = soup.find_all('div', class_="eph-num")
     chapterList = []
     for chapter in list_chapters:
@@ -71,12 +69,13 @@ def search(title):
 
 
 if __name__ == '__main__':
-    url = "https://asuratoon.com/3955407132-insanely-talented-player-chapter-1/"
+    url = "https://asuratoon.com/0873280421-star-embracing-swordmaster-chapter-1/"
     soup = get_page(url)
     title = get_title(url)
     chapter_list = get_chapter_list(soup)
+    print(chapter_list)
     #print(title, chapter_list)
-    print(search('The Dark Mage s Return to Enlistment'))
+    #print(search('The Dark Mage s Return to Enlistment'))
     #preview = get_preview(driver, title)
     #print(chapter_list)
     #driver.quit()

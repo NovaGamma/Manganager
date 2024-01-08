@@ -5,12 +5,6 @@
       <div>
         {{title}}
         <br>
-        <div>
-          <q-btn @click="$router.push(`/admin/${serie.title}`)" label="admin" />
-          <q-btn @click="drop()" label="drop"/>
-          <q-btn @click="del()" label="remove"/>
-          <q-btn @click="update()" icon="autorenew" />
-        </div>
         <q-btn
           v-for="site of serie.sites"
           :label="site"
@@ -43,7 +37,7 @@
         @click="open(chapter[1])"
       >
         <p class="no-margin">
-          {{ chapter[0] }}
+          {{ chapter[0] }} {{ chapter[1] }} {{ chapter[2] }}
         </p>
       </div>
     </div>
@@ -110,7 +104,7 @@ export default {
       })
     },
     async drop(){
-      await fetch("http://127.0.0.1:4444/API/drop",{
+      await fetch("http://127.0.0.1:4444/API/drop", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
@@ -140,7 +134,7 @@ export default {
       this.chapters = chapters_parsed
     },
     async setRead(){
-      await fetch("http://127.0.0.1:4444/API/read_until/",{
+      await fetch("http://127.0.0.1:4444/API/read_until/", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'

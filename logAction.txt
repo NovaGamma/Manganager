@@ -734,3 +734,9 @@ drop Dangerous Dungeon Escape
 drop Golden Mage
 delete The Player Hides His Past
 delete Standard of Reincarnation
+delete Star Embracing Swordmaster
+delete Star Embracing Swordmaster
+delete Star Embracing Swordmaster
+delete Star Embracing Swordmaster
+delete Star Embracing Swordmaster
+delete Star Embracing Swordmaster

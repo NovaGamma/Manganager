@@ -123,7 +123,7 @@ class Handler:
                 try:
                     #can be multithreaded
                     for site in serie.chapters.keys():
-                        chapters = get_chapters_crawler(site)
+                        chapters = get_chapters_crawler(site, serie.chapters[site][serie.last_chapter].url)
                         count = 0
                         for chapter in chapters:
                             chapter_number = extract_chapter_number(chapter[0])
@@ -138,7 +138,7 @@ class Handler:
                         else:
                             print(f"{i/len(self.series)*100} %")
                 except Exception as err:
-                    print(err, serie.title, serie.sites)
+                    print(err, serie.title, list(serie.chapters.keys()))
             import psutil
             processes = psutil.process_iter()
             for process in processes:
@@ -243,27 +243,38 @@ class Handler:
         add_serie = False
         if(not serie):
             add_serie = True
-            serie = Serie(title = title, sites = [site], date=time.time(), state="reading")
+            serie = Serie(
+                title = title,
+                date=time.time(),
+                chapters={},
+                state="reading",
+                read = [],
+                last_chapter_read = 0.0
+            )
 
         elif site in serie.chapters.keys():
             return
         
-        else:
-            serie.sites.append(site)
-        
-        self.log(f"add {title} {url}\n")
+        print(f"add {title} {url}\n")
 
         chapters, preview = call_crawler(site, title, url)
 
+        print(chapters)
         serie.chapters[site] = {
             extract_chapter_number(chapter[0]): Chapter(name = chapter[0], url = chapter[1], number = extract_chapter_number(chapter[0]))
             for chapter in chapters
         }
 
+        last_chapter = list(serie.chapters[site].keys())
+        last_chapter = last_chapter[-1]
+
+        if(serie.last_chapter and last_chapter > serie.last_chapter):
+            serie.last_chapter = last_chapter
+
         if add_serie:
             serie.preview = preview
+            serie.last_chapter = last_chapter
             self.series.append(serie)
-            add_serie(serie)
         self.save()
 
     def following(self, title: str, site: str) -> bool:

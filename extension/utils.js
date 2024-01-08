@@ -9,7 +9,7 @@ export default
     else if(url.match(/https:\/\/mangakakalot\.com\/chapter\/.+\/.+/)){
       return 'mangakakalot'
     }
-    else if(url.match(/https:\/\/asura\.nacm\.xyz\/.*/)){
+    else if(url.match(/https:\/\/asuratoon\.com\/.*/)){
       return 'asurascans'
     }
     else if (url.match(/https:\/\/lhtranslation\.net\/manga\/.*\/.*/)){
