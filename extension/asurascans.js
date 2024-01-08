@@ -9,11 +9,17 @@ chrome.runtime.onMessage.addListener(
       return true;
     }
   );
-  
-console.log("Injected on Site");
-let url = window.document.URL;
-let title = document.getElementsByClassName('allc')[0].children[0].text
-let chapterName = document.getElementsByClassName('entry-title')[0].innerHTML.split(' ').slice(-2)
-chrome.runtime.sendMessage({'question':'url', 'title':title, 'url': url, 'chapterName':chapterName.join(" ")}, function() {
-});
+
+(async () => {
+  await new Promise(r => setTimeout(r, 5000));
+  console.log("Injected on Site");
+  let url = window.document.URL;
+  let title = document.getElementsByClassName('allc')[0].children[0].text
+  if(!title) return;
+  console.log("found title !", title)
+  let chapterName = document.getElementsByClassName('entry-title')[0].innerHTML.split(' ').slice(-2)
+  console.log("chapterName", chapterName);
+  chrome.runtime.sendMessage({'question':'url', 'site':'asurascans', 'title':title, 'url': url, 'chapterName':chapterName.join(" ")}, function() {
+  });
+})()
   

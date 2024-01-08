@@ -13,7 +13,7 @@ chrome.runtime.onMessage.addListener(
           'title':request.title,
           'url':request.url,
           'chapterName':request.chapterName,
-          'site':get_site(request.url)
+          'site':request.site,
         })
       })}
       else if(request.question == "isRead"){

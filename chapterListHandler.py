@@ -48,6 +48,9 @@ class Serie:
 
     def read_chapter(self, data) -> None:
         chapter_number = data['chapter_number']
+        if(not data['site'] in self.chapters.keys()):
+            return
+        
         self.date = time.time()
         self.read.append(chapter_number)
         self.read.sort()
@@ -188,9 +191,10 @@ class Handler:
 
             if not number in serie.read:
                 #chapter has not been read on any site before
+                data['chapter_number'] = number
                 serie.read_chapter(data)
                 
-                self.log(f"read {title} on {site}\n")
+                print(f"read {title} on {site}\n")
                 self.save()                
                 #update_serie(serie)
                     
@@ -264,7 +268,7 @@ class Handler:
 
     def following(self, title: str, site: str) -> bool:
         serie = self.get_serie(title)
-        return False if serie is None else site == serie.sites[0]
+        return False if serie is None else site in serie.chapters.keys()
 
     def get_read_list(self, kwargs) -> list:
         series_list = [serie for serie in self.series if serie.state != "dropped"]

@@ -14,5 +14,5 @@ console.log("Injected on Site");
 let url = window.document.URL;
 let title = document.getElementsByClassName("panel-breadcrumb")[0].children[2].innerHTML;
 let chapterName = document.getElementsByClassName("panel-breadcrumb")[0].children[4].innerHTML;
-chrome.runtime.sendMessage({'question':'url', 'title':title, 'url': url, 'chapterName':chapterName}, function() {
+chrome.runtime.sendMessage({'question':'url', 'site':'readmanganato' , 'title':title, 'url': url, 'chapterName':chapterName}, function() {
 });
