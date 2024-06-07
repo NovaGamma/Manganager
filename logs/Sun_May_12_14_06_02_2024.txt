@@ -1,0 +1,504 @@
+[Sun May 12 14:06:02 2024]: Opening data file...
+[Sun May 12 14:06:02 2024]: Loading data from file...
+[Sun May 12 14:06:02 2024]: Done !
+[Sun May 12 14:06:06 2024]: 0.0 %
+[Sun May 12 14:06:06 2024]: 0.0 %
+[Sun May 12 14:06:06 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? To Hell With Being A Saint I m A Doctor asurascans https://www.asurascans.com/to-hell-with-being-a-saint-im-a-doctor-chapter-48/
+[Sun May 12 14:06:07 2024]: 0.4830917874396135 %
+[Sun May 12 14:06:08 2024]: 0.4830917874396135 %
+[Sun May 12 14:06:09 2024]: 0.7246376811594203 %
+[Sun May 12 14:06:09 2024]: 0.7246376811594203 %
+[Sun May 12 14:06:09 2024]: 0.966183574879227 %
+[Sun May 12 14:06:10 2024]: 1.2077294685990339 %
+[Sun May 12 14:06:10 2024]: 1.2077294685990339 %
+[Sun May 12 14:06:11 2024]: 1.4492753623188406 %
+[Sun May 12 14:06:12 2024]: 1.6908212560386473 %
+[Sun May 12 14:06:12 2024]: 1.6908212560386473 %
+[Sun May 12 14:06:13 2024]: 1.932367149758454 %
+[Sun May 12 14:06:13 2024]: 1.932367149758454 %
+[Sun May 12 14:06:14 2024]: 2.1739130434782608 %
+[Sun May 12 14:06:15 2024]: 2.1739130434782608 %
+[Sun May 12 14:06:15 2024]: 2.4154589371980677 %
+[Sun May 12 14:06:15 2024]: 2.657004830917874 % 1 Mushoku Tensei Isekai Ittara Honki Dasu
+[Sun May 12 14:06:15 2024]: 2.898550724637681 %
+[Sun May 12 14:06:15 2024]: 3.140096618357488 %
+[Sun May 12 14:06:16 2024]: 3.3816425120772946 %
+[Sun May 12 14:06:16 2024]: 3.3816425120772946 %
+[Sun May 12 14:06:17 2024]: 3.6231884057971016 %
+[Sun May 12 14:06:18 2024]: 'NoneType' object has no attribute 'css' Absolute Necromancer mangatx https://mangatx.com/manga/absolute-necromancer/chapter-34/
+[Sun May 12 14:06:18 2024]: 3.864734299516908 %
+[Sun May 12 14:06:19 2024]: 4.1062801932367154 %
+[Sun May 12 14:06:19 2024]: 4.1062801932367154 %
+[Sun May 12 14:06:20 2024]: 'NoneType' object has no attribute 'css' I m Not That Kind of Talent mangatx https://mangatx.com/manga/im-not-that-kind-of-talent/chapter-54/
+[Sun May 12 14:06:21 2024]: 4.3478260869565215 %
+[Sun May 12 14:06:22 2024]: 4.5893719806763285 %
+[Sun May 12 14:06:23 2024]: 4.830917874396135 %
+[Sun May 12 14:06:24 2024]: 5.072463768115942 %
+[Sun May 12 14:06:24 2024]: 5.072463768115942 %
+[Sun May 12 14:06:26 2024]: 5.314009661835748 %
+[Sun May 12 14:06:27 2024]: 5.555555555555555 %
+[Sun May 12 14:06:27 2024]: 5.797101449275362 %
+[Sun May 12 14:06:29 2024]: 'NoneType' object has no attribute 'css' The Player With a Hidden Past mangatx https://mangatx.com/manga/the-player-with-a-hidden-past/chapter-24/
+[Sun May 12 14:06:29 2024]: 6.280193236714976 %
+[Sun May 12 14:06:30 2024]: 6.280193236714976 %
+[Sun May 12 14:06:31 2024]: 'NoneType' object has no attribute 'css' Solo Spell Caster mangatx https://mangatx.com/manga/solo-spell-caster/chapter-114/
+[Sun May 12 14:06:31 2024]: 6.521739130434782 %
+[Sun May 12 14:06:32 2024]: 6.763285024154589 %
+[Sun May 12 14:06:32 2024]: 6.763285024154589 %
+[Sun May 12 14:06:33 2024]: 7.004830917874397 %
+[Sun May 12 14:06:34 2024]: 7.004830917874397 %
+[Sun May 12 14:06:34 2024]: 7.246376811594203 %
+[Sun May 12 14:06:35 2024]: 7.487922705314009 %
+[Sun May 12 14:06:36 2024]: 7.487922705314009 %
+[Sun May 12 14:06:36 2024]: 7.729468599033816 %
+[Sun May 12 14:06:37 2024]: 7.729468599033816 %
+[Sun May 12 14:06:37 2024]: 7.971014492753622 %
+[Sun May 12 14:06:37 2024]: 7.971014492753622 %
+[Sun May 12 14:06:38 2024]: 8.212560386473431 %
+[Sun May 12 14:06:39 2024]: 'NoneType' object has no attribute 'css' Demi Gods and Semi Devils mangatx https://mangatx.com/manga/demi-gods-and-semi-devils/chapter-89/
+[Sun May 12 14:06:40 2024]: 8.695652173913043 %
+[Sun May 12 14:06:40 2024]: 8.695652173913043 %
+[Sun May 12 14:06:41 2024]: 8.937198067632849 %
+[Sun May 12 14:06:42 2024]: 8.937198067632849 %
+[Sun May 12 14:06:42 2024]: 'NoneType' object has no attribute 'css' I Became a Renowned Family s Sword Prodigy mangatx https://mangatx.com/manga/i-became-a-renowned-familys-sword-prodigy/chapter-82/
+[Sun May 12 14:06:43 2024]: 9.178743961352657 %
+[Sun May 12 14:06:44 2024]: 'NoneType' object has no attribute 'css' Swordmaster s Youngest Son mangatx https://mangatx.com/manga/swordmasters-youngest-son/chapter-93/
+[Sun May 12 14:06:44 2024]: 9.420289855072465 %
+[Sun May 12 14:06:45 2024]: 'NoneType' object has no attribute 'css' Return To Player mangatx https://mangatx.com/manga/return-to-player/chapter-143/
+[Sun May 12 14:06:45 2024]: 9.66183574879227 %
+[Sun May 12 14:06:46 2024]: 9.903381642512077 %
+[Sun May 12 14:06:46 2024]: 10.144927536231885 %
+[Sun May 12 14:06:47 2024]: 10.144927536231885 %
+[Sun May 12 14:06:48 2024]: 'NoneType' object has no attribute 'css' Double Click mangatx https://mangatx.com/manga/double-click-park-soo-bong/chapter-66/
+[Sun May 12 14:06:49 2024]: 10.628019323671497 %
+[Sun May 12 14:06:50 2024]: 'NoneType' object has no attribute 'css' Virus Girlfriend mangatx https://mangatx.com/manga/my-girlfriend-is-a-zombie/chapter-428/
+[Sun May 12 14:06:50 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Terminally Ill Genius Dark Knight asurascans https://asura.nacm.xyz/terminally-ill-genius-dark-knight-chapter-20/
+[Sun May 12 14:06:50 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Logging 10 000 Years into the Future asurascans https://asura.nacm.xyz/logging-10000-years-into-the-future-chapter-44/
+[Sun May 12 14:06:51 2024]: 11.594202898550725 %
+[Sun May 12 14:06:51 2024]: 11.594202898550725 %
+[Sun May 12 14:06:52 2024]: 11.83574879227053 %
+[Sun May 12 14:06:53 2024]: 'NoneType' object has no attribute 'css' Kalsarin mangatx https://mangatx.com/manga/kalsarin/chapter-18/
+[Sun May 12 14:06:54 2024]: 12.318840579710146 %
+[Sun May 12 14:06:54 2024]: 12.318840579710146 %
+[Sun May 12 14:06:55 2024]: 12.560386473429952 %
+[Sun May 12 14:06:55 2024]: 12.80193236714976 %
+[Sun May 12 14:06:55 2024]: 13.043478260869565 %
+[Sun May 12 14:06:56 2024]: 'NoneType' object has no attribute 'css' The Gateway of Revolution mangatx https://mangatx.com/manga/the-gateway-of-revolution/chapter-82/
+[Sun May 12 14:06:57 2024]: 'NoneType' object has no attribute 'css' The Greatest in the World mangatx https://mangatx.com/manga/the-greatest-in-the-world/chapter-32/
+[Sun May 12 14:06:58 2024]: 'NoneType' object has no attribute 'css' The Book of Lagier mangatx https://mangatx.com/manga/the-book-of-lagier/chapter-83/
+[Sun May 12 14:06:59 2024]: 13.768115942028986 %
+[Sun May 12 14:06:59 2024]: 14.009661835748794 %
+[Sun May 12 14:07:00 2024]: 'NoneType' object has no attribute 'css' Crazy professor system mangatx https://mangatx.com/manga/crazy-professor-system/chapter-100/
+[Sun May 12 14:07:01 2024]: 'NoneType' object has no attribute 'css' Chronicles Of The Martial God s Return mangatx https://mangatx.com/manga/chronicles-of-the-martial-gods-return/chapter-72/
+[Sun May 12 14:07:01 2024]: 14.492753623188406 %
+[Sun May 12 14:07:02 2024]: 14.734299516908212 %
+[Sun May 12 14:07:02 2024]: 14.734299516908212 %
+[Sun May 12 14:07:03 2024]: 14.975845410628018 %
+[Sun May 12 14:07:04 2024]: 'NoneType' object has no attribute 'css' Player Who Returned 10 000 Years Later mangatx https://mangatx.com/manga/player-who-returned-10000-years-later/chapter-65/
+[Sun May 12 14:07:04 2024]: 15.217391304347828 %
+[Sun May 12 14:07:05 2024]: 'NoneType' object has no attribute 'css' The World After the Fall mangatx https://mangatx.com/manga/the-world-after-the-fall/chapter-95/
+[Sun May 12 14:07:06 2024]: 15.70048309178744 %
+[Sun May 12 14:07:06 2024]: 15.70048309178744 %
+[Sun May 12 14:07:07 2024]: 15.942028985507244 %
+[Sun May 12 14:07:07 2024]: 15.942028985507244 %
+[Sun May 12 14:07:08 2024]: 16.183574879227052 % 1 Archmage Streamer
+[Sun May 12 14:07:09 2024]: 'NoneType' object has no attribute 'css' The S Classes That I Raised mangatx https://mangatx.com/manga/the-s-classes-that-i-raised/chapter-106/
+[Sun May 12 14:07:10 2024]: 16.425120772946862 %
+[Sun May 12 14:07:11 2024]: 'NoneType' object has no attribute 'css' Mercenary Enrollment mangatx https://mangatx.com/manga/mercenary-enrollment/chapter-157/
+[Sun May 12 14:07:12 2024]: 'NoneType' object has no attribute 'css' Surviving The Game as a Barbarian mangatx https://mangatx.com/manga/survive-as-a-barbarian-in-the-game/chapter-33/
+[Sun May 12 14:07:12 2024]: 16.908212560386474 %
+[Sun May 12 14:07:13 2024]: 17.14975845410628 %
+[Sun May 12 14:07:14 2024]: 17.391304347826086 %
+[Sun May 12 14:07:15 2024]: 'NoneType' object has no attribute 'css' Slave B mangatx https://mangatx.com/manga/slave-b-manhwa/chapter-80/
+[Sun May 12 14:07:16 2024]: 17.874396135265698 %
+[Sun May 12 14:07:16 2024]: 17.874396135265698 %
+[Sun May 12 14:07:17 2024]: 18.115942028985508 %
+[Sun May 12 14:07:17 2024]: 18.115942028985508 %
+[Sun May 12 14:07:17 2024]: 18.357487922705314 %
+[Sun May 12 14:07:18 2024]: 18.59903381642512 %
+[Sun May 12 14:07:19 2024]: 18.59903381642512 %
+[Sun May 12 14:07:19 2024]: 18.84057971014493 %
+[Sun May 12 14:07:20 2024]: 19.082125603864732 %
+[Sun May 12 14:07:20 2024]: 19.32367149758454 %
+[Sun May 12 14:07:21 2024]: 19.565217391304348 %
+[Sun May 12 14:07:21 2024]: 19.806763285024154 %
+[Sun May 12 14:07:21 2024]: 19.806763285024154 %
+[Sun May 12 14:07:22 2024]: 20.048309178743963 %
+[Sun May 12 14:07:23 2024]: 'NoneType' object has no attribute 'css' Necromancer s Evolutionary Traits mangatx https://mangatx.com/manga/necromancers-evolutionary-traits/chapter-33/
+[Sun May 12 14:07:23 2024]: 20.28985507246377 %
+[Sun May 12 14:07:24 2024]: 20.531400966183575 %
+[Sun May 12 14:07:25 2024]: 20.77294685990338 %
+[Sun May 12 14:07:25 2024]: 20.77294685990338 %
+[Sun May 12 14:07:26 2024]: 'NoneType' object has no attribute 'css' Return of the Disaster Class Hero mangatx https://mangatx.com/manga/the-return-of-the-disaster-class-hero/chapter-74/
+[Sun May 12 14:07:27 2024]: 21.014492753623188 %
+[Sun May 12 14:07:27 2024]: 21.256038647342994 %
+[Sun May 12 14:07:28 2024]: 21.256038647342994 %
+[Sun May 12 14:07:28 2024]: 21.497584541062803 %
+[Sun May 12 14:07:29 2024]: 21.497584541062803 %
+[Sun May 12 14:07:30 2024]: 21.73913043478261 %
+[Sun May 12 14:07:30 2024]: 21.980676328502415 %
+[Sun May 12 14:07:31 2024]: 22.22222222222222 %
+[Sun May 12 14:07:32 2024]: 22.22222222222222 %
+[Sun May 12 14:07:32 2024]: 22.463768115942027 %
+[Sun May 12 14:07:33 2024]: 22.463768115942027 %
+[Sun May 12 14:07:33 2024]: 22.705314009661837 %
+[Sun May 12 14:07:34 2024]: 22.705314009661837 %
+[Sun May 12 14:07:36 2024]: 22.946859903381643 %
+[Sun May 12 14:07:36 2024]: 23.18840579710145 % 3 Magic Level 99990000 All Attribute Great Sage
+[Sun May 12 14:07:36 2024]: 23.42995169082126 %
+[Sun May 12 14:07:37 2024]: 23.67149758454106 %
+[Sun May 12 14:07:37 2024]: 23.67149758454106 %
+[Sun May 12 14:07:38 2024]: 'NoneType' object has no attribute 'css' Reincarnation Of The Strongest Sword God mangatx https://mangatx.com/manga/reincarnation-of-the-strongest-sword-god/chapter-55/
+[Sun May 12 14:07:39 2024]: 23.91304347826087 %
+[Sun May 12 14:07:39 2024]: 24.154589371980677 %
+[Sun May 12 14:07:40 2024]: 24.396135265700483 %
+[Sun May 12 14:07:41 2024]: 24.637681159420293 %
+[Sun May 12 14:07:42 2024]: 24.879227053140095 %
+[Sun May 12 14:07:43 2024]: 25.120772946859905 %
+[Sun May 12 14:07:44 2024]: 25.36231884057971 %
+[Sun May 12 14:07:45 2024]: 25.60386473429952 %
+[Sun May 12 14:07:45 2024]: 25.60386473429952 %
+[Sun May 12 14:07:46 2024]: 25.845410628019323 %
+[Sun May 12 14:07:46 2024]: 25.845410628019323 %
+[Sun May 12 14:07:47 2024]: 'NoneType' object has no attribute 'css' Demon Lord s Martial Arts Ascension mangatx https://mangatx.com/manga/the-demon-lord-levels-up-with-martial-arts/chapter-53/
+[Sun May 12 14:07:47 2024]: 26.08695652173913 %
+[Sun May 12 14:07:47 2024]: 26.32850241545894 %
+[Sun May 12 14:07:48 2024]: 'NoneType' object has no attribute 'css' Seoul Station Necromancer mangatx https://mangatx.com/manga/seoul-stations-necromancer/chapter-101/
+[Sun May 12 14:07:49 2024]: 'NoneType' object has no attribute 'css' Return of the 8th class Magician mangatx https://mangatx.com/manga/return-of-the-8th-class-magician-manhwa/chapter-79/
+[Sun May 12 14:07:50 2024]: 26.811594202898554 %
+[Sun May 12 14:07:51 2024]: 27.053140096618357 %
+[Sun May 12 14:07:51 2024]: 27.053140096618357 %
+[Sun May 12 14:07:51 2024]: 27.294685990338163 %
+[Sun May 12 14:07:51 2024]: 27.536231884057973 %
+[Sun May 12 14:07:51 2024]: 27.77777777777778 %
+[Sun May 12 14:07:52 2024]: 28.019323671497588 %
+[Sun May 12 14:07:53 2024]: 28.019323671497588 %
+[Sun May 12 14:07:54 2024]: 28.26086956521739 %
+[Sun May 12 14:07:54 2024]: 28.26086956521739 %
+[Sun May 12 14:07:54 2024]: 28.502415458937197 %
+[Sun May 12 14:07:55 2024]: 'NoneType' object has no attribute 'css' Seoul Station Druid mangatx https://mangatx.com/manga/seoul-station-druid/chapter-104/
+[Sun May 12 14:07:56 2024]: 'NoneType' object has no attribute 'css' Academy s Undercover Professor mangatx https://mangatx.com/manga/i-got-a-fake-job-at-the-academy/chapter-67/
+[Sun May 12 14:07:56 2024]: 28.985507246376812 %
+[Sun May 12 14:07:57 2024]: 29.227053140096622 %
+[Sun May 12 14:07:57 2024]: 29.468599033816425 %
+[Sun May 12 14:07:58 2024]: 29.71014492753623 %
+[Sun May 12 14:07:59 2024]: 'NoneType' object has no attribute 'css' Taming Master mangatx https://mangatx.com/manga/taming-master/chapter-125/
+[Sun May 12 14:07:59 2024]: 29.951690821256037 %
+[Sun May 12 14:07:59 2024]: 30.193236714975846 %
+[Sun May 12 14:08:00 2024]: 30.434782608695656 %
+[Sun May 12 14:08:00 2024]: 30.434782608695656 %
+[Sun May 12 14:08:01 2024]: 30.676328502415455 %
+[Sun May 12 14:08:01 2024]: 30.676328502415455 %
+[Sun May 12 14:08:02 2024]: 30.917874396135264 %
+[Sun May 12 14:08:02 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? I ll Be Taking A Break For Personal Reasons asurascans https://www.asurascans.com/ill-be-taking-a-break-for-personal-reasons-chapter-51/
+[Sun May 12 14:08:03 2024]: 'NoneType' object has no attribute 'css' The Player that can t Level Up mangatx https://mangatx.com/manga/the-player-that-cant-level-up/chapter-122/
+[Sun May 12 14:08:03 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Villain To Kill asurascans https://www.asurascans.com/villain-to-kill-chapter-96/
+[Sun May 12 14:08:04 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Star Instructor Master Baek asurascans https://www.asurascans.com/star-instructor-master-baek-chapter-76/
+[Sun May 12 14:08:04 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Warrior High School Dungeon Raid Department asurascans https://www.asurascans.com/warrior-high-school-dungeon-raid-department-chapter-45-s1-end/
+[Sun May 12 14:08:04 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? My School Life Pretending To Be a Worthless Person asurascans https://www.asurascans.com/0906168628-my-school-life-pretending-to-be-a-worthless-person-chapter-52-s1-end/
+[Sun May 12 14:08:04 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? The Heavenly Demon Can t Live a Normal Life asurascans https://www.asurascans.com/the-heavenly-demon-cant-live-a-normal-life-chapter-70-the-last-objective-s1-end/
+[Sun May 12 14:08:05 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? On My Way to Kill God asurascans https://www.asurascans.com/on-my-way-to-kill-god-chapter-44-notice/
+[Sun May 12 14:08:05 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Archmage Transcending Through Regression asurascans https://www.asurascans.com/archmage-transcending-through-regression-chapter-48/
+[Sun May 12 14:08:05 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Carnivorous Hunter asurascans https://www.asurascans.com/carnivorous-hunter-chapter-51-notice/
+[Sun May 12 14:08:06 2024]: 33.57487922705314 %
+[Sun May 12 14:08:06 2024]: 33.81642512077295 %
+[Sun May 12 14:08:07 2024]: 34.05797101449276 %
+[Sun May 12 14:08:08 2024]: 34.29951690821256 %
+[Sun May 12 14:08:08 2024]: 34.54106280193236 %
+[Sun May 12 14:08:09 2024]: 34.54106280193236 %
+[Sun May 12 14:08:10 2024]: 'NoneType' object has no attribute 'css' I Might Be A Fake Cultivator mangatx https://mangatx.com/manga/i-might-be-a-fake-cultivator/chapter-304/
+[Sun May 12 14:08:10 2024]: 35.02415458937198 %
+[Sun May 12 14:08:10 2024]: 35.26570048309179 %
+[Sun May 12 14:08:11 2024]: 'NoneType' object has no attribute 'css' I Obtained a Mythic Item mangatx https://mangatx.com/manga/i-obtained-a-mythic-item/chapter-75/
+[Sun May 12 14:08:12 2024]: 35.507246376811594 %
+[Sun May 12 14:08:12 2024]: 35.748792270531396 % 1 Super God System
+[Sun May 12 14:08:12 2024]: 35.990338164251206 %
+[Sun May 12 14:08:12 2024]: 36.231884057971016 %
+[Sun May 12 14:08:12 2024]: 36.473429951690825 %
+[Sun May 12 14:08:12 2024]: 36.71497584541063 %
+[Sun May 12 14:08:13 2024]: 36.95652173913043 % 1 Iron Ladies
+[Sun May 12 14:08:13 2024]: 37.19806763285024 %
+[Sun May 12 14:08:14 2024]: 37.43961352657005 %
+[Sun May 12 14:08:15 2024]: 'NoneType' object has no attribute 'css' Magic Emperor mangatx https://mangatx.com/manga/magic-emperor/chapter-456/
+[Sun May 12 14:08:16 2024]: 'NoneType' object has no attribute 'css' I Grow Stronger By Eating mangatx https://mangatx.com/manga/i-grow-stronger-by-eating/chapter-100/
+[Sun May 12 14:08:16 2024]: 37.92270531400966 %
+[Sun May 12 14:08:16 2024]: 38.164251207729464 %
+[Sun May 12 14:08:17 2024]: 38.405797101449274 %
+[Sun May 12 14:08:18 2024]: 38.64734299516908 %
+[Sun May 12 14:08:18 2024]: 38.64734299516908 %
+[Sun May 12 14:08:18 2024]: 38.88888888888889 %
+[Sun May 12 14:08:19 2024]: 38.88888888888889 %
+[Sun May 12 14:08:19 2024]: 39.130434782608695 %
+[Sun May 12 14:08:19 2024]: 39.371980676328505 %
+[Sun May 12 14:08:19 2024]: 39.61352657004831 %
+[Sun May 12 14:08:19 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Overpowered Sword asurascans https://www.asurascans.com/overpowered-sword-chapter-65/
+[Sun May 12 14:08:20 2024]: 40.09661835748793 %
+[Sun May 12 14:08:20 2024]: 40.09661835748793 %
+[Sun May 12 14:08:21 2024]: 'NoneType' object has no attribute 'css' The Healing Priest of the Sun mangatx https://mangatx.com/manga/the-healing-priest-of-the-sun/chapter-64/
+[Sun May 12 14:08:22 2024]: 40.57971014492754 %
+[Sun May 12 14:08:22 2024]: 40.82125603864734 %
+[Sun May 12 14:08:23 2024]: 41.06280193236715 %
+[Sun May 12 14:08:24 2024]: 'NoneType' object has no attribute 'css' Martial Peak mangatx https://mangatx.com/manga/martial-peak-manga/chapter-3579/
+[Sun May 12 14:08:25 2024]: 41.54589371980676 %
+[Sun May 12 14:08:25 2024]: 41.78743961352657 %
+[Sun May 12 14:08:26 2024]: 42.028985507246375 %
+[Sun May 12 14:08:27 2024]: 'NoneType' object has no attribute 'css' I m The Only One With Genius DNA mangatx https://mangatx.com/manga/im-the-only-one-with-genius-dna/chapter-117/
+[Sun May 12 14:08:27 2024]: 42.51207729468599 %
+[Sun May 12 14:08:28 2024]: 42.7536231884058 %
+[Sun May 12 14:08:29 2024]: 42.7536231884058 %
+[Sun May 12 14:08:30 2024]: 42.99516908212561 %
+[Sun May 12 14:08:30 2024]: 42.99516908212561 %
+[Sun May 12 14:08:30 2024]: 43.23671497584541 %
+[Sun May 12 14:08:31 2024]: 'NoneType' object has no attribute 'css' Talent Swallowing Magician mangatx https://mangatx.com/manga/talent-swallowing-magician-manga/chapter-50/
+[Sun May 12 14:08:32 2024]: 43.47826086956522 %
+[Sun May 12 14:08:32 2024]: 43.71980676328502 %
+[Sun May 12 14:08:33 2024]: 'NoneType' object has no attribute 'css' Cultivators in the city mangatx https://mangatx.com/manga/cultivators-in-the-city/chapter-61/
+[Sun May 12 14:08:34 2024]: 'NoneType' object has no attribute 'css' I m Just An Immortal mangatx https://mangatx.com/manga/im-just-an-immortal/chapter-52/
+[Sun May 12 14:08:35 2024]: 'NoneType' object has no attribute 'css' The Library Needs A Witch mangatx https://mangatx.com/manga/the-library-needs-a-witch/chapter-59/
+[Sun May 12 14:08:36 2024]: 44.68599033816425 %
+[Sun May 12 14:08:36 2024]: 44.68599033816425 %
+[Sun May 12 14:08:37 2024]: 'NoneType' object has no attribute 'css' Nano Machine mangatx https://mangatx.com/manga/nano-machine/chapter-175/
+[Sun May 12 14:08:38 2024]: 44.927536231884055 %
+[Sun May 12 14:08:38 2024]: 45.169082125603865 %
+[Sun May 12 14:08:39 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Ending Maker asurascans https://asura.gg/ending-maker-chapter-38/
+[Sun May 12 14:08:39 2024]: 45.65217391304348 %
+[Sun May 12 14:08:39 2024]: 45.893719806763286 %
+[Sun May 12 14:08:39 2024]: 46.13526570048309 %
+[Sun May 12 14:08:39 2024]: 46.3768115942029 %
+[Sun May 12 14:08:40 2024]: 46.61835748792271 %
+[Sun May 12 14:08:40 2024]: 46.85990338164252 %
+[Sun May 12 14:08:41 2024]: 47.10144927536232 %
+[Sun May 12 14:08:41 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Reaper of the Drifting Moon asurascans https://www.asurascans.com/reaper-of-the-drifting-moon-chapter-55-s1-end/
+[Sun May 12 14:08:42 2024]: 47.58454106280193 %
+[Sun May 12 14:08:42 2024]: 47.58454106280193 %
+[Sun May 12 14:08:43 2024]: 47.82608695652174 %
+[Sun May 12 14:08:43 2024]: 48.06763285024155 % 1 Kuro No Shoukanshi
+[Sun May 12 14:08:43 2024]: 48.309178743961354 %
+[Sun May 12 14:08:44 2024]: 'NoneType' object has no attribute 'css' Ascension To Godhood By Slaying Demons mangatx https://mangatx.com/manga/ascension-to-godhood-by-slaying-demons/chapter-40/
+[Sun May 12 14:08:45 2024]: 48.792270531400966 %
+[Sun May 12 14:08:46 2024]: 49.033816425120776 %
+[Sun May 12 14:08:46 2024]: module 'crawlers.lhtranslation' has no attribute 'get_page' Nito no Taidana Isekai Shoukougun Saijaku Shoku Healer nano ni Saikyou wa Cheat desu ka lhtranslation https://lhtranslation.net/manga/nito-no-taidana-isekai-shoukougun-saijaku-shoku-healer-nano-ni-saikyou-wa-cheat-desu-ka/chapter-31-2/
+[Sun May 12 14:08:46 2024]: module 'crawlers.lhtranslation' has no attribute 'get_page' Maou ni Natta node Dungeon Tsukutte Jingai Musume to Honobono suru lhtranslation https://lhtranslation.net/manga/maou-ni-natta-node-dungeon-tsukutte-jingai-musume-to-honobono-suru/chapter-63-2/
+[Sun May 12 14:08:46 2024]: module 'crawlers.lhtranslation' has no attribute 'get_page' Six Princesses Fall in Love with God Guardian lhtranslation https://lhtranslation.net/manga/six-princesses-fall-in-love-with-god-guardian/chapter-23/
+[Sun May 12 14:08:46 2024]: module 'crawlers.lhtranslation' has no attribute 'get_page' Isekai Cheat Magic Swordsman lhtranslation https://lhtranslation.net/manga/isekai-cheat-magic-swordsman/chapter-29-2/
+[Sun May 12 14:08:46 2024]: 50.24154589371981 %
+[Sun May 12 14:08:46 2024]: 50.48309178743962 %
+[Sun May 12 14:08:46 2024]: 50.72463768115942 %
+[Sun May 12 14:08:46 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.com/manga-gb983384/chapter-62 expected: https://chapmanganato.to/manga-. Trace: readmanganato https://chapmanganato.com/manga-gb983384/chapter-62 note: could have been modified https://chapmanganato.com/manga-gb983384/chapter-62 original  Welcome To Cheap Restaurant Of Outcast Welcome To Cheap Restaurant Of Outcast readmanganato https://chapmanganato.com/manga-gb983384/chapter-62
+[Sun May 12 14:08:46 2024]: 51.20772946859904 %
+[Sun May 12 14:08:47 2024]: 51.449275362318836 % 1 I Return From The Heaven And Worlds
+[Sun May 12 14:08:47 2024]: 51.690821256038646 %
+[Sun May 12 14:08:47 2024]: 51.93236714975845 %
+[Sun May 12 14:08:47 2024]: 52.17391304347826 %
+[Sun May 12 14:08:47 2024]: 52.41545893719807 %
+[Sun May 12 14:08:47 2024]: 52.65700483091788 %
+[Sun May 12 14:08:48 2024]: 'NoneType' object has no attribute 'css' The Return of the Crazy Demon mangatx https://mangatx.com/manga/return-of-the-mad-demon/chapter-92/
+[Sun May 12 14:08:49 2024]: 52.89855072463768 %
+[Sun May 12 14:08:49 2024]: 53.14009661835749 %
+[Sun May 12 14:08:49 2024]: 53.3816425120773 %
+[Sun May 12 14:08:49 2024]: 53.62318840579711 %
+[Sun May 12 14:08:49 2024]: 53.864734299516904 %
+[Sun May 12 14:08:50 2024]: 54.106280193236714 %
+[Sun May 12 14:08:50 2024]: 54.106280193236714 %
+[Sun May 12 14:08:50 2024]: 54.347826086956516 %
+[Sun May 12 14:08:51 2024]: 54.589371980676326 %
+[Sun May 12 14:08:52 2024]: 'NoneType' object has no attribute 'css' Kill The Dragon mangatx https://mangatx.com/manga/kill-the-dragon/chapter-80/
+[Sun May 12 14:08:52 2024]: 55.072463768115945 %
+[Sun May 12 14:08:52 2024]: 55.31400966183575 %
+[Sun May 12 14:08:53 2024]: 55.55555555555556 %
+[Sun May 12 14:08:54 2024]: 'NoneType' object has no attribute 'css' The Dark Magician Transmigrates After 66666 Years mangatx https://mangatx.com/manga/the-dark-magician-transmigrates-after-66666-years/chapter-100/
+[Sun May 12 14:08:54 2024]: 55.79710144927537 %
+[Sun May 12 14:08:55 2024]: 56.038647342995176 %
+[Sun May 12 14:08:56 2024]: 56.28019323671497 %
+[Sun May 12 14:08:57 2024]: 56.28019323671497 %
+[Sun May 12 14:08:57 2024]: 56.52173913043478 %
+[Sun May 12 14:08:57 2024]: 56.763285024154584 %
+[Sun May 12 14:08:57 2024]: 57.00483091787439 %
+[Sun May 12 14:08:57 2024]: 57.2463768115942 %
+[Sun May 12 14:08:57 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.com/manga-aa977535/chapter-68 expected: https://chapmanganato.to/manga-. Trace: readmanganato https://chapmanganato.com/manga-aa977535/chapter-68 note: could have been modified https://chapmanganato.com/manga-aa977535/chapter-68 original  Legend Takano Masaharu Legend Takano Masaharu readmanganato https://chapmanganato.com/manga-aa977535/chapter-68
+[Sun May 12 14:08:57 2024]: 57.729468599033815 %
+[Sun May 12 14:08:57 2024]: 57.971014492753625 %
+[Sun May 12 14:08:57 2024]: 58.212560386473434 %
+[Sun May 12 14:08:58 2024]: 58.454106280193244 %
+[Sun May 12 14:08:58 2024]: 58.69565217391305 %
+[Sun May 12 14:08:58 2024]: 58.93719806763285 %
+[Sun May 12 14:08:58 2024]: 59.17874396135265 %
+[Sun May 12 14:08:58 2024]: 59.42028985507246 %
+[Sun May 12 14:08:58 2024]: 59.66183574879227 %
+[Sun May 12 14:08:59 2024]: 59.90338164251207 %
+[Sun May 12 14:08:59 2024]: 60.14492753623188 %
+[Sun May 12 14:08:59 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.com/manga-be979313/chapter-41 expected: https://chapmanganato.to/manga-. Trace: readmanganato https://chapmanganato.com/manga-be979313/chapter-41 note: could have been modified https://chapmanganato.com/manga-be979313/chapter-41 original  The Death Mage Who Doesn t Want A Fourth Time The Death Mage Who Doesn t Want A Fourth Time readmanganato https://chapmanganato.com/manga-be979313/chapter-41
+[Sun May 12 14:08:59 2024]: 60.6280193236715 %
+[Sun May 12 14:08:59 2024]: 60.86956521739131 %
+[Sun May 12 14:08:59 2024]: 61.111111111111114 %
+[Sun May 12 14:08:59 2024]: 61.35265700483091 % 1 Banished Disciple s Counterattack
+[Sun May 12 14:09:00 2024]: 61.59420289855072 %
+[Sun May 12 14:09:00 2024]: 61.83574879227053 % 1 Quan Zhi Gao Shou
+[Sun May 12 14:09:00 2024]: 62.07729468599034 %
+[Sun May 12 14:09:00 2024]: 62.31884057971014 % 2 Yuan Zun
+[Sun May 12 14:09:00 2024]: 62.56038647342995 %
+[Sun May 12 14:09:01 2024]: 62.80193236714976 %
+[Sun May 12 14:09:01 2024]: 63.04347826086957 %
+[Sun May 12 14:09:01 2024]: 63.28502415458937 %
+[Sun May 12 14:09:01 2024]: 63.52657004830918 %
+[Sun May 12 14:09:01 2024]: 63.76811594202898 %
+[Sun May 12 14:09:01 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.com/manga-iw985579/chapter-142 expected: https://chapmanganato.to/manga-. Trace: readmanganato https://chapmanganato.com/manga-iw985579/chapter-142 note: could have been modified https://chapmanganato.com/manga-iw985579/chapter-142 original  Omniscient Reader S Viewpoint Omniscient Reader S Viewpoint readmanganato https://chapmanganato.com/manga-iw985579/chapter-142
+[Sun May 12 14:09:02 2024]: 64.00966183574879 %
+[Sun May 12 14:09:02 2024]: 64.25120772946859 %
+[Sun May 12 14:09:36 2024]: 'NoneType' object has no attribute 'css' MEMORIZE mangatx https://mangatx.to/manhua/memorize-all-chapters/chapter-100/
+[Sun May 12 14:09:37 2024]: 'NoneType' object has no attribute 'css' I Log In Alone mangatx https://mangatx.com/manga/i-log-in-alone/chapter-165/
+[Sun May 12 14:09:39 2024]: 64.97584541062803 %
+[Sun May 12 14:09:40 2024]: 'NoneType' object has no attribute 'css' Is There a Problem if the Demon King is a Goblin mangatx https://mangatx.com/manga/is-there-a-problem-if-the-demon-king-is-a-goblin/chapter-10/
+[Sun May 12 14:09:41 2024]: 'NoneType' object has no attribute 'css' Master of Gu mangatx https://mangatx.com/manga/master-of-gu/chapter-96/
+[Sun May 12 14:09:42 2024]: 'NoneType' object has no attribute 'css' Legend of Asura The Venom Dragon mangatx https://mangatx.com/manga/poison-dragon-the-legend-of-an-asura/chapter-133/
+[Sun May 12 14:09:42 2024]: 65.70048309178745 %
+[Sun May 12 14:09:43 2024]: 65.94202898550725 %
+[Sun May 12 14:09:44 2024]: 66.18357487922705 %
+[Sun May 12 14:09:44 2024]: 66.42512077294685 %
+[Sun May 12 14:09:44 2024]: 66.66666666666666 %
+[Sun May 12 14:09:44 2024]: 66.90821256038647 %
+[Sun May 12 14:09:44 2024]: 67.14975845410628 %
+[Sun May 12 14:09:44 2024]: 67.3913043478261 %
+[Sun May 12 14:09:45 2024]: 67.6328502415459 %
+[Sun May 12 14:09:45 2024]: 67.8743961352657 %
+[Sun May 12 14:09:45 2024]: 68.11594202898551 %
+[Sun May 12 14:09:45 2024]: 68.35748792270532 %
+[Sun May 12 14:09:46 2024]: 68.59903381642512 %
+[Sun May 12 14:09:46 2024]: 68.84057971014492 %
+[Sun May 12 14:09:46 2024]: 69.08212560386472 %
+[Sun May 12 14:09:46 2024]: 69.32367149758454 %
+[Sun May 12 14:09:47 2024]: 'NoneType' object has no attribute 'css' Wizard of Arsenia mangatx https://mangatx.com/manga/wizard-of-arsenia/chapter-88/
+[Sun May 12 14:09:48 2024]: 'NoneType' object has no attribute 'css' The Lady and the Beast mangatx https://mangatx.com/manga/the-lady-and-the-beast/chapter-130/
+[Sun May 12 14:09:49 2024]: 70.04830917874396 %
+[Sun May 12 14:09:50 2024]: 70.28985507246377 %
+[Sun May 12 14:09:50 2024]: 'NoneType' object has no attribute 'css' Otherworldly Evil Monarch mangatx https://mangatx.com/manga/otherworldly-evil-monarch-comic/chapter-199/
+[Sun May 12 14:09:52 2024]: 'NoneType' object has no attribute 'css' King Killer Reborn mangatx https://mangatx.com/manga/king-killer-reborn/chapter-132/
+[Sun May 12 14:09:53 2024]: 'NoneType' object has no attribute 'css' Return to Earth to be a God mangatx https://mangatx.com/manga/return-to-earth-to-be-a-god/chapter-46/
+[Sun May 12 14:09:53 2024]: 71.25603864734299 %
+[Sun May 12 14:09:54 2024]: 71.49758454106279 %
+[Sun May 12 14:09:55 2024]: 71.73913043478261 %
+[Sun May 12 14:09:56 2024]: 71.98067632850241 %
+[Sun May 12 14:09:57 2024]: 'NoneType' object has no attribute 'css' Metropolitan Supremacy System mangatx https://mangatx.com/manga/metropolitan-supremacy-system/chapter-203/
+[Sun May 12 14:09:58 2024]: 'NoneType' object has no attribute 'css' I Am Immortal System Xianzun in the City mangatx https://mangatx.com/manga/i-am-immortal/chapter-134/
+[Sun May 12 14:09:59 2024]: 72.70531400966183 %
+[Sun May 12 14:10:00 2024]: 'NoneType' object has no attribute 'css' Metropolitan System mangatx https://mangatx.com/manga/metropolitan-system/chapter-360/
+[Sun May 12 14:10:01 2024]: 'NoneType' object has no attribute 'css' The Boy in the All Girls School mangatx https://mangatx.com/manga/the-boy-in-the-all-girls-school/chapter-287/
+[Sun May 12 14:10:02 2024]: 'NoneType' object has no attribute 'css' Again My Life mangatx https://mangatx.com/manga/again-my-life/chapter-141/
+[Sun May 12 14:10:03 2024]: 73.67149758454107 %
+[Sun May 12 14:10:04 2024]: 73.91304347826086 %
+[Sun May 12 14:10:06 2024]: 74.15458937198068 %
+[Sun May 12 14:10:06 2024]: 74.39613526570048 %
+[Sun May 12 14:10:07 2024]: 74.63768115942028 %
+[Sun May 12 14:10:07 2024]: 74.8792270531401 %
+[Sun May 12 14:10:08 2024]: 'NoneType' object has no attribute 'css' The Peerless Concubine mangatx https://mangatx.com/manga/read-the-peerless-concubine-free/chapter-155-5/
+[Sun May 12 14:10:09 2024]: 'NoneType' object has no attribute 'css' Player Reborn mangatx https://mangatx.com/manga/player-reborn/chapter-194/
+[Sun May 12 14:10:10 2024]: 75.60386473429952 %
+[Sun May 12 14:10:11 2024]: 75.84541062801932 %
+[Sun May 12 14:10:12 2024]: 76.08695652173914 %
+[Sun May 12 14:10:13 2024]: 76.32850241545893 %
+[Sun May 12 14:10:14 2024]: 76.57004830917874 %
+[Sun May 12 14:10:14 2024]: 76.57004830917874 %
+[Sun May 12 14:10:14 2024]: 76.81159420289855 %
+[Sun May 12 14:10:15 2024]: 77.05314009661835 %
+[Sun May 12 14:10:15 2024]: 77.29468599033817 %
+[Sun May 12 14:10:15 2024]: 77.53623188405797 %
+[Sun May 12 14:10:15 2024]: 77.77777777777779 %
+[Sun May 12 14:10:15 2024]: 78.01932367149759 %
+[Sun May 12 14:10:15 2024]: 78.26086956521739 %
+[Sun May 12 14:10:16 2024]: 78.50241545893721 %
+[Sun May 12 14:10:16 2024]: 78.74396135265701 %
+[Sun May 12 14:10:17 2024]: 78.98550724637681 %
+[Sun May 12 14:10:17 2024]: 79.22705314009661 %
+[Sun May 12 14:10:18 2024]: 'NoneType' object has no attribute 'css' Release That Witch mangatx https://mangatx.com/manga/release-that-witch/chapter-529/
+[Sun May 12 14:10:18 2024]: 79.71014492753623 %
+[Sun May 12 14:10:18 2024]: 79.95169082125604 %
+[Sun May 12 14:10:18 2024]: 80.19323671497585 %
+[Sun May 12 14:10:20 2024]: 80.43478260869566 %
+[Sun May 12 14:10:20 2024]: 80.67632850241546 %
+[Sun May 12 14:10:21 2024]: 80.91787439613528 %
+[Sun May 12 14:10:21 2024]: 80.91787439613528 %
+[Sun May 12 14:10:22 2024]: 81.15942028985508 %
+[Sun May 12 14:10:22 2024]: 81.40096618357488 %
+[Sun May 12 14:10:23 2024]: 81.64251207729468 %
+[Sun May 12 14:10:23 2024]: 81.88405797101449 %
+[Sun May 12 14:10:23 2024]: 82.1256038647343 %
+[Sun May 12 14:10:23 2024]: 82.3671497584541 %
+[Sun May 12 14:10:23 2024]: 82.6086956521739 %
+[Sun May 12 14:10:23 2024]: 82.85024154589372 %
+[Sun May 12 14:10:24 2024]: 83.09178743961353 %
+[Sun May 12 14:10:25 2024]: 83.33333333333334 %
+[Sun May 12 14:10:25 2024]: 83.33333333333334 %
+[Sun May 12 14:10:25 2024]: 83.57487922705315 %
+[Sun May 12 14:10:26 2024]: 'NoneType' object has no attribute 'css' Limit Breaker mangatx https://mangatx.com/manga/limit-breaker-online/chapter-80/
+[Sun May 12 14:10:27 2024]: 84.05797101449275 %
+[Sun May 12 14:10:27 2024]: 84.05797101449275 %
+[Sun May 12 14:10:28 2024]: 84.29951690821255 %
+[Sun May 12 14:10:28 2024]: 84.54106280193237 %
+[Sun May 12 14:10:29 2024]: 'NoneType' object has no attribute 'css' The God of Game of God mangatx https://mangatx.com/manga/the-god-of-game-of-god/chapter-35/
+[Sun May 12 14:10:31 2024]: 85.02415458937197 %
+[Sun May 12 14:10:31 2024]: 85.02415458937197 %
+[Sun May 12 14:10:31 2024]: 85.26570048309179 %
+[Sun May 12 14:10:32 2024]: 85.5072463768116 %
+[Sun May 12 14:10:32 2024]: 85.74879227053141 %
+[Sun May 12 14:10:32 2024]: 85.99033816425121 %
+[Sun May 12 14:10:33 2024]: 'NoneType' object has no attribute 'css' Immortal Invincible mangatx https://mangatx.com/manga/immortal-invincible/chapter-159/
+[Sun May 12 14:10:34 2024]: 86.47342995169082 %
+[Sun May 12 14:10:35 2024]: 86.71497584541062 %
+[Sun May 12 14:10:36 2024]: 86.95652173913044 %
+[Sun May 12 14:10:37 2024]: 'NoneType' object has no attribute 'css' master of legendary realms mangatx https://mangatx.com/manga/read-master-of-legendary-realms-manga/chapter-301/
+[Sun May 12 14:10:38 2024]: 'NoneType' object has no attribute 'css' Genius Doctor Black Belly Miss mangatx https://mangatx.com/manga/genius-doctor-black-belly-miss/chapter-78/
+[Sun May 12 14:10:39 2024]: 87.68115942028986 %
+[Sun May 12 14:10:40 2024]: 87.92270531400966 %
+[Sun May 12 14:10:41 2024]: 88.16425120772948 %
+[Sun May 12 14:10:41 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.com/manga-ef951662/chapter-524 expected: https://chapmanganato.to/manga-. Trace: readmanganato https://chapmanganato.com/manga-ef951662/chapter-524 note: could have been modified https://chapmanganato.com/manga-ef951662/chapter-524 original  The Gamer The Gamer readmanganato https://chapmanganato.com/manga-ef951662/chapter-524
+[Sun May 12 14:10:41 2024]: 'NoneType' object has no attribute 'css' The Great Ruler mangatx https://mangatx.com/manga/the-great-ruler/chapter-373/
+[Sun May 12 14:10:42 2024]: 'NoneType' object has no attribute 'css' Supreme Mad Emperor System mangatx https://mangatx.com/manga/supreme-mad-emperor-system/chapter-104/
+[Sun May 12 14:10:43 2024]: 89.13043478260869 %
+[Sun May 12 14:10:44 2024]: 89.3719806763285 %
+[Sun May 12 14:10:45 2024]: 'NoneType' object has no attribute 'css' Solo Auto Hunting mangatx https://mangatx.com/manga/solo-auto-hunting/chapter-92/
+[Sun May 12 14:10:45 2024]: 89.85507246376811 %
+[Sun May 12 14:10:46 2024]: 89.85507246376811 %
+[Sun May 12 14:10:46 2024]: 90.09661835748793 %
+[Sun May 12 14:10:47 2024]: 90.33816425120773 %
+[Sun May 12 14:10:47 2024]: 90.57971014492753 %
+[Sun May 12 14:10:48 2024]: 90.82125603864735 %
+[Sun May 12 14:10:49 2024]: 'NoneType' object has no attribute 'css' 10 Years after saying Leave this to me and go mangatx https://mangatx.com/manga/10-years-after-saying-leave-this-to-me-and-go/chapter-8-3/
+[Sun May 12 14:10:50 2024]: 'NoneType' object has no attribute 'css' I m Not the Overlord mangatx https://mangatx.com/manga/im-not-the-overlord/chapter-58/
+[Sun May 12 14:10:51 2024]: 91.54589371980676 %
+[Sun May 12 14:10:51 2024]: 91.78743961352657 %
+[Sun May 12 14:10:53 2024]: 92.02898550724638 %
+[Sun May 12 14:10:54 2024]: 'NoneType' object has no attribute 'css' The Book Eating Magician mangatx https://mangatx.com/manga/the-book-eating-magician/chapter-104/
+[Sun May 12 14:10:55 2024]: 'NoneType' object has no attribute 'css' The Villainess Reverses the Hourglass mangatx https://mangatx.com/manga/the-villainess-reverses-the-hourglass-online/chapter-40/
+[Sun May 12 14:10:55 2024]: 92.7536231884058 %
+[Sun May 12 14:10:55 2024]: 92.9951690821256 %
+[Sun May 12 14:10:55 2024]: 93.23671497584542 %
+[Sun May 12 14:10:56 2024]: 93.47826086956522 %
+[Sun May 12 14:10:56 2024]: 93.71980676328504 %
+[Sun May 12 14:10:57 2024]: 93.96135265700482 %
+[Sun May 12 14:10:57 2024]: 94.20289855072464 %
+[Sun May 12 14:10:57 2024]: 94.44444444444444 %
+[Sun May 12 14:10:57 2024]: 94.68599033816425 %
+[Sun May 12 14:10:57 2024]: 94.92753623188406 %
+[Sun May 12 14:10:57 2024]: 95.16908212560386 %
+[Sun May 12 14:10:57 2024]: 95.41062801932367 %
+[Sun May 12 14:10:58 2024]: 95.65217391304348 %
+[Sun May 12 14:10:58 2024]: 95.89371980676329 %
+[Sun May 12 14:10:58 2024]: 96.1352657004831 %
+[Sun May 12 14:10:58 2024]: 96.37681159420289 %
+[Sun May 12 14:10:58 2024]: 96.61835748792271 %
+[Sun May 12 14:10:59 2024]: 96.85990338164251 %
+[Sun May 12 14:10:59 2024]: 97.10144927536231 %
+[Sun May 12 14:11:00 2024]: 97.34299516908213 %
+[Sun May 12 14:11:02 2024]: 97.58454106280193 %
+[Sun May 12 14:11:03 2024]: 'NoneType' object has no attribute 'css' The Scholar s Reincarnation mangatx https://mangatx.com/manga/the-scholars-reincarnation-online/chapter-198/
+[Sun May 12 14:11:05 2024]: 98.06763285024155 %
+[Sun May 12 14:11:06 2024]: 98.30917874396135 %
+[Sun May 12 14:11:07 2024]: 'NoneType' object has no attribute 'css' I ve Become the Villainous Empress of a Novel mangatx https://mangatx.com/manga/ive-become-the-villainous-empress-of-a-novel/chapter-71/
+[Sun May 12 14:11:07 2024]: 98.55072463768117 %
+[Sun May 12 14:11:08 2024]: 98.79227053140096 %
+[Sun May 12 14:11:09 2024]: 99.03381642512076 %
+[Sun May 12 14:11:09 2024]: 99.27536231884058 %
+[Sun May 12 14:11:10 2024]: 99.27536231884058 %
+[Sun May 12 14:11:10 2024]: 99.51690821256038 %
+[Sun May 12 14:11:11 2024]: 'NoneType' object has no attribute 'css' the supreme system mangatx https://mangatx.com/manga/the-supreme-system/chapter-135/
+[Sun May 12 14:11:11 2024]: killed remanant firefox processes

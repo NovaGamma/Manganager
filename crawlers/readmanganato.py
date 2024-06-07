@@ -1,4 +1,4 @@
-from bs4 import BeautifulSoup
+from parsel import Selector
 import requests
 try:
     from crawlers.utils import clean
@@ -8,48 +8,40 @@ except:
     from utils import save_preview
 
 def url_scheme():
-    return "https://chapmanganato.com/manga-"
+    return "https://chapmanganato.to/manga-"
 
 def type():
-    return "bs4"
+    return "parsel"
 
-def get_preview(RAW_URL, title):
-    temp = RAW_URL.split("/")
+def get_page(url, title):
+    temp = url.split("/")
     URL = "/".join(temp[:-1]) +"/"
 
     r = requests.get(URL)
-    if r.status_code == 200:
-        soup = BeautifulSoup(r.text, "html.parser")
-        temp = soup.find("span", class_="info-image")
-        url = clean(temp.contents)[0].attrs['src']
+    return Selector(text=r.text)
 
-        return save_preview(title, url)
-
-
-def get_chapter_list(RAW_URL):
-    temp = RAW_URL.split("/")
-    URL = "/".join(temp[:-1]) +"/"
-
-    r = requests.get(URL)
-    if r.status_code == 200:
-        soup = BeautifulSoup(r.text, "html.parser")
-        chapterList = soup.find_all("li", class_="a-h")
-        chapList = []
-        for li in chapterList:
-            a = clean(li.contents)[0]
-            url = a.attrs['href']
-            chapter_name = a.contents[0]
-            chapList.append((chapter_name, url))
-        return chapList[::-1]
+def get_preview(soup, title):
+    url = soup.css(".info-image > img::attr(src)").get()
+    return save_preview(title, url)
 
 
-def get_title(RAW_URL):
-    temp = RAW_URL.split("/")
-    URL = "/".join(temp[:-1]) +"/"
+def get_chapter_list(soup):
+    chapterList = soup.css("li.a-h > a")
+    chapList = []
+    for chapter in chapterList:
+        url = chapter.css("::attr(href)").get()
+        chapter_name = chapter.css("::text").get().strip()
+        chapList.append((chapter_name, url))
+    return chapList[::-1]
 
-    r = requests.get(URL)
-    if r.status_code == 200:
-        soup = BeautifulSoup(r.text, "html.parser")
-        name = clean(soup.find('div', class_ = "panel-breadcrumb").contents)
-        title = name[2].attrs['title']
-        return title
+
+def get_title(soup):
+    title = soup.css(".panel-breadcrumb > a")[-1].css("::text").get()
+    return title
+
+if __name__ == '__main__':
+    url = "https://chapmanganato.to/manga-om991495/chapter-61"
+    soup = get_page(url)
+    title = get_title(soup)
+    chapter_list = get_chapter_list(soup)
+    print(chapter_list)

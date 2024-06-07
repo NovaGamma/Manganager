@@ -14,7 +14,7 @@
   },
   "content_scripts": [
       {
-        "matches": ["https://mangatx.com/manga/*/*/"],
+        "matches": ["https://mangatx.to/*/*/*/"],
         "js": ["mangatx.js"],
         "all_frames": true,
         "match_about_blank": true
@@ -26,7 +26,7 @@
         "match_about_blank": true
       },
       {
-        "matches": ["https://mangatx.com/"],
+        "matches": ["https://mangatx.to/"],
         "js": ["mangatx_chapters.js"],
         "all_frames": true,
         "match_about_blank": true

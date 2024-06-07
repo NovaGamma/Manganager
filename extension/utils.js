@@ -1,6 +1,6 @@
 export default
   function get_site(url){
-    if (url.match(/https:\/\/mangatx\.com\/manga\/.+\/.+\//)){
+    if (url.match(/https:\/\/mangatx\.to\/manga\/.+\/.+\//)){
       return 'mangatx'
     }
     else if(url.match(/https:\/\/chapmanganato\.com\/manga.+\/chapter-.+/)){

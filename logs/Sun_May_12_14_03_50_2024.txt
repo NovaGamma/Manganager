@@ -1,0 +1,58 @@
+[Sun May 12 14:03:50 2024]: Opening data file...
+[Sun May 12 14:03:50 2024]: Loading data from file...
+[Sun May 12 14:03:50 2024]: Done !
+[Sun May 12 14:03:54 2024]: 0.0 %
+[Sun May 12 14:03:55 2024]: 0.0 %
+[Sun May 12 14:03:55 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? To Hell With Being A Saint I m A Doctor asurascans https://www.asurascans.com/to-hell-with-being-a-saint-im-a-doctor-chapter-48/
+[Sun May 12 14:03:56 2024]: 0.4830917874396135 %
+[Sun May 12 14:03:56 2024]: 0.4830917874396135 %
+[Sun May 12 14:03:57 2024]: 0.7246376811594203 %
+[Sun May 12 14:03:58 2024]: 0.7246376811594203 %
+[Sun May 12 14:03:58 2024]: 0.966183574879227 %
+[Sun May 12 14:03:59 2024]: 1.2077294685990339 %
+[Sun May 12 14:03:59 2024]: 1.2077294685990339 %
+[Sun May 12 14:03:59 2024]: 1.4492753623188406 %
+[Sun May 12 14:04:00 2024]: 1.6908212560386473 %
+[Sun May 12 14:04:01 2024]: 1.6908212560386473 %
+[Sun May 12 14:04:02 2024]: 1.932367149758454 %
+[Sun May 12 14:04:02 2024]: 1.932367149758454 %
+[Sun May 12 14:04:03 2024]: 2.1739130434782608 %
+[Sun May 12 14:04:03 2024]: 2.1739130434782608 %
+[Sun May 12 14:04:03 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-rh953142/chapter-95 expected: https://chapmanganato.com/manga-. Trace: readmanganato https://chapmanganato.to/manga-rh953142/chapter-95 note: could have been modified https://chapmanganato.to/manga-rh953142/chapter-95 original  Tsuki Ga Michibiku Isekai Douchuu Tsuki Ga Michibiku Isekai Douchuu readmanganato https://chapmanganato.to/manga-rh953142/chapter-95
+[Sun May 12 14:04:03 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-qm951521/chapter-99 expected: https://chapmanganato.com/manga-. Trace: readmanganato https://chapmanganato.to/manga-qm951521/chapter-99 note: could have been modified https://chapmanganato.to/manga-qm951521/chapter-99 original  Mushoku Tensei Isekai Ittara Honki Dasu Mushoku Tensei Isekai Ittara Honki Dasu readmanganato https://chapmanganato.to/manga-qm951521/chapter-99
+[Sun May 12 14:04:03 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-zl977168/chapter-45 expected: https://chapmanganato.com/manga-. Trace: readmanganato https://chapmanganato.to/manga-zl977168/chapter-45 note: could have been modified https://chapmanganato.to/manga-zl977168/chapter-45 original  Tensei Kyuuketsuki San Wa Ohirune Ga Shitai Tensei Kyuuketsuki San Wa Ohirune Ga Shitai readmanganato https://chapmanganato.to/manga-zl977168/chapter-45
+[Sun May 12 14:04:03 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-co979497/chapter-58 expected: https://chapmanganato.com/manga-. Trace: readmanganato https://chapmanganato.to/manga-co979497/chapter-58 note: could have been modified https://chapmanganato.to/manga-co979497/chapter-58 original  Lazy Dungeon Master Lazy Dungeon Master readmanganato https://chapmanganato.to/manga-co979497/chapter-58
+[Sun May 12 14:04:04 2024]: 3.3816425120772946 %
+[Sun May 12 14:04:04 2024]: 3.3816425120772946 %
+[Sun May 12 14:04:04 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-iy985807/chapter-145 expected: https://chapmanganato.com/manga-. Trace: readmanganato https://chapmanganato.to/manga-iy985807/chapter-145 note: could have been modified https://chapmanganato.to/manga-iy985807/chapter-145 original  The Rise Of The Unemployed Wise Man The Rise Of The Unemployed Wise Man readmanganato https://chapmanganato.to/manga-iy985807/chapter-145
+[Sun May 12 14:04:05 2024]: 'NoneType' object has no attribute 'css' Absolute Necromancer mangatx https://mangatx.com/manga/absolute-necromancer/chapter-34/
+[Sun May 12 14:04:06 2024]: 3.864734299516908 %
+[Sun May 12 14:04:06 2024]: 4.1062801932367154 %
+[Sun May 12 14:04:07 2024]: 4.1062801932367154 %
+[Sun May 12 14:04:08 2024]: 'NoneType' object has no attribute 'css' I m Not That Kind of Talent mangatx https://mangatx.com/manga/im-not-that-kind-of-talent/chapter-54/
+[Sun May 12 14:04:08 2024]: 4.3478260869565215 %
+[Sun May 12 14:04:09 2024]: 4.5893719806763285 %
+[Sun May 12 14:04:10 2024]: 4.830917874396135 %
+[Sun May 12 14:04:11 2024]: 5.072463768115942 %
+[Sun May 12 14:04:11 2024]: 5.072463768115942 %
+[Sun May 12 14:04:13 2024]: 5.314009661835748 %
+[Sun May 12 14:04:14 2024]: 5.555555555555555 %
+[Sun May 12 14:04:15 2024]: 5.797101449275362 %
+[Sun May 12 14:04:16 2024]: 'NoneType' object has no attribute 'css' The Player With a Hidden Past mangatx https://mangatx.com/manga/the-player-with-a-hidden-past/chapter-24/
+[Sun May 12 14:04:17 2024]: 6.280193236714976 %
+[Sun May 12 14:04:17 2024]: 6.280193236714976 %
+[Sun May 12 14:04:18 2024]: 'NoneType' object has no attribute 'css' Solo Spell Caster mangatx https://mangatx.com/manga/solo-spell-caster/chapter-114/
+[Sun May 12 14:04:18 2024]: 6.521739130434782 %
+[Sun May 12 14:04:19 2024]: 6.763285024154589 %
+[Sun May 12 14:04:19 2024]: 6.763285024154589 %
+[Sun May 12 14:04:20 2024]: 7.004830917874397 %
+[Sun May 12 14:04:21 2024]: 7.004830917874397 %
+[Sun May 12 14:04:21 2024]: 7.246376811594203 %
+[Sun May 12 14:04:22 2024]: 7.487922705314009 %
+[Sun May 12 14:04:23 2024]: 7.487922705314009 %
+[Sun May 12 14:04:23 2024]: 7.729468599033816 %
+[Sun May 12 14:04:24 2024]: 7.729468599033816 %
+[Sun May 12 14:04:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-nr990774/chapter-107 expected: https://chapmanganato.com/manga-. Trace: readmanganato https://chapmanganato.to/manga-nr990774/chapter-107 note: could have been modified https://chapmanganato.to/manga-nr990774/chapter-107 original  Of All Things I Became A Crow Of All Things I Became A Crow readmanganato https://chapmanganato.to/manga-nr990774/chapter-107
+[Sun May 12 14:04:24 2024]: 7.971014492753622 %
+[Sun May 12 14:04:25 2024]: 8.212560386473431 %
+[Sun May 12 14:04:26 2024]: 'NoneType' object has no attribute 'css' Demi Gods and Semi Devils mangatx https://mangatx.com/manga/demi-gods-and-semi-devils/chapter-89/

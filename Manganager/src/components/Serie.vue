@@ -140,6 +140,7 @@ export default {
       this.chapters = chapters_parsed
     },
     async setRead(){
+      let chapterNumber = this.chapters[this.displayedSite].filter((chapter) => this.read_until == chapter[0])[0][2]
       await fetch("http://127.0.0.1:4444/API/read_until/",{
         method: "POST",
         headers: {
@@ -147,7 +148,7 @@ export default {
         },
         body: JSON.stringify({
           title: this.title,
-          chapter: this.read_until
+          chapter: chapterNumber
         })
       })
       await this.get_chapters()

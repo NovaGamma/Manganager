@@ -5,16 +5,15 @@
 </template>
 
 <script>
-import ListSeries from './components/ListSeries.vue'
 import NavBar from './components/NavBar.vue'
 
 export default {
   name: 'app',
-  components: { NavBar, ListSeries },
+  components: { NavBar },
   async created() {
-    //await fetch("http://127.0.0.1:4444/API/update_chapter/",{
-    //  method:"POST"
-    //})
+    await fetch("http://127.0.0.1:4444/API/update_chapter/", {
+      method: "POST"
+    })
   }
 }
 </script>

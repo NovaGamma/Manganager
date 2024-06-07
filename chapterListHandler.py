@@ -1,12 +1,20 @@
 from dataclasses import dataclass
-from statistics import mean, median
 from typing import List
 from crawler_handler import call_crawler, get_chapters_crawler, crawler_search
-from utils import clean_title, open_with_json
+from utils import clean_title, open_with_json, save_with_json
 import time
 import multiprocessing
 import json
-from mongo import update, update_serie, remove_serie, get_serie, get_series, get_database, add_serie, set_updated, get_updated
+import functools
+from logger import log
+
+
+def save(func):
+    @functools.wraps(func)
+    def inner(self, *arg, **kw):
+        func(self, *arg, **kw)
+        self.saving()
+    return inner
 
 @dataclass
 class Chapter:
@@ -23,6 +31,16 @@ class Chapter:
         else:
             return False
 
+class ChaptersWrapper(dict):
+    def __init__(self, chapters):
+        super().__init__({
+            float(number): Chapter(name=chapter[0], url=chapter[1], number=chapter[2])
+            for number, chapter in chapters.items()
+        })
+
+    @property
+    def last_chapter(self):
+        return self[max(self, key=float)]
 
 @dataclass
 class Serie:
@@ -57,7 +75,7 @@ class Serie:
         self.last_chapter_read = chapter_number if chapter_number > self.last_chapter_read else self.last_chapter_read
 
         if not chapter_number in self.chapters[data['site']].keys():
-            self.chapters[data['site']][chapter_number] = Chapter(data['url'], data['site'], data['chapterName'], chapter_number)
+            self.chapters[data['site']][chapter_number] = Chapter(data['url'], data['chapterName'], chapter_number)
 
     def mongo(self):
         return {
@@ -75,37 +93,32 @@ class Serie:
             } for site, chapters in self.chapters.items()
         }
 
-
     def __eq__(self, __o: object) -> bool:
         return self.title == __o.title
-
 
 class Handler:
     series: List[Serie]
     lock: object
     def __init__(self) -> None:
-        print("Getting data from the database...")
-        #data = get_series()
+        print("Opening data file...")
         data = open_with_json("chapterList.json")
-        print("Done !")
+        print("Loading data from file...")
         self.load_data(data)
+        print("Done !")
         self.lock = multiprocessing.Lock()
 
     def load_data(self, data):
         self.series = [Serie(
             title = title,
-            date = float(serie['date']), 
-            state = serie['state'], 
+            date = float(serie['date']),
+            state = serie['state'],
             preview = serie["preview"],
             last_chapter = serie["last_chapter"],
-            last_chapter_read = serie["last_chapter_read"] ,
+            last_chapter_read = serie["last_chapter_read"],
             read = [float(number) for number in serie["read"]],
             chapters = {
-                site: {
-                    float(number): Chapter(name = chapter[0], url = chapter[1], number = chapter[2])
-                    for number, chapter in chapters.items()
-                }
-                for site, chapters in serie['chapters'].items()   
+                site: ChaptersWrapper(chapters)
+                for site, chapters in serie['chapters'].items()
             }
         ) for (title, serie) in data.items()]
 
@@ -114,31 +127,34 @@ class Handler:
             data = json.load(file)
         self.load_data(data)
 
+    @save
     def update(self) -> None:
         current_time = time.time()
-        log = get_updated()
-        update_time = log['log']
+        log = open_with_json('log.json')
+        update_time = log['update']
         if current_time - update_time > 86000: #check if one day has passed (i.e 24h)
             for i,serie in enumerate(sorted(self.series, key=lambda x: x.date, reverse=True)):
-                try:
-                    #can be multithreaded
-                    for site in serie.chapters.keys():
-                        chapters = get_chapters_crawler(site, serie.chapters[site][serie.last_chapter].url)
+                #can be multithreaded
+                for site in serie.chapters:
+                    try:
+                        chapters = get_chapters_crawler(site, serie.chapters[site].last_chapter.url, serie.title)
                         count = 0
                         for chapter in chapters:
                             chapter_number = extract_chapter_number(chapter[0])
-                            if chapter_number not in site.keys():
+                            if chapter_number not in serie.chapters[site]:
                                 count += 1
-                                site[chapter_number] = Chapter(name = chapter[0], url = chapter[1], number = chapter_number)
+                                serie.chapters[site][chapter_number] = Chapter(name = chapter[0], url = chapter[1], number = chapter_number)
                                 if chapter_number > serie.last_chapter:
                                     serie.last_chapter = chapter_number
+                            else:
+                                if serie.chapters[site][chapter_number].url != chapter[1]:
+                                    serie.chapters[site][chapter_number].url = chapter[1]
                         if count != 0: #new chapters have been found
-                            update_serie(serie)
                             print(f"{i/len(self.series)*100} %", count, serie.title)
                         else:
                             print(f"{i/len(self.series)*100} %")
-                except Exception as err:
-                    print(err, serie.title, list(serie.chapters.keys()))
+                    except Exception as err:
+                        print(err, serie.title, site, serie.chapters[site].last_chapter.url)
             import psutil
             processes = psutil.process_iter()
             for process in processes:
@@ -147,40 +163,35 @@ class Handler:
                     p.kill()
                     print(f"Process ID: {process.pid}, Name: {process.name()}")
             print("killed remanant firefox processes")
-            #set_updated(time.time())
-            self.save()
+            save_with_json({"update": time.time()}, 'log.json')
 
+    @save
     def delete(self, title: str) -> None:
         serie = self.get_serie(title)
         if serie:
             self.series.remove(serie)
-            #remove_serie(serie)
-            self.save()
 
+    @save
     def drop(self, title: str) -> None:
         serie = self.get_serie(title)
         if serie:
             serie.state = "dropped"
-            self.save()
-            #update_serie(serie)
 
+    @save
     def read_until(self, title: str, chapterNumber: float) -> None:
         serie = self.get_serie(title)
         if serie:
-            indexes = []
-            for chapters in serie.chapters.values():
-                for number in chapters.keys():
-                    if not number in indexes and number <= chapterNumber:
-                        indexes.append(float(number))
+            for site in serie.chapters:
+                chapters = [chapter_number for chapter_number, _ in serie.chapters[site].items() if float(chapter_number) <= float(chapterNumber)]
+                for chapter in chapters:
+                    if chapter not in serie.read:
+                        serie.read.append(chapter)
 
-            for index in indexes:
-                if not index in serie.read:
-                    serie.read.append(index)
             serie.read.sort()
             serie.last_chapter_read = serie.read[-1]
-            self.save()
             #update_serie(serie)
 
+    @save
     def read_chapter(self, data: dict) -> None:
         chapterName = data['chapterName']
         title = clean_title(data['title'])
@@ -189,14 +200,28 @@ class Handler:
         if serie:
             number = extract_chapter_number(chapterName)
 
-            if not number in serie.read:
+            #means that the chapter isn't in the list
+            if number not in serie.chapters[site]:
+                try:
+                    chapters = get_chapters_crawler(site, serie.chapters[site].last_chapter.url, serie.title)
+                    for chapter in chapters:
+                        chapter_number = extract_chapter_number(chapter[0])
+                        if chapter_number not in serie.chapters[site]:
+                            serie.chapters[site][chapter_number] = Chapter(name = chapter[0], url = chapter[1], number = chapter_number)
+                            if chapter_number > serie.last_chapter:
+                                serie.last_chapter = chapter_number
+                        else:
+                            if serie.chapters[site][chapter_number].url != chapter[1]:
+                                serie.chapters[site][chapter_number].url = chapter[1]
+                except Exception as err:
+                    print(err, serie.title, site, serie.chapters[site].last_chapter.url)
+
+            if number not in serie.read:
                 #chapter has not been read on any site before
                 data['chapter_number'] = number
                 serie.read_chapter(data)
                 
-                print(f"read {title} on {site}\n")
-                self.save()                
-                #update_serie(serie)
+                print(f"read {title} {number} on {site}\n")
                     
 
     def get_preview(self, title: str) -> str:
@@ -215,6 +240,7 @@ class Handler:
                     return serie
         else: return None
 
+    @save
     def add_site(self, title: str, site: str) -> None:
         serie = self.get_serie(title)
         if(site in serie.chapters.keys()):
@@ -236,8 +262,7 @@ class Handler:
             if chapters_number[-1] > serie.last_chapter:
                 serie.last_chapter = chapters_number[-1]
 
-            self.save()
-
+    @save
     def add_follow(self, title: str, site: str, url: str) -> None:
         serie = self.get_serie(title)
         add_serie = False
@@ -275,7 +300,6 @@ class Handler:
             serie.preview = preview
             serie.last_chapter = last_chapter
             self.series.append(serie)
-        self.save()
 
     def following(self, title: str, site: str) -> bool:
         serie = self.get_serie(title)
@@ -305,7 +329,7 @@ class Handler:
 
         return [serie.get_infos() for serie in series_list]
 
-    def save(self):
+    def saving(self):
         data = {}
         for serie in self.series:
             data[serie.title] = {
@@ -321,9 +345,6 @@ class Handler:
         with self.lock:
             with open("chapterList.json", 'w') as file:
                 json.dump(data, file)
-
-    def log(self, message):
-        pass
     
 def convert_to_float(number: str) -> float:
     if ':' in number:

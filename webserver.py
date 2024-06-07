@@ -80,10 +80,14 @@ def get_preview(title):
     if os.path.exists(f"static/previews/{preview_name}"):
         return send_file(f"static/previews/{preview_name}")
     else:
-        return send_file(f"static/previews/default.jpg")
-        serie = handler.get_serie(title)
-        get_preview_crawler(serie.sites[0],serie.title,serie.chapters[0].url)
-        return send_file(f"static/previews/{preview_name}")
+        try:
+            serie = handler.get_serie(title)
+            get_preview_crawler(serie.sites[0],serie.title,serie.chapters[0].url)
+            return send_file(f"static/previews/{preview_name}")
+        except Exception as err:
+            print(err)
+            return send_file(f"static/previews/default.jpg")
+
 
 
 @app.route('/API/get_infos_serie/<string:title>')
@@ -190,7 +194,6 @@ def is_read():
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
-    print(sys.argv)
     sys.setrecursionlimit(100000)
     handler = Handler()
     if 'dev' in sys.argv:

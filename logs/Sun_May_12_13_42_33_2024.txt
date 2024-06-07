@@ -1,0 +1,504 @@
+[Sun May 12 13:42:33 2024]: Opening data file...
+[Sun May 12 13:42:33 2024]: Loading data from file...
+[Sun May 12 13:42:33 2024]: Done !
+[Sun May 12 13:42:40 2024]: 0.0 % 1 Genius of the Unique Lineage
+[Sun May 12 13:42:41 2024]: 0.0 % 1 Genius of the Unique Lineage
+[Sun May 12 13:42:41 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? To Hell With Being A Saint I m A Doctor asurascans https://www.asurascans.com/to-hell-with-being-a-saint-im-a-doctor-chapter-48/
+[Sun May 12 13:42:42 2024]: 0.4830917874396135 %
+[Sun May 12 13:42:42 2024]: 0.4830917874396135 %
+[Sun May 12 13:42:43 2024]: 0.7246376811594203 %
+[Sun May 12 13:42:44 2024]: 0.7246376811594203 %
+[Sun May 12 13:42:44 2024]: 0.966183574879227 %
+[Sun May 12 13:42:45 2024]: 1.2077294685990339 %
+[Sun May 12 13:42:45 2024]: 1.2077294685990339 %
+[Sun May 12 13:42:45 2024]: 1.4492753623188406 %
+[Sun May 12 13:42:46 2024]: 1.6908212560386473 %
+[Sun May 12 13:42:46 2024]: 1.6908212560386473 %
+[Sun May 12 13:42:47 2024]: 1.932367149758454 %
+[Sun May 12 13:42:48 2024]: 1.932367149758454 %
+[Sun May 12 13:42:48 2024]: 2.1739130434782608 %
+[Sun May 12 13:42:49 2024]: 2.1739130434782608 %
+[Sun May 12 13:42:49 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-rh953142/chapter-95 expected: https://chapmanganato.com/manga- Tsuki Ga Michibiku Isekai Douchuu readmanganato https://chapmanganato.to/manga-rh953142/chapter-95
+[Sun May 12 13:42:49 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-qm951521/chapter-99 expected: https://chapmanganato.com/manga- Mushoku Tensei Isekai Ittara Honki Dasu readmanganato https://chapmanganato.to/manga-qm951521/chapter-99
+[Sun May 12 13:42:49 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-zl977168/chapter-45 expected: https://chapmanganato.com/manga- Tensei Kyuuketsuki San Wa Ohirune Ga Shitai readmanganato https://chapmanganato.to/manga-zl977168/chapter-45
+[Sun May 12 13:42:49 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-co979497/chapter-58 expected: https://chapmanganato.com/manga- Lazy Dungeon Master readmanganato https://chapmanganato.to/manga-co979497/chapter-58
+[Sun May 12 13:42:50 2024]: 3.3816425120772946 %
+[Sun May 12 13:42:50 2024]: 3.3816425120772946 %
+[Sun May 12 13:42:50 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-iy985807/chapter-145 expected: https://chapmanganato.com/manga- The Rise Of The Unemployed Wise Man readmanganato https://chapmanganato.to/manga-iy985807/chapter-145
+[Sun May 12 13:42:51 2024]: 'NoneType' object has no attribute 'css' Absolute Necromancer mangatx https://mangatx.com/manga/absolute-necromancer/chapter-34/
+[Sun May 12 13:42:51 2024]: 3.864734299516908 %
+[Sun May 12 13:42:52 2024]: 4.1062801932367154 %
+[Sun May 12 13:42:54 2024]: 4.1062801932367154 %
+[Sun May 12 13:42:55 2024]: 'NoneType' object has no attribute 'css' I m Not That Kind of Talent mangatx https://mangatx.com/manga/im-not-that-kind-of-talent/chapter-54/
+[Sun May 12 13:42:55 2024]: 4.3478260869565215 %
+[Sun May 12 13:42:57 2024]: 4.5893719806763285 %
+[Sun May 12 13:42:58 2024]: 4.830917874396135 %
+[Sun May 12 13:42:59 2024]: 5.072463768115942 % 1 The Hero Returns
+[Sun May 12 13:42:59 2024]: 5.072463768115942 % 1 The Hero Returns
+[Sun May 12 13:43:01 2024]: 5.314009661835748 %
+[Sun May 12 13:43:02 2024]: 5.555555555555555 %
+[Sun May 12 13:43:02 2024]: 5.797101449275362 %
+[Sun May 12 13:43:03 2024]: 'NoneType' object has no attribute 'css' The Player With a Hidden Past mangatx https://mangatx.com/manga/the-player-with-a-hidden-past/chapter-24/
+[Sun May 12 13:43:04 2024]: 6.280193236714976 %
+[Sun May 12 13:43:05 2024]: 6.280193236714976 %
+[Sun May 12 13:43:06 2024]: 'NoneType' object has no attribute 'css' Solo Spell Caster mangatx https://mangatx.com/manga/solo-spell-caster/chapter-114/
+[Sun May 12 13:43:06 2024]: 6.521739130434782 %
+[Sun May 12 13:43:07 2024]: 6.763285024154589 %
+[Sun May 12 13:43:07 2024]: 6.763285024154589 %
+[Sun May 12 13:43:08 2024]: 7.004830917874397 % 1 My Daughter is the Final Boss
+[Sun May 12 13:43:09 2024]: 7.004830917874397 % 1 My Daughter is the Final Boss
+[Sun May 12 13:43:09 2024]: 7.246376811594203 %
+[Sun May 12 13:43:10 2024]: 7.487922705314009 %
+[Sun May 12 13:43:11 2024]: 7.487922705314009 %
+[Sun May 12 13:43:12 2024]: 7.729468599033816 %
+[Sun May 12 13:43:12 2024]: 7.729468599033816 %
+[Sun May 12 13:43:12 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-nr990774/chapter-107 expected: https://chapmanganato.com/manga- Of All Things I Became A Crow readmanganato https://chapmanganato.to/manga-nr990774/chapter-107
+[Sun May 12 13:43:12 2024]: 7.971014492753622 %
+[Sun May 12 13:43:13 2024]: 8.212560386473431 %
+[Sun May 12 13:43:14 2024]: 'NoneType' object has no attribute 'css' Demi Gods and Semi Devils mangatx https://mangatx.com/manga/demi-gods-and-semi-devils/chapter-89/
+[Sun May 12 13:43:15 2024]: 8.695652173913043 %
+[Sun May 12 13:43:15 2024]: 8.695652173913043 %
+[Sun May 12 13:43:16 2024]: 8.937198067632849 %
+[Sun May 12 13:43:17 2024]: 8.937198067632849 %
+[Sun May 12 13:43:18 2024]: 'NoneType' object has no attribute 'css' I Became a Renowned Family s Sword Prodigy mangatx https://mangatx.com/manga/i-became-a-renowned-familys-sword-prodigy/chapter-82/
+[Sun May 12 13:43:18 2024]: 9.178743961352657 % 1 I Became a Renowned Family s Sword Prodigy
+[Sun May 12 13:43:19 2024]: 'NoneType' object has no attribute 'css' Swordmaster s Youngest Son mangatx https://mangatx.com/manga/swordmasters-youngest-son/chapter-93/
+[Sun May 12 13:43:19 2024]: 9.420289855072465 % 1 Swordmaster s Youngest Son
+[Sun May 12 13:43:20 2024]: 'NoneType' object has no attribute 'css' Return To Player mangatx https://mangatx.com/manga/return-to-player/chapter-143/
+[Sun May 12 13:43:21 2024]: 9.66183574879227 %
+[Sun May 12 13:43:21 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-eq981551/chapter-114 expected: https://chapmanganato.com/manga- The Reincarnation Magician Of The Inferior Eyes readmanganato https://chapmanganato.to/manga-eq981551/chapter-114
+[Sun May 12 13:43:21 2024]: 10.144927536231885 %
+[Sun May 12 13:43:22 2024]: 10.144927536231885 %
+[Sun May 12 13:43:23 2024]: 'NoneType' object has no attribute 'css' Double Click mangatx https://mangatx.com/manga/double-click-park-soo-bong/chapter-66/
+[Sun May 12 13:43:24 2024]: 10.628019323671497 % 1 Return of the Frozen Player
+[Sun May 12 13:43:25 2024]: 'NoneType' object has no attribute 'css' Virus Girlfriend mangatx https://mangatx.com/manga/my-girlfriend-is-a-zombie/chapter-428/
+[Sun May 12 13:43:27 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Terminally Ill Genius Dark Knight asurascans https://asura.nacm.xyz/terminally-ill-genius-dark-knight-chapter-20/
+[Sun May 12 13:43:29 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Logging 10 000 Years into the Future asurascans https://asura.nacm.xyz/logging-10000-years-into-the-future-chapter-44/
+[Sun May 12 13:43:29 2024]: 11.594202898550725 % 1 Dragon Devouring Mage
+[Sun May 12 13:43:30 2024]: 11.594202898550725 % 3 Dragon Devouring Mage
+[Sun May 12 13:43:30 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ot991802/chapter-52 expected: https://chapmanganato.com/manga- Daily Life Of A Couple In Which The Boyfriend Became A Girl One Day readmanganato https://chapmanganato.to/manga-ot991802/chapter-52
+[Sun May 12 13:43:31 2024]: 'NoneType' object has no attribute 'css' Kalsarin mangatx https://mangatx.com/manga/kalsarin/chapter-18/
+[Sun May 12 13:43:32 2024]: 12.318840579710146 % 1 The Knight King Who Returned with a God
+[Sun May 12 13:43:32 2024]: 12.318840579710146 %
+[Sun May 12 13:43:33 2024]: 12.560386473429952 %
+[Sun May 12 13:43:33 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-sx970306/chapter-76 expected: https://chapmanganato.com/manga- Arifureta Shokugyou De Sekai Saikyou readmanganato https://chapmanganato.to/manga-sx970306/chapter-76
+[Sun May 12 13:43:33 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-gt984176/chapter-205 expected: https://chapmanganato.com/manga- Survival Story Of A Sword King In A Fantasy World readmanganato https://chapmanganato.to/manga-gt984176/chapter-205
+[Sun May 12 13:43:34 2024]: 'NoneType' object has no attribute 'css' The Gateway of Revolution mangatx https://mangatx.com/manga/the-gateway-of-revolution/chapter-82/
+[Sun May 12 13:43:35 2024]: 'NoneType' object has no attribute 'css' The Greatest in the World mangatx https://mangatx.com/manga/the-greatest-in-the-world/chapter-32/
+[Sun May 12 13:43:36 2024]: 'NoneType' object has no attribute 'css' The Book of Lagier mangatx https://mangatx.com/manga/the-book-of-lagier/chapter-83/
+[Sun May 12 13:43:36 2024]: 13.768115942028986 %
+[Sun May 12 13:43:36 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-eb981658/chapter-54 expected: https://chapmanganato.com/manga- Realist Maou Niyoru Seiiki Naki Isekai Kaikaku readmanganato https://chapmanganato.to/manga-eb981658/chapter-54
+[Sun May 12 13:43:37 2024]: 'NoneType' object has no attribute 'css' Crazy professor system mangatx https://mangatx.com/manga/crazy-professor-system/chapter-100/
+[Sun May 12 13:43:38 2024]: 'NoneType' object has no attribute 'css' Chronicles Of The Martial God s Return mangatx https://mangatx.com/manga/chronicles-of-the-martial-gods-return/chapter-72/
+[Sun May 12 13:43:39 2024]: 14.492753623188406 %
+[Sun May 12 13:43:40 2024]: 14.734299516908212 %
+[Sun May 12 13:43:40 2024]: 14.734299516908212 %
+[Sun May 12 13:43:41 2024]: 14.975845410628018 %
+[Sun May 12 13:43:42 2024]: 'NoneType' object has no attribute 'css' Player Who Returned 10 000 Years Later mangatx https://mangatx.com/manga/player-who-returned-10000-years-later/chapter-65/
+[Sun May 12 13:43:42 2024]: 15.217391304347828 %
+[Sun May 12 13:43:43 2024]: 'NoneType' object has no attribute 'css' The World After the Fall mangatx https://mangatx.com/manga/the-world-after-the-fall/chapter-95/
+[Sun May 12 13:43:44 2024]: 15.70048309178744 %
+[Sun May 12 13:43:44 2024]: 15.70048309178744 %
+[Sun May 12 13:43:45 2024]: 15.942028985507244 %
+[Sun May 12 13:43:45 2024]: 15.942028985507244 %
+[Sun May 12 13:43:46 2024]: 16.183574879227052 % 1 Archmage Streamer
+[Sun May 12 13:43:47 2024]: 'NoneType' object has no attribute 'css' The S Classes That I Raised mangatx https://mangatx.com/manga/the-s-classes-that-i-raised/chapter-106/
+[Sun May 12 13:43:48 2024]: 16.425120772946862 %
+[Sun May 12 13:43:48 2024]: 'NoneType' object has no attribute 'css' Mercenary Enrollment mangatx https://mangatx.com/manga/mercenary-enrollment/chapter-157/
+[Sun May 12 13:43:49 2024]: 'NoneType' object has no attribute 'css' Surviving The Game as a Barbarian mangatx https://mangatx.com/manga/survive-as-a-barbarian-in-the-game/chapter-33/
+[Sun May 12 13:43:50 2024]: 16.908212560386474 %
+[Sun May 12 13:43:51 2024]: 17.14975845410628 %
+[Sun May 12 13:43:52 2024]: 17.391304347826086 %
+[Sun May 12 13:43:53 2024]: 'NoneType' object has no attribute 'css' Slave B mangatx https://mangatx.com/manga/slave-b-manhwa/chapter-80/
+[Sun May 12 13:43:53 2024]: 17.874396135265698 %
+[Sun May 12 13:43:54 2024]: 17.874396135265698 %
+[Sun May 12 13:43:55 2024]: 18.115942028985508 % 1 Return of the SSS Class Ranker
+[Sun May 12 13:43:55 2024]: 18.115942028985508 % 1 Return of the SSS Class Ranker
+[Sun May 12 13:43:55 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-zh953890/chapter-37 expected: https://chapmanganato.com/manga- Eiyuu Kyoushitsu readmanganato https://chapmanganato.to/manga-zh953890/chapter-37
+[Sun May 12 13:43:56 2024]: 18.59903381642512 %
+[Sun May 12 13:43:56 2024]: 18.59903381642512 %
+[Sun May 12 13:43:56 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-hz985282/chapter-79 expected: https://chapmanganato.com/manga- Isekai Monster Breeder readmanganato https://chapmanganato.to/manga-hz985282/chapter-79
+[Sun May 12 13:43:57 2024]: 19.082125603864732 %
+[Sun May 12 13:43:57 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-gy983607/chapter-98 expected: https://chapmanganato.com/manga- I Don t Really Get It But It Looks Like I Was Reincarnated In An Another World readmanganato https://chapmanganato.to/manga-gy983607/chapter-98
+[Sun May 12 13:43:58 2024]: 19.565217391304348 %
+[Sun May 12 13:43:58 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-lc989185/chapter-117 expected: https://chapmanganato.com/manga- The Lord s Coins Aren t Decreasing readmanganato https://chapmanganato.to/manga-lc989185/chapter-117
+[Sun May 12 13:43:58 2024]: 19.806763285024154 %
+[Sun May 12 13:43:59 2024]: 20.048309178743963 %
+[Sun May 12 13:44:00 2024]: 'NoneType' object has no attribute 'css' Necromancer s Evolutionary Traits mangatx https://mangatx.com/manga/necromancers-evolutionary-traits/chapter-33/
+[Sun May 12 13:44:00 2024]: 20.28985507246377 %
+[Sun May 12 13:44:01 2024]: 20.531400966183575 % 2 The Strongest Florist
+[Sun May 12 13:44:02 2024]: 20.77294685990338 %
+[Sun May 12 13:44:02 2024]: 20.77294685990338 %
+[Sun May 12 13:44:03 2024]: 'NoneType' object has no attribute 'css' Return of the Disaster Class Hero mangatx https://mangatx.com/manga/the-return-of-the-disaster-class-hero/chapter-74/
+[Sun May 12 13:44:04 2024]: 21.014492753623188 %
+[Sun May 12 13:44:05 2024]: 21.256038647342994 %
+[Sun May 12 13:44:05 2024]: 21.256038647342994 %
+[Sun May 12 13:44:06 2024]: 21.497584541062803 %
+[Sun May 12 13:44:06 2024]: 21.497584541062803 %
+[Sun May 12 13:44:07 2024]: 21.73913043478261 %
+[Sun May 12 13:44:08 2024]: 21.980676328502415 %
+[Sun May 12 13:44:09 2024]: 22.22222222222222 %
+[Sun May 12 13:44:09 2024]: 22.22222222222222 %
+[Sun May 12 13:44:10 2024]: 22.463768115942027 %
+[Sun May 12 13:44:10 2024]: 22.463768115942027 %
+[Sun May 12 13:44:11 2024]: 22.705314009661837 %
+[Sun May 12 13:44:11 2024]: 22.705314009661837 %
+[Sun May 12 13:44:13 2024]: 22.946859903381643 % 1 Tales of Demons and Gods
+[Sun May 12 13:44:13 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-qz993682/chapter-66 expected: https://chapmanganato.com/manga- Magic Level 99990000 All Attribute Great Sage readmanganato https://chapmanganato.to/manga-qz993682/chapter-66
+[Sun May 12 13:44:13 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ct979654/chapter-44 expected: https://chapmanganato.com/manga- Tatoeba Last Dungeon Mae No Mura No Shounen Ga Joban No Machi De Kurasu Youna Monogatari readmanganato https://chapmanganato.to/manga-ct979654/chapter-44
+[Sun May 12 13:44:14 2024]: 23.67149758454106 % 1 Boundless Necromancer
+[Sun May 12 13:44:14 2024]: 23.67149758454106 % 1 Boundless Necromancer
+[Sun May 12 13:44:15 2024]: 'NoneType' object has no attribute 'css' Reincarnation Of The Strongest Sword God mangatx https://mangatx.com/manga/reincarnation-of-the-strongest-sword-god/chapter-55/
+[Sun May 12 13:44:16 2024]: 23.91304347826087 %
+[Sun May 12 13:44:17 2024]: 24.154589371980677 %
+[Sun May 12 13:44:18 2024]: 24.396135265700483 %
+[Sun May 12 13:44:18 2024]: 24.637681159420293 %
+[Sun May 12 13:44:19 2024]: 24.879227053140095 %
+[Sun May 12 13:44:20 2024]: 25.120772946859905 %
+[Sun May 12 13:44:21 2024]: 25.36231884057971 %
+[Sun May 12 13:44:22 2024]: 25.60386473429952 %
+[Sun May 12 13:44:22 2024]: 25.60386473429952 %
+[Sun May 12 13:44:23 2024]: 25.845410628019323 % 1 I Regressed to My Ruined Family
+[Sun May 12 13:44:23 2024]: 25.845410628019323 % 1 I Regressed to My Ruined Family
+[Sun May 12 13:44:24 2024]: 'NoneType' object has no attribute 'css' Demon Lord s Martial Arts Ascension mangatx https://mangatx.com/manga/the-demon-lord-levels-up-with-martial-arts/chapter-53/
+[Sun May 12 13:44:24 2024]: 26.08695652173913 %
+[Sun May 12 13:44:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-de980539/chapter-63 expected: https://chapmanganato.com/manga- The Eminence In Shadow readmanganato https://chapmanganato.to/manga-de980539/chapter-63
+[Sun May 12 13:44:26 2024]: 'NoneType' object has no attribute 'css' Seoul Station Necromancer mangatx https://mangatx.com/manga/seoul-stations-necromancer/chapter-101/
+[Sun May 12 13:44:26 2024]: 'NoneType' object has no attribute 'css' Return of the 8th class Magician mangatx https://mangatx.com/manga/return-of-the-8th-class-magician-manhwa/chapter-79/
+[Sun May 12 13:44:27 2024]: 26.811594202898554 %
+[Sun May 12 13:44:28 2024]: 27.053140096618357 %
+[Sun May 12 13:44:28 2024]: 27.053140096618357 %
+[Sun May 12 13:44:28 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-tw971279/chapter-45 expected: https://chapmanganato.com/manga- Kou 1 Desu Ga Isekai De Joushu Hajimemashita readmanganato https://chapmanganato.to/manga-tw971279/chapter-45
+[Sun May 12 13:44:28 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-zb976736/chapter-67 expected: https://chapmanganato.com/manga- Murabito Desu Ga Nani Ka readmanganato https://chapmanganato.to/manga-zb976736/chapter-67
+[Sun May 12 13:44:28 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-df981088/chapter-60 expected: https://chapmanganato.com/manga- I ll Start Being A Feminine Boy readmanganato https://chapmanganato.to/manga-df981088/chapter-60
+[Sun May 12 13:44:29 2024]: 28.019323671497588 % 1 The Newbie is Too Strong
+[Sun May 12 13:44:29 2024]: 28.019323671497588 % 1 The Newbie is Too Strong
+[Sun May 12 13:44:30 2024]: 28.26086956521739 %
+[Sun May 12 13:44:30 2024]: 28.26086956521739 %
+[Sun May 12 13:44:30 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ja986457/chapter-43 expected: https://chapmanganato.com/manga- Yo Jo Life readmanganato https://chapmanganato.to/manga-ja986457/chapter-43
+[Sun May 12 13:44:31 2024]: 'NoneType' object has no attribute 'css' Seoul Station Druid mangatx https://mangatx.com/manga/seoul-station-druid/chapter-104/
+[Sun May 12 13:44:32 2024]: 'NoneType' object has no attribute 'css' Academy s Undercover Professor mangatx https://mangatx.com/manga/i-got-a-fake-job-at-the-academy/chapter-67/
+[Sun May 12 13:44:32 2024]: 28.985507246376812 %
+[Sun May 12 13:44:32 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-je986361/chapter-8 expected: https://chapmanganato.com/manga- Kuro No Senki Isekai Ten I Shita Boku Ga Saikyou Na No Wa Bed No Ue Dake No You Desu readmanganato https://chapmanganato.to/manga-je986361/chapter-8
+[Sun May 12 13:44:32 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-jd986360/chapter-93 expected: https://chapmanganato.com/manga- The Reincarnated Inferior Magic Swordsman readmanganato https://chapmanganato.to/manga-jd986360/chapter-93
+[Sun May 12 13:44:33 2024]: 29.71014492753623 %
+[Sun May 12 13:44:34 2024]: 'NoneType' object has no attribute 'css' Taming Master mangatx https://mangatx.com/manga/taming-master/chapter-125/
+[Sun May 12 13:44:35 2024]: 29.951690821256037 %
+[Sun May 12 13:44:35 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-as977475/chapter-59 expected: https://chapmanganato.com/manga- Magi Craft Meister readmanganato https://chapmanganato.to/manga-as977475/chapter-59
+[Sun May 12 13:44:35 2024]: 30.434782608695656 %
+[Sun May 12 13:44:36 2024]: 30.434782608695656 %
+[Sun May 12 13:44:37 2024]: 30.676328502415455 %
+[Sun May 12 13:44:37 2024]: 30.676328502415455 %
+[Sun May 12 13:44:37 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-kw988005/chapter-28 expected: https://chapmanganato.com/manga- A Cute Guy readmanganato https://chapmanganato.to/manga-kw988005/chapter-28
+[Sun May 12 13:44:37 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? I ll Be Taking A Break For Personal Reasons asurascans https://www.asurascans.com/ill-be-taking-a-break-for-personal-reasons-chapter-51/
+[Sun May 12 13:44:38 2024]: 'NoneType' object has no attribute 'css' The Player that can t Level Up mangatx https://mangatx.com/manga/the-player-that-cant-level-up/chapter-122/
+[Sun May 12 13:44:39 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Villain To Kill asurascans https://www.asurascans.com/villain-to-kill-chapter-96/
+[Sun May 12 13:44:39 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Star Instructor Master Baek asurascans https://www.asurascans.com/star-instructor-master-baek-chapter-76/
+[Sun May 12 13:44:39 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Warrior High School Dungeon Raid Department asurascans https://www.asurascans.com/warrior-high-school-dungeon-raid-department-chapter-45-s1-end/
+[Sun May 12 13:44:40 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? My School Life Pretending To Be a Worthless Person asurascans https://www.asurascans.com/0906168628-my-school-life-pretending-to-be-a-worthless-person-chapter-52-s1-end/
+[Sun May 12 13:44:40 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? The Heavenly Demon Can t Live a Normal Life asurascans https://www.asurascans.com/the-heavenly-demon-cant-live-a-normal-life-chapter-70-the-last-objective-s1-end/
+[Sun May 12 13:44:40 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? On My Way to Kill God asurascans https://www.asurascans.com/on-my-way-to-kill-god-chapter-44-notice/
+[Sun May 12 13:44:40 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Archmage Transcending Through Regression asurascans https://www.asurascans.com/archmage-transcending-through-regression-chapter-48/
+[Sun May 12 13:44:41 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Carnivorous Hunter asurascans https://www.asurascans.com/carnivorous-hunter-chapter-51-notice/
+[Sun May 12 13:44:42 2024]: 33.57487922705314 %
+[Sun May 12 13:44:42 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-on991670/chapter-40 expected: https://chapmanganato.com/manga- I Changed My Life By Signing In readmanganato https://chapmanganato.to/manga-on991670/chapter-40
+[Sun May 12 13:44:43 2024]: 34.05797101449276 %
+[Sun May 12 13:44:43 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-bt978702/chapter-86.9 expected: https://chapmanganato.com/manga- Onii Chan Is Done For readmanganato https://chapmanganato.to/manga-bt978702/chapter-86.9
+[Sun May 12 13:44:43 2024]: 34.54106280193236 %
+[Sun May 12 13:44:44 2024]: 34.54106280193236 %
+[Sun May 12 13:44:45 2024]: 'NoneType' object has no attribute 'css' I Might Be A Fake Cultivator mangatx https://mangatx.com/manga/i-might-be-a-fake-cultivator/chapter-304/
+[Sun May 12 13:44:45 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-nl991220/chapter-20 expected: https://chapmanganato.com/manga- Futari Switch readmanganato https://chapmanganato.to/manga-nl991220/chapter-20
+[Sun May 12 13:44:45 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-nj990618/chapter-28 expected: https://chapmanganato.com/manga- Thank You Isekai readmanganato https://chapmanganato.to/manga-nj990618/chapter-28
+[Sun May 12 13:44:46 2024]: 'NoneType' object has no attribute 'css' I Obtained a Mythic Item mangatx https://mangatx.com/manga/i-obtained-a-mythic-item/chapter-75/
+[Sun May 12 13:44:46 2024]: 35.507246376811594 %
+[Sun May 12 13:44:46 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-pb992410/chapter-99 expected: https://chapmanganato.com/manga- Super God System readmanganato https://chapmanganato.to/manga-pb992410/chapter-99
+[Sun May 12 13:44:46 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ng990741/chapter-12 expected: https://chapmanganato.com/manga- The Reincarnated Swordsman With 9999 Strength Wants To Become A Magician readmanganato https://chapmanganato.to/manga-ng990741/chapter-12
+[Sun May 12 13:44:46 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-dh981316/chapter-76 expected: https://chapmanganato.com/manga- Yuusha Party Wo Tsuihou Sareta Beast Tamer Saikyou Shuzoku Nekomimi Shojo To Deau readmanganato https://chapmanganato.to/manga-dh981316/chapter-76
+[Sun May 12 13:44:46 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ae977439/chapter-326 expected: https://chapmanganato.com/manga- Yong Heng Zhi Zun readmanganato https://chapmanganato.to/manga-ae977439/chapter-326
+[Sun May 12 13:44:46 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-gm984221/chapter-28 expected: https://chapmanganato.com/manga- Isekai De Cheat Skill Wo Te Ni Shita Ore Wa Genjitsu Sekai Wo Mo Musou Suru Level Up Wa Jinsei Wo Kaeta readmanganato https://chapmanganato.to/manga-gm984221/chapter-28
+[Sun May 12 13:44:46 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-dp980372/chapter-594 expected: https://chapmanganato.com/manga- Iron Ladies readmanganato https://chapmanganato.to/manga-dp980372/chapter-594
+[Sun May 12 13:44:46 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-pf992614/chapter-18 expected: https://chapmanganato.com/manga- Transmigrated Into The Fox King S Adored Wife readmanganato https://chapmanganato.to/manga-pf992614/chapter-18
+[Sun May 12 13:44:47 2024]: 37.43961352657005 %
+[Sun May 12 13:44:48 2024]: 'NoneType' object has no attribute 'css' Magic Emperor mangatx https://mangatx.com/manga/magic-emperor/chapter-456/
+[Sun May 12 13:44:49 2024]: 'NoneType' object has no attribute 'css' I Grow Stronger By Eating mangatx https://mangatx.com/manga/i-grow-stronger-by-eating/chapter-100/
+[Sun May 12 13:44:49 2024]: 37.92270531400966 %
+[Sun May 12 13:44:49 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-cs979953/chapter-62.5 expected: https://chapmanganato.com/manga- Amachin Wa Jishou readmanganato https://chapmanganato.to/manga-cs979953/chapter-62.5
+[Sun May 12 13:44:50 2024]: 38.405797101449274 %
+[Sun May 12 13:44:51 2024]: 38.64734299516908 %
+[Sun May 12 13:44:51 2024]: 38.64734299516908 %
+[Sun May 12 13:44:51 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-lu989229/chapter-101.5 expected: https://chapmanganato.com/manga- Reincarnation Of The Suicidal Battle God readmanganato https://chapmanganato.to/manga-lu989229/chapter-101.5
+[Sun May 12 13:44:52 2024]: 38.88888888888889 %
+[Sun May 12 13:44:52 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-at977654/chapter-55.2 expected: https://chapmanganato.com/manga- Makikomarete Isekai Teni Suru Yatsu Wa Taitei Cheat readmanganato https://chapmanganato.to/manga-at977654/chapter-55.2
+[Sun May 12 13:44:52 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-eb981710/chapter-50 expected: https://chapmanganato.com/manga- Kanzen Kaihi Healer No Kiseki readmanganato https://chapmanganato.to/manga-eb981710/chapter-50
+[Sun May 12 13:44:52 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ih985416/chapter-20.5 expected: https://chapmanganato.com/manga- Villainess Level 99 I May Be The Hidden Boss But I m Not The Demon Lord readmanganato https://chapmanganato.to/manga-ih985416/chapter-20.5
+[Sun May 12 13:44:52 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Overpowered Sword asurascans https://www.asurascans.com/overpowered-sword-chapter-65/
+[Sun May 12 13:44:53 2024]: 40.09661835748793 %
+[Sun May 12 13:44:53 2024]: 40.09661835748793 %
+[Sun May 12 13:44:54 2024]: 'NoneType' object has no attribute 'css' The Healing Priest of the Sun mangatx https://mangatx.com/manga/the-healing-priest-of-the-sun/chapter-64/
+[Sun May 12 13:44:55 2024]: 40.57971014492754 %
+[Sun May 12 13:44:55 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-hu985229/chapter-189.5 expected: https://chapmanganato.com/manga- The Great Mage Returns After 4000 Years readmanganato https://chapmanganato.to/manga-hu985229/chapter-189.5
+[Sun May 12 13:44:56 2024]: 41.06280193236715 %
+[Sun May 12 13:44:57 2024]: 'NoneType' object has no attribute 'css' Martial Peak mangatx https://mangatx.com/manga/martial-peak-manga/chapter-3579/
+[Sun May 12 13:44:58 2024]: 41.54589371980676 % 1 Spare Me Great Lord
+[Sun May 12 13:44:58 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-lg989263/chapter-260 expected: https://chapmanganato.com/manga- My Apprentices Are All Female Devils readmanganato https://chapmanganato.to/manga-lg989263/chapter-260
+[Sun May 12 13:44:58 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-kx987532/chapter-239 expected: https://chapmanganato.com/manga- 99 Ways To Become Heroes By Beauty Masters readmanganato https://chapmanganato.to/manga-kx987532/chapter-239
+[Sun May 12 13:44:59 2024]: 'NoneType' object has no attribute 'css' I m The Only One With Genius DNA mangatx https://mangatx.com/manga/im-the-only-one-with-genius-dna/chapter-117/
+[Sun May 12 13:45:00 2024]: 42.51207729468599 %
+[Sun May 12 13:45:01 2024]: 42.7536231884058 %
+[Sun May 12 13:45:01 2024]: 42.7536231884058 %
+[Sun May 12 13:45:02 2024]: 42.99516908212561 %
+[Sun May 12 13:45:02 2024]: 42.99516908212561 %
+[Sun May 12 13:45:02 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-xi974543/chapter-66 expected: https://chapmanganato.com/manga- World Teacher Isekaishiki Kyouiku Agent readmanganato https://chapmanganato.to/manga-xi974543/chapter-66
+[Sun May 12 13:45:04 2024]: 'NoneType' object has no attribute 'css' Talent Swallowing Magician mangatx https://mangatx.com/manga/talent-swallowing-magician-manga/chapter-50/
+[Sun May 12 13:45:04 2024]: 43.47826086956522 %
+[Sun May 12 13:45:04 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-br978852/chapter-73 expected: https://chapmanganato.com/manga- The Balls Of The Elves readmanganato https://chapmanganato.to/manga-br978852/chapter-73
+[Sun May 12 13:45:05 2024]: 'NoneType' object has no attribute 'css' Cultivators in the city mangatx https://mangatx.com/manga/cultivators-in-the-city/chapter-61/
+[Sun May 12 13:45:06 2024]: 'NoneType' object has no attribute 'css' I m Just An Immortal mangatx https://mangatx.com/manga/im-just-an-immortal/chapter-52/
+[Sun May 12 13:45:07 2024]: 'NoneType' object has no attribute 'css' The Library Needs A Witch mangatx https://mangatx.com/manga/the-library-needs-a-witch/chapter-59/
+[Sun May 12 13:45:07 2024]: 44.68599033816425 %
+[Sun May 12 13:45:08 2024]: 44.68599033816425 %
+[Sun May 12 13:45:09 2024]: 'NoneType' object has no attribute 'css' Nano Machine mangatx https://mangatx.com/manga/nano-machine/chapter-175/
+[Sun May 12 13:45:09 2024]: 44.927536231884055 %
+[Sun May 12 13:45:10 2024]: 45.169082125603865 %
+[Sun May 12 13:45:10 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Ending Maker asurascans https://asura.gg/ending-maker-chapter-38/
+[Sun May 12 13:45:10 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ho985149/chapter-252 expected: https://chapmanganato.com/manga- Divine Perspective readmanganato https://chapmanganato.to/manga-ho985149/chapter-252
+[Sun May 12 13:45:10 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ha984509/chapter-426 expected: https://chapmanganato.com/manga- Empress s Harem readmanganato https://chapmanganato.to/manga-ha984509/chapter-426
+[Sun May 12 13:45:10 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-fj982918/chapter-807 expected: https://chapmanganato.com/manga- My Cultivator Girlfriend readmanganato https://chapmanganato.to/manga-fj982918/chapter-807
+[Sun May 12 13:45:10 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-mj989592/chapter-90 expected: https://chapmanganato.com/manga- Eternal Kingdom readmanganato https://chapmanganato.to/manga-mj989592/chapter-90
+[Sun May 12 13:45:10 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-nb990610/chapter-113.5 expected: https://chapmanganato.com/manga- My Crossdressing Senpai readmanganato https://chapmanganato.to/manga-nb990610/chapter-113.5
+[Sun May 12 13:45:10 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-jn986622/chapter-15 expected: https://chapmanganato.com/manga- Starting A Business In Another World Former Corporate Slave Change Jobs And Advances In A Different World Building A Labyrinth That Is Impenetrable By The Hero readmanganato https://chapmanganato.to/manga-jn986622/chapter-15
+[Sun May 12 13:45:11 2024]: 47.10144927536232 % 1 Dragon Master
+[Sun May 12 13:45:12 2024]: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None? Reaper of the Drifting Moon asurascans https://www.asurascans.com/reaper-of-the-drifting-moon-chapter-55-s1-end/
+[Sun May 12 13:45:13 2024]: 47.58454106280193 %
+[Sun May 12 13:45:13 2024]: 47.58454106280193 %
+[Sun May 12 13:45:13 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-lv952256/chapter-101 expected: https://chapmanganato.com/manga- The New Gate readmanganato https://chapmanganato.to/manga-lv952256/chapter-101
+[Sun May 12 13:45:13 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-bn978948/chapter-138 expected: https://chapmanganato.com/manga- Kuro No Shoukanshi readmanganato https://chapmanganato.to/manga-bn978948/chapter-138
+[Sun May 12 13:45:13 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-mf989888/chapter-40 expected: https://chapmanganato.com/manga- Return Of The Invincible Patriarch readmanganato https://chapmanganato.to/manga-mf989888/chapter-40
+[Sun May 12 13:45:14 2024]: 'NoneType' object has no attribute 'css' Ascension To Godhood By Slaying Demons mangatx https://mangatx.com/manga/ascension-to-godhood-by-slaying-demons/chapter-40/
+[Sun May 12 13:45:15 2024]: 48.792270531400966 %
+[Sun May 12 13:45:16 2024]: 49.033816425120776 %
+[Sun May 12 13:45:16 2024]: module 'crawlers.lhtranslation' has no attribute 'get_page' Nito no Taidana Isekai Shoukougun Saijaku Shoku Healer nano ni Saikyou wa Cheat desu ka lhtranslation https://lhtranslation.net/manga/nito-no-taidana-isekai-shoukougun-saijaku-shoku-healer-nano-ni-saikyou-wa-cheat-desu-ka/chapter-31-2/
+[Sun May 12 13:45:16 2024]: module 'crawlers.lhtranslation' has no attribute 'get_page' Maou ni Natta node Dungeon Tsukutte Jingai Musume to Honobono suru lhtranslation https://lhtranslation.net/manga/maou-ni-natta-node-dungeon-tsukutte-jingai-musume-to-honobono-suru/chapter-63-2/
+[Sun May 12 13:45:16 2024]: module 'crawlers.lhtranslation' has no attribute 'get_page' Six Princesses Fall in Love with God Guardian lhtranslation https://lhtranslation.net/manga/six-princesses-fall-in-love-with-god-guardian/chapter-23/
+[Sun May 12 13:45:16 2024]: module 'crawlers.lhtranslation' has no attribute 'get_page' Isekai Cheat Magic Swordsman lhtranslation https://lhtranslation.net/manga/isekai-cheat-magic-swordsman/chapter-29-2/
+[Sun May 12 13:45:16 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-if986014/chapter-31 expected: https://chapmanganato.com/manga- Cheat Skill shisha Sosei Ga Kakusei Shite Inishieno Maougun Wo Fukkatsu Sasete Shimaimashita Dare Mo Shinasenai Saikyou Hiiro readmanganato https://chapmanganato.to/manga-if986014/chapter-31
+[Sun May 12 13:45:16 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ni990617/chapter-16 expected: https://chapmanganato.com/manga- Isekai De Uwamae Hanete Ikiteiku Saisei Mahotsukai No Yuru Fuwa Jinzai Haken Seikatsu readmanganato https://chapmanganato.to/manga-ni990617/chapter-16
+[Sun May 12 13:45:16 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-aa951883/chapter-622 expected: https://chapmanganato.com/manga- Tower Of God readmanganato https://chapmanganato.to/manga-aa951883/chapter-622
+[Sun May 12 13:45:16 2024]: 50.96618357487923 %
+[Sun May 12 13:45:16 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-wa973483/chapter-40 expected: https://chapmanganato.com/manga- Otonari Complex readmanganato https://chapmanganato.to/manga-wa973483/chapter-40
+[Sun May 12 13:45:16 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ls989075/chapter-283 expected: https://chapmanganato.com/manga- I Return From The Heaven And Worlds readmanganato https://chapmanganato.to/manga-ls989075/chapter-283
+[Sun May 12 13:45:16 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-nh990542/chapter-42 expected: https://chapmanganato.com/manga- I Opened A Harem In Hell readmanganato https://chapmanganato.to/manga-nh990542/chapter-42
+[Sun May 12 13:45:16 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-pf952888/chapter-77 expected: https://chapmanganato.com/manga- Reincarnation No Kaben readmanganato https://chapmanganato.to/manga-pf952888/chapter-77
+[Sun May 12 13:45:16 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-zl976420/chapter-368 expected: https://chapmanganato.com/manga- Atsumare Fushigi Kenkyu Bu readmanganato https://chapmanganato.to/manga-zl976420/chapter-368
+[Sun May 12 13:45:16 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-dv980556/chapter-49 expected: https://chapmanganato.com/manga- I Am Not A Goddess readmanganato https://chapmanganato.to/manga-dv980556/chapter-49
+[Sun May 12 13:45:16 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-sj970066/chapter-60 expected: https://chapmanganato.com/manga- The Mage Will Master Magic Efficiently In His Second Life readmanganato https://chapmanganato.to/manga-sj970066/chapter-60
+[Sun May 12 13:45:17 2024]: 'NoneType' object has no attribute 'css' The Return of the Crazy Demon mangatx https://mangatx.com/manga/return-of-the-mad-demon/chapter-92/
+[Sun May 12 13:45:17 2024]: 52.89855072463768 %
+[Sun May 12 13:45:17 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-zb977258/chapter-77 expected: https://chapmanganato.com/manga- Shikkaku Mon No Saikyou Kenja readmanganato https://chapmanganato.to/manga-zb977258/chapter-77
+[Sun May 12 13:45:17 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-fa982883/chapter-186 expected: https://chapmanganato.com/manga- I m Destined For Greatness readmanganato https://chapmanganato.to/manga-fa982883/chapter-186
+[Sun May 12 13:45:17 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-nz990434/chapter-261 expected: https://chapmanganato.com/manga- Protoss Dark Emperor readmanganato https://chapmanganato.to/manga-nz990434/chapter-261
+[Sun May 12 13:45:17 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-bo978671/chapter-61 expected: https://chapmanganato.com/manga- Kimoota Idol Yarutteyo readmanganato https://chapmanganato.to/manga-bo978671/chapter-61
+[Sun May 12 13:45:18 2024]: 54.106280193236714 %
+[Sun May 12 13:45:18 2024]: 54.106280193236714 %
+[Sun May 12 13:45:18 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-fo982397/chapter-45 expected: https://chapmanganato.com/manga- 100 Nin No Eiyuu O Sodateta Saikyou Yogensha Wa Boukensha Ni Natte Mo Sekaijuu No Deshi Kara Shitawarete Masu readmanganato https://chapmanganato.to/manga-fo982397/chapter-45
+[Sun May 12 13:45:18 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-li988543/chapter-254 expected: https://chapmanganato.com/manga- I Have An Apocalyptic Dungeon readmanganato https://chapmanganato.to/manga-li988543/chapter-254
+[Sun May 12 13:45:19 2024]: 'NoneType' object has no attribute 'css' Kill The Dragon mangatx https://mangatx.com/manga/kill-the-dragon/chapter-80/
+[Sun May 12 13:45:19 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-hn984596/chapter-401 expected: https://chapmanganato.com/manga- Infinite Apostles And Twelve War Girls readmanganato https://chapmanganato.to/manga-hn984596/chapter-401
+[Sun May 12 13:45:19 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-iu986277/chapter-451 expected: https://chapmanganato.com/manga- Cultivation Return On Campus readmanganato https://chapmanganato.to/manga-iu986277/chapter-451
+[Sun May 12 13:45:20 2024]: 55.55555555555556 %
+[Sun May 12 13:45:21 2024]: 'NoneType' object has no attribute 'css' The Dark Magician Transmigrates After 66666 Years mangatx https://mangatx.com/manga/the-dark-magician-transmigrates-after-66666-years/chapter-100/
+[Sun May 12 13:45:21 2024]: 55.79710144927537 %
+[Sun May 12 13:45:22 2024]: 56.038647342995176 %
+[Sun May 12 13:45:23 2024]: 56.28019323671497 %
+[Sun May 12 13:45:24 2024]: 56.28019323671497 %
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-gs983501/chapter-141 expected: https://chapmanganato.com/manga- The Descent Of The Demonic Master readmanganato https://chapmanganato.to/manga-gs983501/chapter-141
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-hf985214/chapter-75 expected: https://chapmanganato.com/manga- The Blade Of Evolution Walking Alone In The Dungeon readmanganato https://chapmanganato.to/manga-hf985214/chapter-75
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-hi984643/chapter-156 expected: https://chapmanganato.com/manga- Villain Initialization readmanganato https://chapmanganato.to/manga-hi984643/chapter-156
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-gr983752/chapter-107 expected: https://chapmanganato.com/manga- The Strongest Magical Swordsman Ever Reborn As An F Rank Adventurer readmanganato https://chapmanganato.to/manga-gr983752/chapter-107
+[Sun May 12 13:45:24 2024]: 57.48792270531401 %
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-bh979290/chapter-46 expected: https://chapmanganato.com/manga- The Other World Doesn t Stand A Chance Against The Power Of Instant Death readmanganato https://chapmanganato.to/manga-bh979290/chapter-46
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ib986284/chapter-42.2 expected: https://chapmanganato.com/manga- Shoukan Sareta Kenja Wa Isekai Wo Yuku Saikyou Nano Wa Fuyou Zaiko No Item Deshita readmanganato https://chapmanganato.to/manga-ib986284/chapter-42.2
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-gc983811/chapter-634 expected: https://chapmanganato.com/manga- I m The Great Immortal readmanganato https://chapmanganato.to/manga-gc983811/chapter-634
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-sh953216/chapter-99 expected: https://chapmanganato.com/manga- Death March Kara Hajimaru Isekai Kyousoukyoku readmanganato https://chapmanganato.to/manga-sh953216/chapter-99
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-yz975582/chapter-61.2 expected: https://chapmanganato.com/manga- Gaikotsu Kishi Sama Tadaima Isekai E Odekake Chuu readmanganato https://chapmanganato.to/manga-yz975582/chapter-61.2
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ga983509/chapter-154 expected: https://chapmanganato.com/manga- I Was Born As The Demon Lord s Daughter readmanganato https://chapmanganato.to/manga-ga983509/chapter-154
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-lt988502/chapter-343 expected: https://chapmanganato.com/manga- 100 000 Levels Of Body Refining All The Dogs I Raise Are The Emperor readmanganato https://chapmanganato.to/manga-lt988502/chapter-343
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-fs983327/chapter-33 expected: https://chapmanganato.com/manga- A Boy Who Loves Genderswap Got Genderswapped So He Acts Out His Ideal Genderswap Girl readmanganato https://chapmanganato.to/manga-fs983327/chapter-33
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ja986957/chapter-21.2 expected: https://chapmanganato.com/manga- Neta Chara Tensei To Ka Anmari Da readmanganato https://chapmanganato.to/manga-ja986957/chapter-21.2
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-dw980579/chapter-61.5 expected: https://chapmanganato.com/manga- I Ve Been Killing Slimes For 300 Years And Maxed Out My Level readmanganato https://chapmanganato.to/manga-dw980579/chapter-61.5
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-dr980852/chapter-87 expected: https://chapmanganato.com/manga- Fukushuu O Koinegau Saikyou Yuusha Wa Yami No Chikara De Senmetsu Musou Suru readmanganato https://chapmanganato.to/manga-dr980852/chapter-87
+[Sun May 12 13:45:24 2024]: 60.38647342995169 %
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-iv985804/chapter-35 expected: https://chapmanganato.com/manga- Shijou Saikyou No Daimaou Murabito A Ni Tensei Suru readmanganato https://chapmanganato.to/manga-iv985804/chapter-35
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-du980477/chapter-336 expected: https://chapmanganato.com/manga- The Superb Captain In The City readmanganato https://chapmanganato.to/manga-du980477/chapter-336
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-sv970056/chapter-91 expected: https://chapmanganato.com/manga- Hachinan Tte Sore Wa Nai Deshou readmanganato https://chapmanganato.to/manga-sv970056/chapter-91
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-hc984537/chapter-464 expected: https://chapmanganato.com/manga- Banished Disciple s Counterattack readmanganato https://chapmanganato.to/manga-hc984537/chapter-464
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-nc952011/chapter-281.1 expected: https://chapmanganato.com/manga- Kaguya Sama Wa Kokurasetai Tensai Tachi No Renai Zunousen readmanganato https://chapmanganato.to/manga-nc952011/chapter-281.1
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-vo972423/chapter-146 expected: https://chapmanganato.com/manga- Quan Zhi Gao Shou readmanganato https://chapmanganato.to/manga-vo972423/chapter-146
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-eu982203/chapter-411 expected: https://chapmanganato.com/manga- Tomb Raider King readmanganato https://chapmanganato.to/manga-eu982203/chapter-411
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-bf978762/chapter-599 expected: https://chapmanganato.com/manga- Yuan Zun readmanganato https://chapmanganato.to/manga-bf978762/chapter-599
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-dk980919/chapter-285 expected: https://chapmanganato.com/manga- Meng Shi Zai Shang readmanganato https://chapmanganato.to/manga-dk980919/chapter-285
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-bu979277/chapter-281 expected: https://chapmanganato.com/manga- Skeleton Soldier Couldn T Protect The Dungeon readmanganato https://chapmanganato.to/manga-bu979277/chapter-281
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-hx984606/chapter-214 expected: https://chapmanganato.com/manga- Ultimate Soldier readmanganato https://chapmanganato.to/manga-hx984606/chapter-214
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-zd976712/chapter-69.1 expected: https://chapmanganato.com/manga- Kumo Desu Ga Nani Ka readmanganato https://chapmanganato.to/manga-zd976712/chapter-69.1
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-az977908/chapter-497.5 expected: https://chapmanganato.com/manga- Goddess Creation System readmanganato https://chapmanganato.to/manga-az977908/chapter-497.5
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-zo977297/chapter-46.1 expected: https://chapmanganato.com/manga- Yasei No Last Boss Ga Arawareta readmanganato https://chapmanganato.to/manga-zo977297/chapter-46.1
+[Sun May 12 13:45:24 2024]: 64.00966183574879 %
+[Sun May 12 13:45:24 2024]: 64.00966183574879 %
+[Sun May 12 13:45:24 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-fr982926/chapter-996 expected: https://chapmanganato.com/manga- Rebirth Of The Urban Immortal Cultivator readmanganato https://chapmanganato.to/manga-fr982926/chapter-996
+[Sun May 12 13:45:25 2024]: 64.4927536231884 %
+[Sun May 12 13:45:26 2024]: 'NoneType' object has no attribute 'css' I Log In Alone mangatx https://mangatx.com/manga/i-log-in-alone/chapter-165/
+[Sun May 12 13:45:28 2024]: 64.97584541062803 %
+[Sun May 12 13:45:29 2024]: 'NoneType' object has no attribute 'css' Is There a Problem if the Demon King is a Goblin mangatx https://mangatx.com/manga/is-there-a-problem-if-the-demon-king-is-a-goblin/chapter-10/
+[Sun May 12 13:45:30 2024]: 'NoneType' object has no attribute 'css' Master of Gu mangatx https://mangatx.com/manga/master-of-gu/chapter-96/
+[Sun May 12 13:45:31 2024]: 'NoneType' object has no attribute 'css' Legend of Asura The Venom Dragon mangatx https://mangatx.com/manga/poison-dragon-the-legend-of-an-asura/chapter-133/
+[Sun May 12 13:45:31 2024]: 65.70048309178745 %
+[Sun May 12 13:45:32 2024]: 65.94202898550725 %
+[Sun May 12 13:45:32 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-gz957182/chapter-15 expected: https://chapmanganato.com/manga- Reversible readmanganato https://chapmanganato.to/manga-gz957182/chapter-15
+[Sun May 12 13:45:32 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-bv978830/chapter-44 expected: https://chapmanganato.com/manga- My Wife Is A Man readmanganato https://chapmanganato.to/manga-bv978830/chapter-44
+[Sun May 12 13:45:32 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-da980683/chapter-295 expected: https://chapmanganato.com/manga- Chromosome 47 readmanganato https://chapmanganato.to/manga-da980683/chapter-295
+[Sun May 12 13:45:32 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-le989087/chapter-213 expected: https://chapmanganato.com/manga- Supreme Rebirth readmanganato https://chapmanganato.to/manga-le989087/chapter-213
+[Sun May 12 13:45:32 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-cz979808/chapter-16 expected: https://chapmanganato.com/manga- Jun And Kaoru Pure And Fragrant readmanganato https://chapmanganato.to/manga-cz979808/chapter-16
+[Sun May 12 13:45:32 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ed982060/chapter-26 expected: https://chapmanganato.com/manga- Samayoeru Tensei Sha Tachi No Revival Game readmanganato https://chapmanganato.to/manga-ed982060/chapter-26
+[Sun May 12 13:45:32 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-dy980433/chapter-20 expected: https://chapmanganato.com/manga- My Lolita Brother readmanganato https://chapmanganato.to/manga-dy980433/chapter-20
+[Sun May 12 13:45:32 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-fp982624/chapter-22.1 expected: https://chapmanganato.com/manga- A Lazy Guy Woke Up As A Girl One Morning readmanganato https://chapmanganato.to/manga-fp982624/chapter-22.1
+[Sun May 12 13:45:32 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-mz990308/chapter-135 expected: https://chapmanganato.com/manga- Quest Supremacy readmanganato https://chapmanganato.to/manga-mz990308/chapter-135
+[Sun May 12 13:45:32 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-nq990573/chapter-43 expected: https://chapmanganato.com/manga- Record Of The Mightiest Lord readmanganato https://chapmanganato.to/manga-nq990573/chapter-43
+[Sun May 12 13:45:33 2024]: 68.59903381642512 %
+[Sun May 12 13:45:33 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-yq975751/chapter-22 expected: https://chapmanganato.com/manga- Tanaka The Wizard readmanganato https://chapmanganato.to/manga-yq975751/chapter-22
+[Sun May 12 13:45:33 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-di981165/chapter-148 expected: https://chapmanganato.com/manga- Slayerdramon Ant readmanganato https://chapmanganato.to/manga-di981165/chapter-148
+[Sun May 12 13:45:33 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-rm951795/chapter-243.5 expected: https://chapmanganato.com/manga- Yamada Kun To 7 Nin No Majo readmanganato https://chapmanganato.to/manga-rm951795/chapter-243.5
+[Sun May 12 13:45:34 2024]: 'NoneType' object has no attribute 'css' Wizard of Arsenia mangatx https://mangatx.com/manga/wizard-of-arsenia/chapter-88/
+[Sun May 12 13:45:35 2024]: 'NoneType' object has no attribute 'css' The Lady and the Beast mangatx https://mangatx.com/manga/the-lady-and-the-beast/chapter-130/
+[Sun May 12 13:45:35 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-qi952991/chapter-100 expected: https://chapmanganato.com/manga- Hinamatsuri readmanganato https://chapmanganato.to/manga-qi952991/chapter-100
+[Sun May 12 13:45:36 2024]: 70.28985507246377 %
+[Sun May 12 13:45:37 2024]: 'NoneType' object has no attribute 'css' Otherworldly Evil Monarch mangatx https://mangatx.com/manga/otherworldly-evil-monarch-comic/chapter-199/
+[Sun May 12 13:45:38 2024]: 'NoneType' object has no attribute 'css' King Killer Reborn mangatx https://mangatx.com/manga/king-killer-reborn/chapter-132/
+[Sun May 12 13:45:39 2024]: 'NoneType' object has no attribute 'css' Return to Earth to be a God mangatx https://mangatx.com/manga/return-to-earth-to-be-a-god/chapter-46/
+[Sun May 12 13:45:39 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-tf970914/chapter-42 expected: https://chapmanganato.com/manga- Honzuki No Gekokujou readmanganato https://chapmanganato.to/manga-tf970914/chapter-42
+[Sun May 12 13:45:40 2024]: 71.49758454106279 %
+[Sun May 12 13:45:41 2024]: 71.73913043478261 %
+[Sun May 12 13:45:42 2024]: 71.98067632850241 %
+[Sun May 12 13:45:43 2024]: 'NoneType' object has no attribute 'css' Metropolitan Supremacy System mangatx https://mangatx.com/manga/metropolitan-supremacy-system/chapter-203/
+[Sun May 12 13:45:44 2024]: 'NoneType' object has no attribute 'css' I Am Immortal System Xianzun in the City mangatx https://mangatx.com/manga/i-am-immortal/chapter-134/
+[Sun May 12 13:45:45 2024]: 72.70531400966183 %
+[Sun May 12 13:45:46 2024]: 'NoneType' object has no attribute 'css' Metropolitan System mangatx https://mangatx.com/manga/metropolitan-system/chapter-360/
+[Sun May 12 13:45:47 2024]: 'NoneType' object has no attribute 'css' The Boy in the All Girls School mangatx https://mangatx.com/manga/the-boy-in-the-all-girls-school/chapter-287/
+[Sun May 12 13:45:48 2024]: 'NoneType' object has no attribute 'css' Again My Life mangatx https://mangatx.com/manga/again-my-life/chapter-141/
+[Sun May 12 13:45:49 2024]: 73.67149758454107 %
+[Sun May 12 13:45:50 2024]: 73.91304347826086 %
+[Sun May 12 13:45:51 2024]: 74.15458937198068 %
+[Sun May 12 13:45:51 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-uw971531/chapter-350 expected: https://chapmanganato.com/manga- Unordinary readmanganato https://chapmanganato.to/manga-uw971531/chapter-350
+[Sun May 12 13:45:52 2024]: 74.63768115942028 %
+[Sun May 12 13:45:52 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-us971853/chapter-33 expected: https://chapmanganato.com/manga- Dungeon Seeker readmanganato https://chapmanganato.to/manga-us971853/chapter-33
+[Sun May 12 13:46:46 2024]: 'NoneType' object has no attribute 'css' The Peerless Concubine mangatx https://mangatx.com/manga/read-the-peerless-concubine-free/chapter-155-5/
+[Sun May 12 13:46:47 2024]: 'NoneType' object has no attribute 'css' Player Reborn mangatx https://mangatx.com/manga/player-reborn/chapter-194/
+[Sun May 12 13:46:48 2024]: 75.60386473429952 % 1 Overgeared
+[Sun May 12 13:46:50 2024]: 75.84541062801932 % 1 Star Martial God Technique
+[Sun May 12 13:46:51 2024]: 76.08695652173914 %
+[Sun May 12 13:46:52 2024]: 76.32850241545893 %
+[Sun May 12 13:46:53 2024]: 76.57004830917874 %
+[Sun May 12 13:46:53 2024]: 76.57004830917874 %
+[Sun May 12 13:46:53 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-um971369/chapter-77 expected: https://chapmanganato.com/manga- Youjo Senki readmanganato https://chapmanganato.to/manga-um971369/chapter-77
+[Sun May 12 13:46:53 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-wa958835/chapter-29 expected: https://chapmanganato.com/manga- Kashimashi Girl Meets Girl readmanganato https://chapmanganato.to/manga-wa958835/chapter-29
+[Sun May 12 13:46:53 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-bd979060/chapter-141 expected: https://chapmanganato.com/manga- After Transformation Mine And Her Wild Fantasy readmanganato https://chapmanganato.to/manga-bd979060/chapter-141
+[Sun May 12 13:46:53 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ak977919/chapter-84 expected: https://chapmanganato.com/manga- Isekai Meikyuu De Harem O readmanganato https://chapmanganato.to/manga-ak977919/chapter-84
+[Sun May 12 13:46:53 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-oo952849/chapter-153 expected: https://chapmanganato.com/manga- Denpa Kyoushi readmanganato https://chapmanganato.to/manga-oo952849/chapter-153
+[Sun May 12 13:46:53 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-gv984356/chapter-82 expected: https://chapmanganato.com/manga- I Turned My Childhood Friend Into A Girl readmanganato https://chapmanganato.to/manga-gv984356/chapter-82
+[Sun May 12 13:46:53 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-cm979469/chapter-46 expected: https://chapmanganato.com/manga- Arafoo Kenja No Isekai Seikatsu Nikki readmanganato https://chapmanganato.to/manga-cm979469/chapter-46
+[Sun May 12 13:46:53 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-vp972424/chapter-61 expected: https://chapmanganato.com/manga- Kenja No Deshi Wo Nanoru Kenja readmanganato https://chapmanganato.to/manga-vp972424/chapter-61
+[Sun May 12 13:46:54 2024]: 78.74396135265701 %
+[Sun May 12 13:46:54 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-nf990662/chapter-59 expected: https://chapmanganato.com/manga- I Can See Your Death readmanganato https://chapmanganato.to/manga-nf990662/chapter-59
+[Sun May 12 13:46:54 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-my990307/chapter-110 expected: https://chapmanganato.com/manga- Return Of The Broken Constellation readmanganato https://chapmanganato.to/manga-my990307/chapter-110
+[Sun May 12 13:46:55 2024]: 'NoneType' object has no attribute 'css' Release That Witch mangatx https://mangatx.com/manga/release-that-witch/chapter-529/
+[Sun May 12 13:46:55 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-mg989815/chapter-34 expected: https://chapmanganato.com/manga- I Stand Beyond The Heavens readmanganato https://chapmanganato.to/manga-mg989815/chapter-34
+[Sun May 12 13:46:55 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-fx982632/chapter-16 expected: https://chapmanganato.com/manga- Bro Girl readmanganato https://chapmanganato.to/manga-fx982632/chapter-16
+[Sun May 12 13:46:55 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-su951803/chapter-107 expected: https://chapmanganato.com/manga- Boku Girl readmanganato https://chapmanganato.to/manga-su951803/chapter-107
+[Sun May 12 13:46:57 2024]: 80.43478260869566 %
+[Sun May 12 13:46:57 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-tz953334/chapter-117 expected: https://chapmanganato.com/manga- Tensei Shitara Slime Datta Ken readmanganato https://chapmanganato.to/manga-tz953334/chapter-117
+[Sun May 12 13:46:58 2024]: 80.91787439613528 %
+[Sun May 12 13:46:58 2024]: 80.91787439613528 %
+[Sun May 12 13:46:59 2024]: 81.15942028985508 %
+[Sun May 12 13:46:59 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-hs954675/chapter-56 expected: https://chapmanganato.com/manga- Kampfer readmanganato https://chapmanganato.to/manga-hs954675/chapter-56
+[Sun May 12 13:46:59 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-dm980495/chapter-28 expected: https://chapmanganato.com/manga- Starting New Life As A Girl readmanganato https://chapmanganato.to/manga-dm980495/chapter-28
+[Sun May 12 13:46:59 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-gg983841/chapter-43 expected: https://chapmanganato.com/manga- Ex Arm readmanganato https://chapmanganato.to/manga-gg983841/chapter-43
+[Sun May 12 13:46:59 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-hu984929/chapter-39 expected: https://chapmanganato.com/manga- I Am Worried That My Childhood Friend Is Too Cute readmanganato https://chapmanganato.to/manga-hu984929/chapter-39
+[Sun May 12 13:46:59 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ct979454/chapter-74 expected: https://chapmanganato.com/manga- Tensei Pandemic readmanganato https://chapmanganato.to/manga-ct979454/chapter-74
+[Sun May 12 13:46:59 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ha985209/chapter-13.8 expected: https://chapmanganato.com/manga- When I Woke Up I Was A Girl readmanganato https://chapmanganato.to/manga-ha985209/chapter-13.8
+[Sun May 12 13:46:59 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-zd977312/chapter-41 expected: https://chapmanganato.com/manga- Isekai Cheat Magician readmanganato https://chapmanganato.to/manga-zd977312/chapter-41
+[Sun May 12 13:47:00 2024]: 83.09178743961353 %
+[Sun May 12 13:47:01 2024]: 83.33333333333334 %
+[Sun May 12 13:47:01 2024]: 83.33333333333334 %
+[Sun May 12 13:47:01 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-eo981371/chapter-41 expected: https://chapmanganato.com/manga- A Rank Boukensha No Slow Life readmanganato https://chapmanganato.to/manga-eo981371/chapter-41
+[Sun May 12 13:47:02 2024]: 'NoneType' object has no attribute 'css' Limit Breaker mangatx https://mangatx.com/manga/limit-breaker-online/chapter-80/
+[Sun May 12 13:47:03 2024]: 84.05797101449275 %
+[Sun May 12 13:47:04 2024]: 84.05797101449275 %
+[Sun May 12 13:47:04 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-se953187/chapter-100 expected: https://chapmanganato.com/manga- Re monster readmanganato https://chapmanganato.to/manga-se953187/chapter-100
+[Sun May 12 13:47:04 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-lt988602/chapter-326 expected: https://chapmanganato.com/manga- Library Of Heaven S Path readmanganato https://chapmanganato.to/manga-lt988602/chapter-326
+[Sun May 12 13:47:05 2024]: 'NoneType' object has no attribute 'css' The God of Game of God mangatx https://mangatx.com/manga/the-god-of-game-of-god/chapter-35/
+[Sun May 12 13:47:07 2024]: 85.02415458937197 %
+[Sun May 12 13:47:07 2024]: 85.02415458937197 %
+[Sun May 12 13:47:07 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-mw989779/chapter-231 expected: https://chapmanganato.com/manga- The First Ancestor In History readmanganato https://chapmanganato.to/manga-mw989779/chapter-231
+[Sun May 12 13:47:08 2024]: 85.5072463768116 %
+[Sun May 12 13:47:08 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-lf988514/chapter-429 expected: https://chapmanganato.com/manga- The Time Of Rebirth readmanganato https://chapmanganato.to/manga-lf988514/chapter-429
+[Sun May 12 13:47:08 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-lx989280/chapter-93 expected: https://chapmanganato.com/manga- Make The Level Up To Max readmanganato https://chapmanganato.to/manga-lx989280/chapter-93
+[Sun May 12 13:47:09 2024]: 'NoneType' object has no attribute 'css' Immortal Invincible mangatx https://mangatx.com/manga/immortal-invincible/chapter-159/
+[Sun May 12 13:47:10 2024]: 86.47342995169082 %
+[Sun May 12 13:47:11 2024]: 86.71497584541062 %
+[Sun May 12 13:47:12 2024]: 86.95652173913044 %
+[Sun May 12 13:47:13 2024]: 'NoneType' object has no attribute 'css' master of legendary realms mangatx https://mangatx.com/manga/read-master-of-legendary-realms-manga/chapter-301/
+[Sun May 12 13:47:14 2024]: 'NoneType' object has no attribute 'css' Genius Doctor Black Belly Miss mangatx https://mangatx.com/manga/genius-doctor-black-belly-miss/chapter-78/
+[Sun May 12 13:47:15 2024]: 87.68115942028986 %
+[Sun May 12 13:47:16 2024]: 87.92270531400966 % 1 A Returner s Magic Should Be Special
+[Sun May 12 13:47:16 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-wl951846/chapter-169 expected: https://chapmanganato.com/manga- The Legendary Moonlight Sculptor readmanganato https://chapmanganato.to/manga-wl951846/chapter-169
+[Sun May 12 13:47:16 2024]: 88.40579710144928 %
+[Sun May 12 13:47:17 2024]: 'NoneType' object has no attribute 'css' The Great Ruler mangatx https://mangatx.com/manga/the-great-ruler/chapter-373/
+[Sun May 12 13:47:18 2024]: 'NoneType' object has no attribute 'css' Supreme Mad Emperor System mangatx https://mangatx.com/manga/supreme-mad-emperor-system/chapter-104/
+[Sun May 12 13:47:19 2024]: 89.13043478260869 %
+[Sun May 12 13:47:19 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ir986152/chapter-148 expected: https://chapmanganato.com/manga- Busted Darklord readmanganato https://chapmanganato.to/manga-ir986152/chapter-148
+[Sun May 12 13:47:20 2024]: 'NoneType' object has no attribute 'css' Solo Auto Hunting mangatx https://mangatx.com/manga/solo-auto-hunting/chapter-92/
+[Sun May 12 13:47:21 2024]: 89.85507246376811 % 2 Rise From The Rubble
+[Sun May 12 13:47:22 2024]: 89.85507246376811 %
+[Sun May 12 13:47:22 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-hv984430/chapter-298 expected: https://chapmanganato.com/manga- Another Emperor Reborn readmanganato https://chapmanganato.to/manga-hv984430/chapter-298
+[Sun May 12 13:47:22 2024]: 90.33816425120773 %
+[Sun May 12 13:47:22 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-wc973711/chapter-187.1 expected: https://chapmanganato.com/manga- To You The Immortal readmanganato https://chapmanganato.to/manga-wc973711/chapter-187.1
+[Sun May 12 13:47:23 2024]: 90.82125603864735 %
+[Sun May 12 13:47:24 2024]: 'NoneType' object has no attribute 'css' 10 Years after saying Leave this to me and go mangatx https://mangatx.com/manga/10-years-after-saying-leave-this-to-me-and-go/chapter-8-3/
+[Sun May 12 13:47:26 2024]: 'NoneType' object has no attribute 'css' I m Not the Overlord mangatx https://mangatx.com/manga/im-not-the-overlord/chapter-58/
+[Sun May 12 13:47:26 2024]: 91.54589371980676 %
+[Sun May 12 13:47:27 2024]: 91.78743961352657 %
+[Sun May 12 13:47:28 2024]: 92.02898550724638 %
+[Sun May 12 13:47:29 2024]: 'NoneType' object has no attribute 'css' The Book Eating Magician mangatx https://mangatx.com/manga/the-book-eating-magician/chapter-104/
+[Sun May 12 13:47:30 2024]: 'NoneType' object has no attribute 'css' The Villainess Reverses the Hourglass mangatx https://mangatx.com/manga/the-villainess-reverses-the-hourglass-online/chapter-40/
+[Sun May 12 13:47:30 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-lr989100/chapter-194 expected: https://chapmanganato.com/manga- My Girl Is A Dragon Princess readmanganato https://chapmanganato.to/manga-lr989100/chapter-194
+[Sun May 12 13:47:30 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ej981644/chapter-15.4 expected: https://chapmanganato.com/manga- Maou Gakuin No Futekigousha readmanganato https://chapmanganato.to/manga-ej981644/chapter-15.4
+[Sun May 12 13:47:30 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ck979545/chapter-267 expected: https://chapmanganato.com/manga- Slime Life readmanganato https://chapmanganato.to/manga-ck979545/chapter-267
+[Sun May 12 13:47:31 2024]: 93.47826086956522 %
+[Sun May 12 13:47:31 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-kg987863/chapter-301 expected: https://chapmanganato.com/manga- Life Of A War Emperor After Retirement readmanganato https://chapmanganato.to/manga-kg987863/chapter-301
+[Sun May 12 13:47:31 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-zl977046/chapter-69 expected: https://chapmanganato.com/manga- Lv999 No Murabito readmanganato https://chapmanganato.to/manga-zl977046/chapter-69
+[Sun May 12 13:47:31 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-zp977298/chapter-70 expected: https://chapmanganato.com/manga- The Wrong Way To Use Healing Magic readmanganato https://chapmanganato.to/manga-zp977298/chapter-70
+[Sun May 12 13:47:31 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-bq979325/chapter-112 expected: https://chapmanganato.com/manga- Jichou Shinai Motoyuusha No Tsuyokute Tanoshii New Game readmanganato https://chapmanganato.to/manga-bq979325/chapter-112
+[Sun May 12 13:47:31 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-nm952721/chapter-106 expected: https://chapmanganato.com/manga- Konjiki No Moji Tsukai Yuusha Yonin Ni Makikomareta Unique Cheat readmanganato https://chapmanganato.to/manga-nm952721/chapter-106
+[Sun May 12 13:47:31 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-vi972843/chapter-135 expected: https://chapmanganato.com/manga- Isekai Shihai No Skill Taker Zero Kara Hajimeru Dorei Harem readmanganato https://chapmanganato.to/manga-vi972843/chapter-135
+[Sun May 12 13:47:31 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-cu979629/chapter-48 expected: https://chapmanganato.com/manga- Isekai Shoukan Wa Nidome Desu readmanganato https://chapmanganato.to/manga-cu979629/chapter-48
+[Sun May 12 13:47:31 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ly989007/chapter-192 expected: https://chapmanganato.com/manga- The Reincarnated Weapon Shop Owner readmanganato https://chapmanganato.to/manga-ly989007/chapter-192
+[Sun May 12 13:47:31 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-lt988976/chapter-140 expected: https://chapmanganato.com/manga- Urban Leveling readmanganato https://chapmanganato.to/manga-lt988976/chapter-140
+[Sun May 12 13:47:31 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-ie951961/chapter-107.2 expected: https://chapmanganato.com/manga- Tsuyokute New Saga readmanganato https://chapmanganato.to/manga-ie951961/chapter-107.2
+[Sun May 12 13:47:31 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-cf979914/chapter-24.5 expected: https://chapmanganato.com/manga- Eiyuu No Musume To Shite Umarekawatta Eiyuu Wa Futatabi Eiyuu O Mezasu readmanganato https://chapmanganato.to/manga-cf979914/chapter-24.5
+[Sun May 12 13:47:31 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-gt983754/chapter-160.2 expected: https://chapmanganato.com/manga- Fantasy Bishoujo Juniku Ojisan To readmanganato https://chapmanganato.to/manga-gt983754/chapter-160.2
+[Sun May 12 13:47:31 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-cf979414/chapter-15 expected: https://chapmanganato.com/manga- Tadashi Ore Wa Heroine Toshite readmanganato https://chapmanganato.to/manga-cf979414/chapter-15
+[Sun May 12 13:47:32 2024]: 96.85990338164251 %
+[Sun May 12 13:47:32 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-na952009/chapter-103.2 expected: https://chapmanganato.com/manga- Isekai Maou To Shoukan Shoujo Dorei Majutsu readmanganato https://chapmanganato.to/manga-na952009/chapter-103.2
+[Sun May 12 13:47:33 2024]: 97.34299516908213 %
+[Sun May 12 13:47:35 2024]: 97.58454106280193 % 1 Apotheosis
+[Sun May 12 13:47:36 2024]: 'NoneType' object has no attribute 'css' The Scholar s Reincarnation mangatx https://mangatx.com/manga/the-scholars-reincarnation-online/chapter-198/
+[Sun May 12 13:47:38 2024]: 98.06763285024155 %
+[Sun May 12 13:47:39 2024]: 98.30917874396135 %
+[Sun May 12 13:47:40 2024]: 'NoneType' object has no attribute 'css' I ve Become the Villainous Empress of a Novel mangatx https://mangatx.com/manga/ive-become-the-villainous-empress-of-a-novel/chapter-71/
+[Sun May 12 13:47:40 2024]: 98.55072463768117 %
+[Sun May 12 13:47:42 2024]: 98.79227053140096 %
+[Sun May 12 13:47:43 2024]: 99.03381642512076 %
+[Sun May 12 13:47:43 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-gg983941/chapter-109 expected: https://chapmanganato.com/manga- The Second Coming Of Gluttony readmanganato https://chapmanganato.to/manga-gg983941/chapter-109
+[Sun May 12 13:47:43 2024]: 99.27536231884058 %
+[Sun May 12 13:47:43 2024]: URL does not correspond to the url_scheme. Got: https://chapmanganato.to/manga-sv970156/chapter-349 expected: https://chapmanganato.com/manga- Hardcore Leveling Warrior readmanganato https://chapmanganato.to/manga-sv970156/chapter-349
+[Sun May 12 13:47:44 2024]: 'NoneType' object has no attribute 'css' the supreme system mangatx https://mangatx.com/manga/the-supreme-system/chapter-135/
+[Sun May 12 13:47:44 2024]: killed remanant firefox processes
